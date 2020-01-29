@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Scenes/Battle.gd" type="Script" id=1]
 [ext_resource path="res://Images/Dungeon.png" type="Texture" id=2]
 [ext_resource path="res://Images/Mobile RPG Mockup.png" type="Texture" id=3]
-[ext_resource path="res://Images/Rat.png" type="Texture" id=4]
+[ext_resource path="res://Scenes/Enemy.gd" type="Script" id=4]
+[ext_resource path="res://Images/Rat.png" type="Texture" id=5]
 
 [node name="Battle" type="Node"]
 script = ExtResource( 1 )
@@ -13,16 +14,16 @@ position = Vector2( 45, 80 )
 texture = ExtResource( 2 )
 
 [node name="Mobile RPG Mockup" type="Sprite" parent="."]
-visible = false
 modulate = Color( 1, 1, 1, 0.282353 )
 position = Vector2( 45, 80 )
 texture = ExtResource( 3 )
 
 [node name="Enemy" type="Node2D" parent="."]
 position = Vector2( 46, 33 )
+script = ExtResource( 4 )
 
 [node name="Rat" type="Sprite" parent="Enemy"]
-texture = ExtResource( 4 )
+texture = ExtResource( 5 )
 
 [node name="HPLabel" type="Label" parent="Enemy"]
 margin_left = -15.0
@@ -30,15 +31,28 @@ margin_top = -27.0
 margin_right = 17.0
 margin_bottom = -13.0
 text = "25hp"
+align = 1
 
 [node name="UI" type="Control" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
 
+[node name="StatsPanel" type="Panel" parent="UI"]
+margin_left = 3.0
+margin_top = 49.0
+margin_right = 87.0
+margin_bottom = 71.0
+
 [node name="SwordButton" type="Button" parent="UI"]
-margin_left = 10.0
-margin_top = 82.0
-margin_right = 80.0
-margin_bottom = 102.0
+margin_left = 9.0
+margin_top = 73.0
+margin_right = 41.0
+margin_bottom = 86.0
 text = "Sword"
+
+[node name="TextboxPanel" type="Panel" parent="UI"]
+margin_left = -2.0
+margin_top = 120.0
+margin_right = 92.0
+margin_bottom = 160.0
 [connection signal="pressed" from="UI/SwordButton" to="." method="_on_SwordButton_pressed"]

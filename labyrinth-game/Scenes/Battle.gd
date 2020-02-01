@@ -1,15 +1,13 @@
 extends Node
 
 onready var enemy = $Enemy
-onready var swordButton = $UI/SwordButton
+onready var battleActionButtons = $UI/BattleActionButtons
 
 func _on_SwordButton_pressed():
-	var enemy = find_node("Enemy")
-	
-	if enemy!= null:
+	if enemy != null:
 		enemy.hp -= 4
 
 
 func _on_Enemy_died():
-	swordButton.hide()
+	battleActionButtons.hide()
 	enemy = null

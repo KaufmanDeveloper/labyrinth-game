@@ -2,6 +2,8 @@ extends Node
 
 # Updates UI for player stats
 
+const BattleUnits = preload("res://BattleUnits.tres")
+
 var max_hp = 25
 var hp = max_hp setget set_hp
 
@@ -29,3 +31,10 @@ func set_ap(value):
 func set_mp(value):
 	mp = clamp(value, 0, max_mp)
 	emit_signal("mp_changed", mp)
+
+# Godot hooks
+func _ready():
+	BattleUnits.PlayerStats = self # Give the BattleUnits access to player stats
+
+func _exit_tree():
+	BattleUnits.PlayerStats = null # If this node exits tree, remove that access

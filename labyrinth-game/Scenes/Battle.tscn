@@ -10,10 +10,9 @@
 [ext_resource path="res://Scenes/HealActionButton.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Scenes/Rat.tscn" type="PackedScene" id=9]
 
-[sub_resource type="StyleBoxEmpty" id=2]
+[sub_resource type="StyleBoxEmpty" id=1]
 
-[sub_resource type="Animation" id=1]
-resource_name = "FadeToNewRoom"
+[sub_resource type="Animation" id=2]
 length = 0.5
 step = 0.05
 tracks/0/type = "value"
@@ -37,14 +36,14 @@ enemies = [ ExtResource( 9 ), ExtResource( 5 ) ]
 script = ExtResource( 2 )
 
 [node name="Dungeon" type="Sprite" parent="."]
-position = Vector2( 45, 80 )
+position = Vector2( 80, 45 )
 texture = ExtResource( 3 )
 __meta__ = {
 "_edit_lock_": true
 }
 
 [node name="EnemyPosition" type="Position2D" parent="."]
-position = Vector2( 47, 31 )
+position = Vector2( 77, 29 )
 
 [node name="Slime" parent="EnemyPosition" instance=ExtResource( 5 )]
 
@@ -66,7 +65,8 @@ __meta__ = {
 }
 
 [node name="CenterContainer" type="CenterContainer" parent="UI"]
-margin_right = 90.0
+margin_left = 32.0
+margin_right = 122.0
 margin_bottom = 50.0
 mouse_filter = 2
 __meta__ = {
@@ -83,10 +83,10 @@ rect_min_size = Vector2( 70, 13 )
 text = "Enter Next Room"
 
 [node name="StatsPanel" type="Panel" parent="UI"]
-margin_left = 3.0
-margin_top = 50.0
-margin_right = 87.0
-margin_bottom = 72.0
+margin_left = 35.0
+margin_top = 46.0
+margin_right = 119.0
+margin_bottom = 68.0
 script = ExtResource( 6 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -96,6 +96,7 @@ __meta__ = {
 anchor_right = 1.0
 anchor_bottom = 1.0
 __meta__ = {
+"_edit_lock_": true,
 "_edit_use_anchors_": false
 }
 
@@ -107,6 +108,9 @@ size_flags_horizontal = 3
 text = "HP
 25"
 align = 1
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="AP" type="Label" parent="UI/StatsPanel/StatsContainer"]
 margin_left = 29.0
@@ -117,6 +121,9 @@ size_flags_horizontal = 3
 text = "AP
 3"
 align = 1
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="MP" type="Label" parent="UI/StatsPanel/StatsContainer"]
 margin_left = 58.0
@@ -127,12 +134,15 @@ size_flags_horizontal = 3
 text = "MP
 10"
 align = 1
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="TextboxPanel" type="Panel" parent="UI"]
-margin_left = -2.0
-margin_top = 135.0
-margin_right = 92.0
-margin_bottom = 161.0
+margin_left = 30.0
+margin_top = 96.0
+margin_right = 124.0
+margin_bottom = 122.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -142,18 +152,19 @@ margin_left = 3.0
 margin_top = 2.0
 margin_right = 91.0
 margin_bottom = 24.0
-custom_styles/normal = SubResource( 2 )
+custom_styles/normal = SubResource( 1 )
 custom_constants/table_vseparation = 0
 custom_constants/line_separation = 2
 __meta__ = {
+"_edit_lock_": true,
 "_edit_use_anchors_": false
 }
 
 [node name="BattleActionButtons" type="GridContainer" parent="UI"]
-margin_left = 9.0
-margin_top = 75.0
-margin_right = 83.0
-margin_bottom = 137.0
+margin_left = 40.0
+margin_top = 70.0
+margin_right = 114.0
+margin_bottom = 89.0
 custom_constants/vseparation = 3
 custom_constants/hseparation = 8
 columns = 2
@@ -179,7 +190,7 @@ __meta__ = {
 }
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-anims/FadeToNewRoom = SubResource( 1 )
+anims/FadeToNewRoom = SubResource( 2 )
 [connection signal="ap_changed" from="PlayerStats" to="UI/StatsPanel" method="_on_PlayerStats_ap_changed"]
 [connection signal="hp_changed" from="PlayerStats" to="UI/StatsPanel" method="_on_PlayerStats_hp_changed"]
 [connection signal="mp_changed" from="PlayerStats" to="UI/StatsPanel" method="_on_PlayerStats_mp_changed"]

@@ -1,14 +1,13 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Scenes/Battle.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/PlayerStats.gd" type="Script" id=2]
 [ext_resource path="res://Images/Dungeon.png" type="Texture" id=3]
 [ext_resource path="res://Images/Mobile RPG Mockup.png" type="Texture" id=4]
-[ext_resource path="res://Scenes/Slime.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scenes/StatsPanel.gd" type="Script" id=6]
 [ext_resource path="res://Scenes/SwordActionButton.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Scenes/HealActionButton.tscn" type="PackedScene" id=8]
-[ext_resource path="res://Scenes/Rat.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Scenes/Centipede.tscn" type="PackedScene" id=9]
 
 [sub_resource type="StyleBoxEmpty" id=1]
 
@@ -30,7 +29,7 @@ tracks/0/keys = {
 
 [node name="Battle" type="Node"]
 script = ExtResource( 1 )
-enemies = [ ExtResource( 9 ), ExtResource( 5 ) ]
+enemies = [ ExtResource( 9 ) ]
 
 [node name="PlayerStats" type="Node" parent="."]
 script = ExtResource( 2 )
@@ -45,7 +44,7 @@ __meta__ = {
 [node name="EnemyPosition" type="Position2D" parent="."]
 position = Vector2( 77, 29 )
 
-[node name="Slime" parent="EnemyPosition" instance=ExtResource( 5 )]
+[node name="Enemy" parent="EnemyPosition" instance=ExtResource( 9 )]
 
 [node name="Mobile RPG Mockup" type="Sprite" parent="."]
 visible = false

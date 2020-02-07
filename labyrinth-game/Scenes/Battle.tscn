@@ -1,13 +1,16 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Scenes/Battle.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/PlayerStats.gd" type="Script" id=2]
 [ext_resource path="res://Images/Dungeon.png" type="Texture" id=3]
 [ext_resource path="res://Images/Mobile RPG Mockup.png" type="Texture" id=4]
+[ext_resource path="res://Images/UI/Heart.png" type="Texture" id=5]
 [ext_resource path="res://Scenes/StatsPanel.gd" type="Script" id=6]
 [ext_resource path="res://Scenes/SwordActionButton.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Scenes/HealActionButton.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Scenes/Centipede.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Images/UI/Sword.png" type="Texture" id=10]
+[ext_resource path="res://Images/UI/Staff.png" type="Texture" id=11]
 
 [sub_resource type="StyleBoxEmpty" id=1]
 
@@ -82,57 +85,75 @@ rect_min_size = Vector2( 70, 13 )
 text = "Enter Next Room"
 
 [node name="StatsPanel" type="Panel" parent="UI"]
-margin_left = 35.0
-margin_top = 46.0
-margin_right = 119.0
-margin_bottom = 68.0
+margin_left = 6.0
+margin_top = 7.0
+margin_right = 34.0
+margin_bottom = 36.0
 script = ExtResource( 6 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="StatsContainer" type="HBoxContainer" parent="UI/StatsPanel"]
-anchor_right = 1.0
-anchor_bottom = 1.0
+[node name="StatsContainer" type="VBoxContainer" parent="UI/StatsPanel"]
+margin_left = 4.0
+margin_top = -1.0
+margin_right = 28.0
+margin_bottom = 30.0
+custom_constants/separation = -3
 __meta__ = {
 "_edit_lock_": true,
 "_edit_use_anchors_": false
 }
 
 [node name="HP" type="Label" parent="UI/StatsPanel/StatsContainer"]
-margin_top = 1.0
-margin_right = 25.0
-margin_bottom = 20.0
+margin_right = 24.0
+margin_bottom = 12.0
 size_flags_horizontal = 3
-text = "HP
-25"
+text = "25"
 align = 1
 __meta__ = {
 "_edit_lock_": true
 }
 
 [node name="AP" type="Label" parent="UI/StatsPanel/StatsContainer"]
-margin_left = 29.0
-margin_top = 1.0
-margin_right = 54.0
-margin_bottom = 20.0
+margin_top = 9.0
+margin_right = 24.0
+margin_bottom = 21.0
 size_flags_horizontal = 3
-text = "AP
-3"
+text = "3"
 align = 1
 __meta__ = {
 "_edit_lock_": true
 }
 
 [node name="MP" type="Label" parent="UI/StatsPanel/StatsContainer"]
-margin_left = 58.0
-margin_top = 1.0
-margin_right = 84.0
-margin_bottom = 20.0
+margin_top = 18.0
+margin_right = 24.0
+margin_bottom = 30.0
 size_flags_horizontal = 3
-text = "MP
-10"
+text = "10"
 align = 1
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="HeartStatSprite" type="Sprite" parent="UI/StatsPanel"]
+position = Vector2( 6, 6 )
+texture = ExtResource( 5 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="SwordStatSprite" type="Sprite" parent="UI/StatsPanel"]
+position = Vector2( 6, 14 )
+texture = ExtResource( 10 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="StaffStatSprite" type="Sprite" parent="UI/StatsPanel"]
+position = Vector2( 6, 23 )
+texture = ExtResource( 11 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -161,9 +182,9 @@ __meta__ = {
 
 [node name="BattleActionButtons" type="GridContainer" parent="UI"]
 margin_left = 40.0
-margin_top = 70.0
+margin_top = 62.0
 margin_right = 114.0
-margin_bottom = 89.0
+margin_bottom = 81.0
 custom_constants/vseparation = 3
 custom_constants/hseparation = 8
 columns = 2

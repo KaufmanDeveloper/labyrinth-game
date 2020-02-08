@@ -10,6 +10,18 @@
 [node name="Background" type="Sprite" parent="."]
 position = Vector2( 80, 45 )
 texture = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Tara" type="Sprite" parent="."]
+position = Vector2( 72, 31 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 2 )
+hframes = 2
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="Control" type="Control" parent="."]
 margin_right = 40.0
@@ -18,16 +30,17 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Panel" type="Panel" parent="Control"]
+[node name="DialoguePanel" type="Panel" parent="Control"]
 margin_left = 29.0
 margin_top = 59.0
 margin_right = 119.0
 margin_bottom = 90.0
 __meta__ = {
+"_edit_lock_": true,
 "_edit_use_anchors_": false
 }
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Control/Panel"]
+[node name="DialogueText" type="RichTextLabel" parent="Control/DialoguePanel"]
 margin_left = 3.0
 margin_top = 2.0
 margin_right = 87.0
@@ -40,8 +53,25 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Tara" type="Sprite" parent="."]
-position = Vector2( 72, 31 )
-scale = Vector2( 2, 2 )
-texture = ExtResource( 2 )
-hframes = 2
+[node name="Panel" type="Panel" parent="Control/DialoguePanel"]
+margin_top = -10.0
+margin_right = 41.0
+margin_bottom = 1.0
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Name" type="RichTextLabel" parent="Control/DialoguePanel/Panel"]
+margin_left = 3.0
+margin_top = 2.0
+margin_right = 38.0
+margin_bottom = 11.0
+custom_styles/normal = SubResource( 1 )
+custom_colors/default_color = Color( 1, 0.854902, 0.368627, 1 )
+custom_constants/line_separation = 3
+text = "Name"
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}

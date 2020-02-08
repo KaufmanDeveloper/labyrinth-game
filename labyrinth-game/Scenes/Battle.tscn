@@ -1,19 +1,20 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Scenes/Battle.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/PlayerStats.gd" type="Script" id=2]
 [ext_resource path="res://Images/Dungeon.png" type="Texture" id=3]
 [ext_resource path="res://Images/Mobile RPG Mockup.png" type="Texture" id=4]
-[ext_resource path="res://Scenes/Slime.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Images/UI/Heart.png" type="Texture" id=5]
 [ext_resource path="res://Scenes/StatsPanel.gd" type="Script" id=6]
 [ext_resource path="res://Scenes/SwordActionButton.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Scenes/HealActionButton.tscn" type="PackedScene" id=8]
-[ext_resource path="res://Scenes/Rat.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Scenes/Centipede.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Images/UI/Sword.png" type="Texture" id=10]
+[ext_resource path="res://Images/UI/Staff.png" type="Texture" id=11]
 
-[sub_resource type="StyleBoxEmpty" id=2]
+[sub_resource type="StyleBoxEmpty" id=1]
 
-[sub_resource type="Animation" id=1]
-resource_name = "FadeToNewRoom"
+[sub_resource type="Animation" id=2]
 length = 0.5
 step = 0.05
 tracks/0/type = "value"
@@ -31,22 +32,22 @@ tracks/0/keys = {
 
 [node name="Battle" type="Node"]
 script = ExtResource( 1 )
-enemies = [ ExtResource( 9 ), ExtResource( 5 ) ]
+enemies = [ ExtResource( 9 ) ]
 
 [node name="PlayerStats" type="Node" parent="."]
 script = ExtResource( 2 )
 
 [node name="Dungeon" type="Sprite" parent="."]
-position = Vector2( 45, 80 )
+position = Vector2( 80, 45 )
 texture = ExtResource( 3 )
 __meta__ = {
 "_edit_lock_": true
 }
 
 [node name="EnemyPosition" type="Position2D" parent="."]
-position = Vector2( 47, 31 )
+position = Vector2( 77, 29 )
 
-[node name="Slime" parent="EnemyPosition" instance=ExtResource( 5 )]
+[node name="Enemy" parent="EnemyPosition" instance=ExtResource( 9 )]
 
 [node name="Mobile RPG Mockup" type="Sprite" parent="."]
 visible = false
@@ -66,7 +67,8 @@ __meta__ = {
 }
 
 [node name="CenterContainer" type="CenterContainer" parent="UI"]
-margin_right = 90.0
+margin_left = 32.0
+margin_right = 122.0
 margin_bottom = 50.0
 mouse_filter = 2
 __meta__ = {
@@ -83,56 +85,84 @@ rect_min_size = Vector2( 70, 13 )
 text = "Enter Next Room"
 
 [node name="StatsPanel" type="Panel" parent="UI"]
-margin_left = 3.0
-margin_top = 50.0
-margin_right = 87.0
-margin_bottom = 72.0
+margin_left = 6.0
+margin_top = 7.0
+margin_right = 34.0
+margin_bottom = 36.0
 script = ExtResource( 6 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="StatsContainer" type="HBoxContainer" parent="UI/StatsPanel"]
-anchor_right = 1.0
-anchor_bottom = 1.0
+[node name="StatsContainer" type="VBoxContainer" parent="UI/StatsPanel"]
+margin_left = 4.0
+margin_top = -1.0
+margin_right = 28.0
+margin_bottom = 30.0
+custom_constants/separation = -3
 __meta__ = {
+"_edit_lock_": true,
 "_edit_use_anchors_": false
 }
 
 [node name="HP" type="Label" parent="UI/StatsPanel/StatsContainer"]
-margin_top = 1.0
-margin_right = 25.0
-margin_bottom = 20.0
+margin_right = 24.0
+margin_bottom = 12.0
 size_flags_horizontal = 3
-text = "HP
-25"
+text = "25"
 align = 1
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="AP" type="Label" parent="UI/StatsPanel/StatsContainer"]
-margin_left = 29.0
-margin_top = 1.0
-margin_right = 54.0
-margin_bottom = 20.0
+margin_top = 9.0
+margin_right = 24.0
+margin_bottom = 21.0
 size_flags_horizontal = 3
-text = "AP
-3"
+text = "3"
 align = 1
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="MP" type="Label" parent="UI/StatsPanel/StatsContainer"]
-margin_left = 58.0
-margin_top = 1.0
-margin_right = 84.0
-margin_bottom = 20.0
+margin_top = 18.0
+margin_right = 24.0
+margin_bottom = 30.0
 size_flags_horizontal = 3
-text = "MP
-10"
+text = "10"
 align = 1
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="HeartStatSprite" type="Sprite" parent="UI/StatsPanel"]
+position = Vector2( 6, 6 )
+texture = ExtResource( 5 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="SwordStatSprite" type="Sprite" parent="UI/StatsPanel"]
+position = Vector2( 6, 14 )
+texture = ExtResource( 10 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="StaffStatSprite" type="Sprite" parent="UI/StatsPanel"]
+position = Vector2( 6, 23 )
+texture = ExtResource( 11 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="TextboxPanel" type="Panel" parent="UI"]
-margin_left = -2.0
-margin_top = 135.0
-margin_right = 92.0
-margin_bottom = 161.0
+margin_left = 30.0
+margin_top = 96.0
+margin_right = 124.0
+margin_bottom = 122.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -142,18 +172,19 @@ margin_left = 3.0
 margin_top = 2.0
 margin_right = 91.0
 margin_bottom = 24.0
-custom_styles/normal = SubResource( 2 )
+custom_styles/normal = SubResource( 1 )
 custom_constants/table_vseparation = 0
 custom_constants/line_separation = 2
 __meta__ = {
+"_edit_lock_": true,
 "_edit_use_anchors_": false
 }
 
 [node name="BattleActionButtons" type="GridContainer" parent="UI"]
-margin_left = 9.0
-margin_top = 75.0
-margin_right = 83.0
-margin_bottom = 137.0
+margin_left = 40.0
+margin_top = 62.0
+margin_right = 114.0
+margin_bottom = 81.0
 custom_constants/vseparation = 3
 custom_constants/hseparation = 8
 columns = 2
@@ -179,7 +210,7 @@ __meta__ = {
 }
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-anims/FadeToNewRoom = SubResource( 1 )
+anims/FadeToNewRoom = SubResource( 2 )
 [connection signal="ap_changed" from="PlayerStats" to="UI/StatsPanel" method="_on_PlayerStats_ap_changed"]
 [connection signal="hp_changed" from="PlayerStats" to="UI/StatsPanel" method="_on_PlayerStats_hp_changed"]
 [connection signal="mp_changed" from="PlayerStats" to="UI/StatsPanel" method="_on_PlayerStats_mp_changed"]

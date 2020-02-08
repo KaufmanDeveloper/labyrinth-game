@@ -15,7 +15,7 @@ signal end_turn
 func set_hp(new_hp):
 	hp = new_hp
 	if hpLabel != null:
-		hpLabel.text = str(hp) + "hp"
+		hpLabel.text = str(hp)
 
 func _ready():
 	BattleUnits.Enemy = self

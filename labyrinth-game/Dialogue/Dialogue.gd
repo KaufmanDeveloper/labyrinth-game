@@ -9,6 +9,10 @@ export (AudioStream) var track
 
 signal proceed_dialogue
 
+var textTimer = 0
+var textRevealed = 0
+var dialogueIsRevealing = true
+
 func _ready():
 	var musicPlayer = MusicPlayer.instance()
 	add_child(musicPlayer)
@@ -17,8 +21,18 @@ func _ready():
 	interact()
 
 func _process(delta):
-	if Input.is_action_pressed("ui_accept"):
-		emit_signal("proceed_dialogue")
+	if dialogueIsRevealing:
+		textTimer += 1
+		if textTimer >= 7:
+			textTimer = 0
+			textRevealed += 1
+			dialogueText.set_visible_characters(textRevealed)
+		if textRevealed >= dialogueText.get_text().length():
+			dialogueIsRevealing = false
+	else:
+		if Input.is_action_pressed("ui_accept"):
+			reset_text_timers()
+			emit_signal("proceed_dialogue")
 
 func interact() -> void:
 	var dialogue : Dictionary = load_dialogue(dialogue_file_path)
@@ -40,6 +54,7 @@ func load_dialogue(file_path) -> Dictionary:
 	return dialogue
 
 func print_text(text):
+	dialogueText.set_visible_characters(textRevealed)
 	dialogueText.set_text(text)
 
 func check_actor(name):
@@ -48,3 +63,8 @@ func check_actor(name):
 		nameText.set_text("Jem")
 	else:
 		nameText.set_text(name)
+
+func reset_text_timers():
+	textTimer = 0
+	textRevealed = 0
+	dialogueIsRevealing = true

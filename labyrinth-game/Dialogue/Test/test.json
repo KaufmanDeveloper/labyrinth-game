@@ -1,5 +1,5 @@
 {
-  "001": { "name": "Player", "text": "This is a test" },
+  "001": { "name": "Player", "text": "This is a test." },
   "002": { "name": "Tara", "text": "Tests are fun!" },
   "003": {
     "name": "Player",
@@ -7,14 +7,14 @@
   },
   "004": {
     "name": "Player",
-    "text": "This is a test"
+    "text": "Same person talking."
   },
   "005": {
-    "name": "Player",
-    "text": "This is a test"
+    "name": "Tara",
+    "text": "Different person talking."
   },
   "006": {
     "name": "Player",
-    "text": "This is a test"
+    "text": "Woo!"
   }
 }

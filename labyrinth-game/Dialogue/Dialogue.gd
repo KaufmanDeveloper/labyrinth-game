@@ -4,6 +4,8 @@ onready var MusicPlayer = load("res://Music/MusicPlayer.tscn")
 onready var nameText = $UI/DialoguePanel/NamePanel/NameText
 onready var dialogueText = $UI/DialoguePanel/DialogueText
 onready var textSound = $TextSound
+onready var textInSound = $TextIn
+onready var textOutSound = $TextOut
 onready var animationPlayer = $AnimationPlayer
 
 export (String, FILE, "*.json") var dialogue_file_path : String
@@ -63,10 +65,13 @@ func check_actor(name):
 	if not isInitialRender:
 		animationPlayer.play("NamePanelOut")
 		yield(animationPlayer, "animation_finished")
+		textOutSound.play()
 		animationPlayer.play("DialogueBoxOut")
 		yield(animationPlayer, "animation_finished")
+		yield(get_tree().create_timer(0.4), "timeout")
 	
 	isInitialRender = false
+	textInSound.play()
 	animationPlayer.play("DialogueBoxIn")
 	yield(animationPlayer, "animation_finished")
 	animationPlayer.play("NamePanelIn")

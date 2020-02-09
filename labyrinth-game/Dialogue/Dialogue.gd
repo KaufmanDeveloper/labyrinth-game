@@ -42,12 +42,13 @@ func _process(delta):
 
 func interact() -> void:
 	var dialogue : Dictionary = load_dialogue(dialogue_file_path)
-	print(dialogue)
 	for index in dialogue:
 		var currentDialogue = dialogue[index]
 		check_actor(currentDialogue.name)
 		print_text(currentDialogue.text)
 		yield(self, "proceed_dialogue")
+	
+	queue_free()
 	
 func load_dialogue(file_path) -> Dictionary:
 	# Parses a JSON file and returns it as a dictionary

@@ -3,6 +3,7 @@ extends Node
 onready var MusicPlayer = load("res://Music/MusicPlayer.tscn")
 onready var nameText = $UI/DialoguePanel/NamePanel/NameText
 onready var dialogueText = $UI/DialoguePanel/DialogueText
+onready var textSound = $TextSound
 
 export (String, FILE, "*.json") var dialogue_file_path : String
 export (AudioStream) var track
@@ -25,16 +26,17 @@ func _process(delta):
 		if Input.is_action_just_pressed("ui_accept"):
 			textRevealed = dialogueText.get_text().length()
 		textTimer += 1
-		if textTimer >= 7:
+		if textTimer >= 4:
 			textTimer = 0
 			if textRevealed < dialogueText.get_text().length():
+				if dialogueText.get_text().substr(textRevealed, 1) != " ":
+					textSound.play(0)
 				textRevealed += 1
 		if textRevealed >= dialogueText.get_text().length():
 			dialogueIsRevealing = false
 		dialogueText.set_visible_characters(textRevealed)
 	else:
 		if Input.is_action_just_pressed("ui_accept") and not dialogueIsRevealing:
-			print('ran the else logic')
 			reset_text_timers()
 			emit_signal("proceed_dialogue")
 

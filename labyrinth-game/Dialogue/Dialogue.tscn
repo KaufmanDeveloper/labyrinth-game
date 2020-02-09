@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Images/Dungeon.png" type="Texture" id=1]
 [ext_resource path="res://Images/Actors/Tara.png" type="Texture" id=2]
@@ -7,6 +7,71 @@
 [ext_resource path="res://Sound Effects/TextSound.wav" type="AudioStream" id=5]
 
 [sub_resource type="StyleBoxEmpty" id=1]
+
+[sub_resource type="Animation" id=2]
+resource_name = "DialogueBoxIn"
+length = 0.2
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("UI/DialoguePanel:rect_scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1e-05, 1e-05 ), Vector2( 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "DialogueBoxOut"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/path = NodePath("UI/DialoguePanel:rect_scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1e-05, 1e-05 ) ]
+}
+
+[sub_resource type="Animation" id=5]
+resource_name = "NamePanelIn"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("UI/DialoguePanel/NamePanel:rect_scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1e-05, 1e-05 ), Vector2( 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "NamePanelOut"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("UI/DialoguePanel/NamePanel:rect_scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1e-05, 1e-05 ) ]
+}
 
 [node name="Dialogue" type="Node"]
 script = ExtResource( 3 )
@@ -30,19 +95,21 @@ __meta__ = {
 }
 
 [node name="UI" type="Control" parent="."]
-margin_right = 40.0
-margin_bottom = 40.0
+anchor_right = 1.0
+anchor_bottom = 1.0
 __meta__ = {
+"_edit_lock_": true,
 "_edit_use_anchors_": false
 }
 
 [node name="DialoguePanel" type="Panel" parent="UI"]
+anchor_right = 0.633
 margin_left = 29.0
 margin_top = 59.0
-margin_right = 119.0
+margin_right = 17.72
 margin_bottom = 90.0
+rect_pivot_offset = Vector2( 44, 17 )
 __meta__ = {
-"_edit_lock_": true,
 "_edit_use_anchors_": false
 }
 
@@ -63,8 +130,9 @@ __meta__ = {
 margin_top = -10.0
 margin_right = 41.0
 margin_bottom = 1.0
+rect_min_size = Vector2( 1, 1 )
+rect_pivot_offset = Vector2( 22, 5 )
 __meta__ = {
-"_edit_lock_": true,
 "_edit_use_anchors_": false
 }
 
@@ -86,3 +154,9 @@ __meta__ = {
 stream = ExtResource( 5 )
 volume_db = -9.244
 pitch_scale = 1.8
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/DialogueBoxIn = SubResource( 2 )
+anims/DialogueBoxOut = SubResource( 3 )
+anims/NamePanelIn = SubResource( 5 )
+anims/NamePanelOut = SubResource( 4 )

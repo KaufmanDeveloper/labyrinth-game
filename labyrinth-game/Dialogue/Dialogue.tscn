@@ -28,14 +28,14 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="Control" type="Control" parent="."]
+[node name="UI" type="Control" parent="."]
 margin_right = 40.0
 margin_bottom = 40.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="DialoguePanel" type="Panel" parent="Control"]
+[node name="DialoguePanel" type="Panel" parent="UI"]
 margin_left = 29.0
 margin_top = 59.0
 margin_right = 119.0
@@ -45,7 +45,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="DialogueText" type="RichTextLabel" parent="Control/DialoguePanel"]
+[node name="DialogueText" type="RichTextLabel" parent="UI/DialoguePanel"]
 margin_left = 3.0
 margin_top = 2.0
 margin_right = 87.0
@@ -58,7 +58,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Panel" type="Panel" parent="Control/DialoguePanel"]
+[node name="NamePanel" type="Panel" parent="UI/DialoguePanel"]
 margin_top = -10.0
 margin_right = 41.0
 margin_bottom = 1.0
@@ -67,11 +67,11 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Name" type="RichTextLabel" parent="Control/DialoguePanel/Panel"]
+[node name="NameText" type="RichTextLabel" parent="UI/DialoguePanel/NamePanel"]
 margin_left = 3.0
-margin_top = 2.0
+margin_top = 3.0
 margin_right = 38.0
-margin_bottom = 11.0
+margin_bottom = 12.0
 custom_styles/normal = SubResource( 1 )
 custom_colors/default_color = Color( 1, 0.854902, 0.368627, 1 )
 custom_constants/line_separation = 3

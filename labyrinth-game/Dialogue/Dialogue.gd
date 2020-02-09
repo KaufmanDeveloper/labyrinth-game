@@ -20,17 +20,21 @@ func _ready():
 	musicPlayer.play(0)
 	interact()
 
-func _process(delta):
+func _process(delta):	
 	if dialogueIsRevealing:
+		if Input.is_action_just_pressed("ui_accept"):
+			textRevealed = dialogueText.get_text().length()
 		textTimer += 1
 		if textTimer >= 7:
 			textTimer = 0
-			textRevealed += 1
-			dialogueText.set_visible_characters(textRevealed)
+			if textRevealed < dialogueText.get_text().length():
+				textRevealed += 1
 		if textRevealed >= dialogueText.get_text().length():
 			dialogueIsRevealing = false
+		dialogueText.set_visible_characters(textRevealed)
 	else:
-		if Input.is_action_pressed("ui_accept"):
+		if Input.is_action_just_pressed("ui_accept") and not dialogueIsRevealing:
+			print('ran the else logic')
 			reset_text_timers()
 			emit_signal("proceed_dialogue")
 

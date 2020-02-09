@@ -7,12 +7,18 @@ onready var dialogueText = $UI/DialoguePanel/DialogueText
 export (String, FILE, "*.json") var dialogue_file_path : String
 export (AudioStream) var track
 
+signal proceed_dialogue
+
 func _ready():
 	var musicPlayer = MusicPlayer.instance()
 	add_child(musicPlayer)
 	musicPlayer.set_stream(track)
 	musicPlayer.play(0)
 	interact()
+
+func _process(delta):
+	if Input.is_action_pressed("ui_accept"):
+		emit_signal("proceed_dialogue")
 
 func interact() -> void:
 	var dialogue : Dictionary = load_dialogue(dialogue_file_path)
@@ -21,6 +27,7 @@ func interact() -> void:
 		var currentDialogue = dialogue[index]
 		check_actor(currentDialogue.name)
 		print_text(currentDialogue.text)
+		yield(self, "proceed_dialogue")
 	
 func load_dialogue(file_path) -> Dictionary:
 	# Parses a JSON file and returns it as a dictionary
@@ -37,4 +44,7 @@ func print_text(text):
 
 func check_actor(name):
 	# Will need to take array of actors and compare them to name field
-	nameText.set_text(name)
+	if name == "Player":
+		nameText.set_text("Jem")
+	else:
+		nameText.set_text(name)

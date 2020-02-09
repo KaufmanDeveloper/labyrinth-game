@@ -47,7 +47,7 @@ tracks/0/keys = {
 resource_name = "NamePanelIn"
 length = 0.1
 tracks/0/type = "value"
-tracks/0/path = NodePath("UI/DialoguePanel/NamePanel:rect_scale")
+tracks/0/path = NodePath("UI/DialoguePanel/NamePanel:rect_size")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -56,13 +56,25 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.1 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 1e-05, 1e-05 ), Vector2( 1, 1 ) ]
+"values": [ Vector2( 41, 1 ), Vector2( 41, 11 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("UI/DialoguePanel/NamePanel:rect_position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, -10 ) ]
 }
 
 [sub_resource type="Animation" id=5]
 length = 0.1
 tracks/0/type = "value"
-tracks/0/path = NodePath("UI/DialoguePanel/NamePanel:rect_scale")
+tracks/0/path = NodePath("UI/DialoguePanel/NamePanel:rect_size")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -71,7 +83,19 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.1 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 1, 1 ), Vector2( 1e-05, 1e-05 ) ]
+"values": [ Vector2( 41, 11 ), Vector2( 41, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("UI/DialoguePanel/NamePanel:rect_position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, -10 ), Vector2( 0, 0 ) ]
 }
 
 [node name="Dialogue" type="Node"]
@@ -109,6 +133,7 @@ margin_left = 29.0
 margin_top = 59.0
 margin_right = 17.72
 margin_bottom = 90.0
+rect_scale = Vector2( 0.500005, 0.500005 )
 rect_pivot_offset = Vector2( 44, 17 )
 __meta__ = {
 "_edit_use_anchors_": false

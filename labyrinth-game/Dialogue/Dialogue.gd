@@ -1,12 +1,15 @@
 extends Node
 
 onready var MusicPlayer = load("res://Music/MusicPlayer.tscn")
+onready var actors = []
+
 onready var nameText = $UI/DialoguePanel/NamePanel/NameText
 onready var dialogueText = $UI/DialoguePanel/DialogueText
 onready var textSound = $TextSound
 onready var textInSound = $TextIn
 onready var textOutSound = $TextOut
 onready var animationPlayer = $AnimationPlayer
+onready var currentActor = $CurrentActor
 
 export (String, FILE, "*.json") var dialogue_file_path : String
 export (AudioStream) var track
@@ -33,6 +36,8 @@ func _process(delta):
 
 func interact() -> void:
 	var dialogue : Dictionary = load_dialogue(dialogue_file_path)
+	load_actors(dialogue)
+	
 	for index in dialogue:
 		var currentDialogue = dialogue[index]
 		check_actor(currentDialogue.name)
@@ -108,3 +113,15 @@ func type_text():
 		if Input.is_action_just_pressed("ui_accept") and not dialogueIsRevealing:
 			reset_text_timers()
 			emit_signal("proceed_dialogue")
+
+func load_actors(dialogue):
+	var names = []
+	for index in dialogue:
+		var currentDialogue = dialogue[index]
+		if(currentDialogue.name != "Player" and names.find(currentDialogue.name) == -1):
+			names.push_back(currentDialogue.name)
+			var CurrentActor = load("res://Actors/" + currentDialogue.name + ".tscn")
+			var currentActor = CurrentActor.instance()
+			actors.push_back(currentActor)
+	
+	currentActor.set_texture(actors[0].get_node("ActorSprite").get_texture()) # Not getting actorSprite here

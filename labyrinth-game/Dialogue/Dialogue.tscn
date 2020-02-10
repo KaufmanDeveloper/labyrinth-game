@@ -1,7 +1,7 @@
 [gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Images/Dungeon.png" type="Texture" id=1]
-[ext_resource path="res://Images/Actors/Tara.png" type="Texture" id=2]
+[ext_resource path="res://Actors/Test.png" type="Texture" id=2]
 [ext_resource path="res://Dialogue/Dialogue.gd" type="Script" id=3]
 [ext_resource path="res://Music/Exported/Maplewood Lake.ogg" type="AudioStream" id=4]
 [ext_resource path="res://Sound Effects/TextSound.wav" type="AudioStream" id=5]
@@ -110,7 +110,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="Tara" type="Sprite" parent="."]
+[node name="CurrentActor" type="Sprite" parent="."]
 position = Vector2( 72, 31 )
 scale = Vector2( 2, 2 )
 texture = ExtResource( 2 )
@@ -129,11 +129,11 @@ __meta__ = {
 
 [node name="DialoguePanel" type="Panel" parent="UI"]
 anchor_right = 0.633
-margin_left = 29.0
+margin_left = 35.0
 margin_top = 59.0
-margin_right = 17.72
+margin_right = 24.0
 margin_bottom = 90.0
-rect_scale = Vector2( 0.500005, 0.500005 )
+rect_scale = Vector2( 1e-05, 1e-05 )
 rect_pivot_offset = Vector2( 44, 17 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -159,6 +159,7 @@ margin_bottom = 1.0
 rect_min_size = Vector2( 1, 1 )
 rect_pivot_offset = Vector2( 22, 5 )
 __meta__ = {
+"_edit_lock_": true,
 "_edit_use_anchors_": false
 }
 

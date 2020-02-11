@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Images/Dungeon.png" type="Texture" id=1]
 [ext_resource path="res://Actors/Test.png" type="Texture" id=2]
@@ -98,6 +98,23 @@ tracks/1/keys = {
 "values": [ Vector2( 0, -10 ), Vector2( 0, 0 ) ]
 }
 
+[sub_resource type="Animation" id=6]
+resource_name = "Talking"
+length = 0.5
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("CurrentActor:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 0, 1 ]
+}
+
 [node name="Dialogue" type="Node"]
 script = ExtResource( 3 )
 dialogue_file_path = "res://Dialogue/Test/test.json"
@@ -187,6 +204,7 @@ anims/DialogueBoxIn = SubResource( 2 )
 anims/DialogueBoxOut = SubResource( 3 )
 anims/NamePanelIn = SubResource( 4 )
 anims/NamePanelOut = SubResource( 5 )
+anims/Talking = SubResource( 6 )
 
 [node name="TextIn" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 7 )

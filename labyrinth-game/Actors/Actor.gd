@@ -9,7 +9,8 @@ var actor = actorSprite
 signal actor_loaded
 
 func _process(delta):
-	pass
+	if talking:
+		animationPlayer.play("Talking")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

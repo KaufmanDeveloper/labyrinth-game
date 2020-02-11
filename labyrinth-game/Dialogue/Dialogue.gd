@@ -21,6 +21,7 @@ var textRevealed = 0
 var dialogueIsRevealing = true
 var nameIsChecked = false
 var isInitialRender = true
+var currentActorName = ""
 
 func _ready():
 	var musicPlayer = MusicPlayer.instance()
@@ -64,6 +65,8 @@ func check_actor(name):
 	if nameText.get_text() == "Jem" and name == "Player" or (nameText.get_text() == name):
 		return
 	
+	currentActorName = name
+	
 	nameText.set_text("")
 	nameIsChecked = false
 	
@@ -97,6 +100,11 @@ func reset_text_timers():
 
 func type_text():
 	if dialogueIsRevealing:
+		if currentActor and (not animationPlayer.current_animation == "Talking") and currentActorName != "Player":
+			animationPlayer.play("Talking")
+		elif animationPlayer.current_animation == "Talking" and currentActorName == "Player":
+			animationPlayer.stop()
+		
 		if Input.is_action_just_pressed("ui_accept"):
 			textRevealed = dialogueText.get_text().length()
 		textTimer += 1
@@ -110,6 +118,10 @@ func type_text():
 			dialogueIsRevealing = false
 		dialogueText.set_visible_characters(textRevealed)
 	else:
+		if animationPlayer.current_animation == "Talking":
+			animationPlayer.stop()
+			currentActor.set_frame(0)
+		
 		if Input.is_action_just_pressed("ui_accept") and not dialogueIsRevealing:
 			reset_text_timers()
 			emit_signal("proceed_dialogue")

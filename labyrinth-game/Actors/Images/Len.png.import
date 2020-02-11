@@ -1,0 +1,34 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/Len.png-38da26315c95b9a4fad6a8933939d3a3.stex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://Actors/Images/Len.png"
+dest_files=[ "res://.import/Len.png-38da26315c95b9a4fad6a8933939d3a3.stex" ]
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/bptc_ldr=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=false
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+process/invert_color=false
+stream=false
+size_limit=0
+detect_3d=false
+svg/scale=1.0

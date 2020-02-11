@@ -65,7 +65,9 @@ func check_actor(name):
 	if nameText.get_text() == "Jem" and name == "Player" or (nameText.get_text() == name):
 		return
 	
-	currentActorName = name
+	if currentActorName != name:
+		currentActorName = name
+		change_actor(name)
 	
 	nameText.set_text("")
 	nameIsChecked = false
@@ -136,4 +138,11 @@ func load_actors(dialogue):
 			var currentActor = CurrentActor.instance()
 			actors.push_back(currentActor)
 	
-	currentActor.set_texture(actors[0].get_node("ActorSprite").get_texture()) # Not getting actorSprite here
+	currentActor.set_texture(actors[0].get_node("ActorSprite").get_texture())
+
+func change_actor(name):
+	for actor in actors:
+		print(actor.actorName)
+		if name == actor.actorName:
+			currentActor.set_texture(actor.get_node("ActorSprite").get_texture())
+			return

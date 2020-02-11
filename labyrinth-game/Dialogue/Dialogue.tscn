@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://Images/Dungeon.png" type="Texture" id=1]
 [ext_resource path="res://Actors/Test.png" type="Texture" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://Sound Effects/TextSound.wav" type="AudioStream" id=5]
 [ext_resource path="res://Sound Effects/TxtOut.wav" type="AudioStream" id=6]
 [ext_resource path="res://Sound Effects/TxtIn.wav" type="AudioStream" id=7]
+[ext_resource path="res://Dialogue/CurrentActor.gd" type="Script" id=8]
 
 [sub_resource type="StyleBoxEmpty" id=1]
 
@@ -115,6 +116,40 @@ tracks/0/keys = {
 "values": [ 0, 1 ]
 }
 
+[sub_resource type="Animation" id=7]
+resource_name = "FadeInActor"
+length = 0.2
+step = 0.2
+tracks/0/type = "value"
+tracks/0/path = NodePath("CurrentActor:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=8]
+resource_name = "FadeOutActor"
+length = 0.2
+step = 0.2
+tracks/0/type = "value"
+tracks/0/path = NodePath("CurrentActor:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+
 [node name="Dialogue" type="Node"]
 script = ExtResource( 3 )
 dialogue_file_path = "res://Dialogue/Test/test.json"
@@ -132,6 +167,7 @@ position = Vector2( 72, 31 )
 scale = Vector2( 2, 2 )
 texture = ExtResource( 2 )
 hframes = 2
+script = ExtResource( 8 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -213,3 +249,7 @@ volume_db = -8.0
 [node name="TextOut" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 6 )
 volume_db = -8.0
+
+[node name="SpriteFadesAnimationPlayer" type="AnimationPlayer" parent="."]
+anims/FadeInActor = SubResource( 7 )
+anims/FadeOutActor = SubResource( 8 )

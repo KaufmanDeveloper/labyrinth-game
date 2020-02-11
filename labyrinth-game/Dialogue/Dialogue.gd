@@ -9,6 +9,7 @@ onready var textSound = $TextSound
 onready var textInSound = $TextIn
 onready var textOutSound = $TextOut
 onready var animationPlayer = $AnimationPlayer
+onready var spriteFadesAnimationPlayer = $SpriteFadesAnimationPlayer
 onready var currentActor = $CurrentActor
 
 export (String, FILE, "*.json") var dialogue_file_path : String
@@ -67,7 +68,8 @@ func check_actor(name):
 	
 	if currentActorName != name:
 		currentActorName = name
-		change_actor(name)
+		if name != "Player" and name != currentActor.get_actorName():
+			change_actor(name)
 	
 	nameText.set_text("")
 	nameIsChecked = false
@@ -138,11 +140,18 @@ func load_actors(dialogue):
 			var currentActor = CurrentActor.instance()
 			actors.push_back(currentActor)
 	
+	# Set first actor to talk as displayed actor
 	currentActor.set_texture(actors[0].get_node("ActorSprite").get_texture())
+	currentActor.set_actorName(actors[0].actorName)
 
 func change_actor(name):
 	for actor in actors:
-		print(actor.actorName)
 		if name == actor.actorName:
+			spriteFadesAnimationPlayer.play("FadeOutActor")
+			yield(spriteFadesAnimationPlayer, "animation_finished")
 			currentActor.set_texture(actor.get_node("ActorSprite").get_texture())
+			yield(get_tree().create_timer(0.4), "timeout")
+			spriteFadesAnimationPlayer.play("FadeInActor")
+			yield(spriteFadesAnimationPlayer, "animation_finished")
+			currentActor.set_actorName(name)
 			return

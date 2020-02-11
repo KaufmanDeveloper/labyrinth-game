@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/TxtIn.wav-17c68f92718f22a103528b87daa663b1.sample"
+
+[deps]
+
+source_file="res://Sound Effects/TxtIn.wav"
+dest_files=[ "res://.import/TxtIn.wav-17c68f92718f22a103528b87daa663b1.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

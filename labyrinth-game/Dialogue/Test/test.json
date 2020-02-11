@@ -1,0 +1,20 @@
+{
+  "1": { "name": "Player", "text": "This is a test." },
+  "2": { "name": "Tara", "text": "Tests are fun!" },
+  "3": {
+    "name": "Grant",
+    "text": "I can talk a lot. I can talk a lot. I can talk a lot."
+  },
+  "4": {
+    "name": "Player",
+    "text": "Same person talking."
+  },
+  "5": {
+    "name": "Tara",
+    "text": "Different person talking."
+  },
+  "6": {
+    "name": "Player",
+    "text": "Woo!"
+  }
+}

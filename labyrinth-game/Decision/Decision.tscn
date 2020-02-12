@@ -9,6 +9,8 @@
 script = ExtResource( 1 )
 backgroundTexture = ExtResource( 4 )
 currentActorTexture = ExtResource( 5 )
+firstChoice = "Go Left"
+secondChoice = "Go Right"
 
 [node name="Background" type="Sprite" parent="."]
 position = Vector2( 80, 45 )
@@ -22,6 +24,52 @@ position = Vector2( 72, 31 )
 scale = Vector2( 2, 2 )
 texture = ExtResource( 2 )
 hframes = 2
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="UI" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="CenterContainer" parent="UI"]
+margin_top = 60.0
+margin_right = 160.0
+margin_bottom = 90.0
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="GridContainer" type="GridContainer" parent="UI/Panel"]
+margin_left = 22.0
+margin_top = 8.0
+margin_right = 138.0
+margin_bottom = 21.0
+custom_constants/hseparation = 15
+columns = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FirstChoiceButton" type="Button" parent="UI/Panel/GridContainer"]
+margin_right = 46.0
+margin_bottom = 13.0
+rect_min_size = Vector2( 32, 13 )
+text = "First Choice"
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="SecondChoiceButton" type="Button" parent="UI/Panel/GridContainer"]
+margin_left = 61.0
+margin_right = 116.0
+margin_bottom = 13.0
+text = "Second Choice"
 __meta__ = {
 "_edit_lock_": true
 }

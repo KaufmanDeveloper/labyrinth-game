@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Ok.wav-4ca7d114898327e7a7106ff2d54d0aaf.sample"
+
+[deps]
+
+source_file="res://Sound Effects/Ok.wav"
+dest_files=[ "res://.import/Ok.wav-4ca7d114898327e7a7106ff2d54d0aaf.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

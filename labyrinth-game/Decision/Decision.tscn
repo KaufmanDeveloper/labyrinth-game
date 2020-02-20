@@ -1,0 +1,69 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Decision/Decision.gd" type="Script" id=1]
+[ext_resource path="res://Actors/Test.png" type="Texture" id=2]
+[ext_resource path="res://Utilities/CustomButton.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Images/Dungeon.png" type="Texture" id=4]
+[ext_resource path="res://Actors/Tara.png" type="Texture" id=5]
+
+[node name="Decision" type="Node"]
+script = ExtResource( 1 )
+backgroundTexture = ExtResource( 4 )
+currentActorTexture = ExtResource( 5 )
+firstChoice = "Go Left"
+secondChoice = "Go Right"
+
+[node name="Background" type="Sprite" parent="."]
+position = Vector2( 80, 45 )
+texture = ExtResource( 4 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CurrentActor" type="Sprite" parent="."]
+position = Vector2( 72, 31 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 2 )
+hframes = 2
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="UI" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="CenterContainer" parent="UI"]
+margin_top = 60.0
+margin_right = 160.0
+margin_bottom = 90.0
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="GridContainer" type="GridContainer" parent="UI/Panel"]
+margin_left = 22.0
+margin_top = 8.0
+margin_right = 138.0
+margin_bottom = 21.0
+custom_constants/hseparation = 15
+columns = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FirstChoiceButton" parent="UI/Panel/GridContainer" instance=ExtResource( 3 )]
+margin_right = 46.0
+text = "First Choice"
+
+[node name="SecondChoiceButton" parent="UI/Panel/GridContainer" instance=ExtResource( 3 )]
+margin_left = 61.0
+margin_right = 116.0
+text = "Second Choice"
+[connection signal="pressed" from="UI/Panel/GridContainer/FirstChoiceButton" to="." method="_on_FirstChoiceButton_pressed"]
+[connection signal="pressed" from="UI/Panel/GridContainer/SecondChoiceButton" to="." method="_on_SecondChoiceButton_pressed"]

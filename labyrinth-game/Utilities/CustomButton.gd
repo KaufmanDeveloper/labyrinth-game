@@ -6,11 +6,11 @@ onready var pressedSound = $PressedSound
 
 func _ready():
 	self.set_pivot_offset(self.get_size() / 2)
-	print(self.get_pivot_offset())
 
 func _on_CustomButton_pressed():
 	animationPlayer.play("Pressed")
 	pressedSound.play()
+	yield(animationPlayer, "animation_finished")
 
 
 func _on_CustomButton_mouse_entered():

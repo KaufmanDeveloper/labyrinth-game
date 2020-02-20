@@ -65,3 +65,5 @@ text = "First Choice"
 margin_left = 61.0
 margin_right = 116.0
 text = "Second Choice"
+[connection signal="pressed" from="UI/Panel/GridContainer/FirstChoiceButton" to="." method="_on_FirstChoiceButton_pressed"]
+[connection signal="pressed" from="UI/Panel/GridContainer/SecondChoiceButton" to="." method="_on_SecondChoiceButton_pressed"]

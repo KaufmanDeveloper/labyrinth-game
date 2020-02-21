@@ -6,4 +6,8 @@ const DecisionTree = preload("res://Globals/DecisionTree.tres")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	for element in elements:
+		var elementInstance = element.instance()
+		add_child(elementInstance)
+		yield(elementInstance, "finished")
+		remove_child(elementInstance)

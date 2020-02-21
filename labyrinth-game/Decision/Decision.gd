@@ -11,6 +11,7 @@ export (String) var firstChoice : String
 export (String) var secondChoice : String
 
 var choiceMade setget set_choiceMade # Accessed by parent to understand choice made
+signal finished
 
 func _ready():
 	background.set_texture(backgroundTexture)
@@ -21,9 +22,11 @@ func _ready():
 
 func _on_FirstChoiceButton_pressed():
 	choiceMade = firstChoiceButton.get_text()
+	emit_signal("finished")
 
 func _on_SecondChoiceButton_pressed():
 	choiceMade = secondChoiceButton.get_text()
+	emit_signal("finished")
 
 func set_choiceMade(choice):
 	choiceMade = choice

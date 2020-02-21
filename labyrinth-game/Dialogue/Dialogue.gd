@@ -16,6 +16,7 @@ export (String, FILE, "*.json") var dialogue_file_path : String
 export (AudioStream) var track
 
 signal proceed_dialogue
+signal finished
 
 var textTimer = 0
 var textRevealed = 0
@@ -46,7 +47,7 @@ func interact() -> void:
 		print_text(currentDialogue.text)
 		yield(self, "proceed_dialogue")
 	
-	queue_free()
+	emit_signal("finished")
 	
 func load_dialogue(file_path) -> Dictionary:
 	# Parses a JSON file and returns it as a dictionary

@@ -15,6 +15,8 @@ onready var currentActor = $CurrentActor
 export (String, FILE, "*.json") var dialogue_file_path : String
 export (AudioStream) var track
 
+var type = "dialogue"
+
 signal proceed_dialogue
 signal finished
 

@@ -5,4 +5,4 @@
 [ext_resource path="res://Decision/Decision.tscn" type="PackedScene" id=3]
 
 [node name="Chapter" instance=ExtResource( 1 )]
-elements = [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 2 ) ]
+elements = [ ExtResource( 2 ), ExtResource( 3 ) ]

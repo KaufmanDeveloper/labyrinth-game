@@ -23,11 +23,19 @@ func _ready():
 			fadesAnimationPlayer = fades.get_node("AnimationPlayer")
 			fadesAnimationPlayer.play("FadeIn")
 			yield(fadesAnimationPlayer, "animation_finished")
+			remove_child(fades)
 		
 		
 		yield(elementInstance, "finished")
 		
+		if element == elements[elements.size() -1]: # Fade if last element
+			var fades = Fades.instance()
+			add_child(fades)
+			fadesAnimationPlayer = fades.get_node("AnimationPlayer")
+			fadesAnimationPlayer.play("FadeOut")
+			yield(fadesAnimationPlayer, "animation_finished")
+		
+		
 		remove_child(elementInstance)
 	
-#	fadesAnimationPlayer.play("FadeOut")
-#	yield(fadesAnimationPlayer, "animation_finished")
+	

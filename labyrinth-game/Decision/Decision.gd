@@ -27,6 +27,7 @@ func _on_FirstChoiceButton_pressed():
 	choiceMadeSound.play()
 	yield(firstChoiceButton, "click_finished")
 	hide_buttons()
+	yield(get_tree().create_timer(1.0), "timeout")
 	emit_signal("finished")
 
 func _on_SecondChoiceButton_pressed():
@@ -34,6 +35,7 @@ func _on_SecondChoiceButton_pressed():
 	choiceMadeSound.play()
 	yield(secondChoiceButton, "click_finished")
 	hide_buttons()
+	yield(get_tree().create_timer(1.0), "timeout")
 	emit_signal("finished")
 
 func set_choiceMade(choice):

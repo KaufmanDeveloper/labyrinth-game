@@ -1,6 +1,5 @@
 extends Node
 
-onready var MusicPlayer = load("res://Music/MusicPlayer.tscn")
 onready var actors = []
 
 onready var nameText = $UI/DialoguePanel/NamePanel/NameText
@@ -13,9 +12,12 @@ onready var spriteFadesAnimationPlayer = $SpriteFadesAnimationPlayer
 onready var currentActor = $CurrentActor
 
 export (String, FILE, "*.json") var dialogue_file_path : String
-export (AudioStream) var track
+
+
+var type = "dialogue"
 
 signal proceed_dialogue
+signal finished
 
 var textTimer = 0
 var textRevealed = 0
@@ -25,10 +27,6 @@ var isInitialRender = true
 var currentActorName = ""
 
 func _ready():
-	var musicPlayer = MusicPlayer.instance()
-	add_child(musicPlayer)
-	musicPlayer.set_stream(track)
-	musicPlayer.play(0)
 	interact()
 
 func _process(delta):
@@ -46,7 +44,7 @@ func interact() -> void:
 		print_text(currentDialogue.text)
 		yield(self, "proceed_dialogue")
 	
-	queue_free()
+	emit_signal("finished")
 	
 func load_dialogue(file_path) -> Dictionary:
 	# Parses a JSON file and returns it as a dictionary

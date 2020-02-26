@@ -13,9 +13,15 @@ _global_script_classes=[ {
 "class": "BattleUnits",
 "language": "GDScript",
 "path": "res://BattleUnits.gd"
+}, {
+"base": "Resource",
+"class": "DecisionTree",
+"language": "GDScript",
+"path": "res://Globals/DecisionTree.gd"
 } ]
 _global_script_class_icons={
-"BattleUnits": ""
+"BattleUnits": "",
+"DecisionTree": ""
 }
 
 [application]

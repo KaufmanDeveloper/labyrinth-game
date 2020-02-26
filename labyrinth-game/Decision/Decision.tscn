@@ -4,7 +4,7 @@
 [ext_resource path="res://Actors/Test.png" type="Texture" id=2]
 [ext_resource path="res://Utilities/CustomButton.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Images/Dungeon.png" type="Texture" id=4]
-[ext_resource path="res://Actors/Tara.png" type="Texture" id=5]
+[ext_resource path="res://Actors/Images/Tara.png" type="Texture" id=5]
 [ext_resource path="res://Sound Effects/BoostMagic.wav" type="AudioStream" id=6]
 
 [node name="Decision" type="Node"]

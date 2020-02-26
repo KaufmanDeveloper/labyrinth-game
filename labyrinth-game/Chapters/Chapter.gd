@@ -10,6 +10,8 @@ const Fades = preload("res://Utilities/Transitions/Fades.tscn")
 
 var fadesAnimationPlayer = null
 
+signal finished
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	
@@ -38,4 +40,4 @@ func _ready():
 		
 		remove_child(elementInstance)
 	
-	
+	emit_signal("finished")

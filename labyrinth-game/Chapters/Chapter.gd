@@ -4,7 +4,9 @@ onready var animationPlayer = $AnimationPlayer
 onready var colorRect = $ColorRect
 
 export(Array, PackedScene) var elements = []
+export (AudioStream) var track
 
+onready var MusicPlayer = load("res://Music/MusicPlayer.tscn")
 const DecisionTree = preload("res://Globals/DecisionTree.tres")
 const Fades = preload("res://Utilities/Transitions/Fades.tscn")
 
@@ -14,6 +16,10 @@ signal finished
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	var musicPlayer = MusicPlayer.instance()
+	add_child(musicPlayer)
+	musicPlayer.set_stream(track)
+	musicPlayer.play(0)
 	
 	for element in elements:
 		var elementInstance = element.instance()

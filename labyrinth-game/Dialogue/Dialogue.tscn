@@ -56,7 +56,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.1 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 41, 1 ), Vector2( 41, 32 ) ]
+"values": [ Vector2( 0, 0 ), Vector2( 160, 54 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("UI/DialoguePanel/NamePanel:rect_position")
@@ -68,7 +68,7 @@ tracks/1/keys = {
 "times": PoolRealArray( 0, 0.1 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 0, 0 ), Vector2( 0, -32 ) ]
+"values": [ Vector2( 0, 0 ), Vector2( 0, -54 ) ]
 }
 
 [sub_resource type="Animation" id=5]
@@ -83,7 +83,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.1 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 41, 11 ), Vector2( 41, 1 ) ]
+"values": [ Vector2( 160, 54 ), Vector2( 41, 1 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("UI/DialoguePanel/NamePanel:rect_position")
@@ -95,7 +95,7 @@ tracks/1/keys = {
 "times": PoolRealArray( 0, 0.1 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 0, -10 ), Vector2( 0, 0 ) ]
+"values": [ Vector2( 0, -54 ), Vector2( 0, 0 ) ]
 }
 
 [sub_resource type="Animation" id=6]
@@ -159,6 +159,7 @@ scale = Vector2( 2, 2 )
 texture = ExtResource( 1 )
 
 [node name="CurrentActor" type="Sprite" parent="."]
+modulate = Color( 1, 1, 1, 0 )
 position = Vector2( 138, 62 )
 scale = Vector2( 2, 2 )
 texture = ExtResource( 2 )
@@ -183,13 +184,14 @@ margin_right = 234.88
 margin_bottom = 360.0
 rect_pivot_offset = Vector2( 319, 58 )
 __meta__ = {
+"_edit_lock_": true,
 "_edit_use_anchors_": false
 }
 
 [node name="DialogueText" type="RichTextLabel" parent="UI/DialoguePanel"]
-margin_left = 3.0
-margin_top = 2.0
-margin_right = 637.0
+margin_left = 7.0
+margin_top = 8.0
+margin_right = 633.0
 margin_bottom = 120.0
 custom_styles/normal = SubResource( 1 )
 custom_constants/line_separation = 3
@@ -200,8 +202,8 @@ __meta__ = {
 }
 
 [node name="NamePanel" type="Panel" parent="UI/DialoguePanel"]
-margin_top = -32.0
-margin_right = 91.0
+margin_top = -54.0
+margin_right = 160.0
 rect_min_size = Vector2( 1, 1 )
 rect_pivot_offset = Vector2( 22, 5 )
 __meta__ = {
@@ -210,16 +212,15 @@ __meta__ = {
 }
 
 [node name="NameText" type="RichTextLabel" parent="UI/DialoguePanel/NamePanel"]
-margin_left = 5.0
-margin_top = 12.0
-margin_right = 83.0
-margin_bottom = 27.0
+margin_left = 7.0
+margin_top = 11.0
+margin_right = 216.0
+margin_bottom = 47.0
 custom_styles/normal = SubResource( 1 )
 custom_colors/default_color = Color( 1, 0.854902, 0.368627, 1 )
 custom_constants/line_separation = 3
 text = "Name"
 __meta__ = {
-"_edit_lock_": true,
 "_edit_use_anchors_": false
 }
 

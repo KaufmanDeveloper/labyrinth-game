@@ -221,6 +221,7 @@ custom_colors/default_color = Color( 1, 0.854902, 0.368627, 1 )
 custom_constants/line_separation = 3
 text = "Name"
 __meta__ = {
+"_edit_lock_": true,
 "_edit_use_anchors_": false
 }
 

@@ -19,7 +19,7 @@ scale = Vector2( 2, 2 )
 texture = ExtResource( 4 )
 
 [node name="CurrentActor" type="Sprite" parent="."]
-position = Vector2( 295, 125 )
+position = Vector2( 273, 125 )
 scale = Vector2( 4, 4 )
 texture = ExtResource( 5 )
 hframes = 2

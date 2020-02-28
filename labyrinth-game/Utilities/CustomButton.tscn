@@ -24,7 +24,7 @@ tracks/0/keys = {
 [node name="CustomButton" type="Button"]
 margin_right = 32.0
 margin_bottom = 13.0
-rect_min_size = Vector2( 32, 13 )
+rect_min_size = Vector2( 128, 52 )
 rect_pivot_offset = Vector2( 16, 6 )
 text = "Test"
 script = ExtResource( 1 )

@@ -43,9 +43,9 @@ __meta__ = {
 
 [node name="GridContainer" type="GridContainer" parent="UI/Panel"]
 margin_left = 25.0
-margin_top = 6.0
+margin_top = 4.0
 margin_right = 575.0
-margin_bottom = 54.0
+margin_bottom = 56.0
 custom_constants/hseparation = 68
 columns = 2
 __meta__ = {
@@ -55,13 +55,13 @@ __meta__ = {
 
 [node name="FirstChoiceButton" parent="UI/Panel/GridContainer" instance=ExtResource( 3 )]
 margin_right = 232.0
-margin_bottom = 48.0
+margin_bottom = 52.0
 text = "First Choice"
 
 [node name="SecondChoiceButton" parent="UI/Panel/GridContainer" instance=ExtResource( 3 )]
 margin_left = 300.0
 margin_right = 550.0
-margin_bottom = 48.0
+margin_bottom = 52.0
 text = "Second Choice"
 
 [node name="ChoiceMadeSound" type="AudioStreamPlayer" parent="."]

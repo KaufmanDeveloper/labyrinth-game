@@ -49,7 +49,7 @@ __meta__ = {
 position = Vector2( 77, 29 )
 
 [node name="Enemy" parent="EnemyPosition" instance=ExtResource( 9 )]
-position = Vector2( 228, 75 )
+position = Vector2( 226, 108 )
 
 [node name="Mobile RPG Mockup" type="Sprite" parent="."]
 visible = false
@@ -91,22 +91,20 @@ text = "Enter Next Room"
 [node name="StatsPanel" type="Panel" parent="UI"]
 margin_left = 6.0
 margin_top = 7.0
-margin_right = 106.0
-margin_bottom = 131.0
+margin_right = 95.0
+margin_bottom = 125.0
 script = ExtResource( 6 )
 __meta__ = {
-"_edit_lock_": true,
 "_edit_use_anchors_": false
 }
 
 [node name="StatsContainer" type="VBoxContainer" parent="UI/StatsPanel"]
-margin_left = 4.0
-margin_top = -1.0
-margin_right = 28.0
-margin_bottom = 30.0
+margin_left = 36.0
+margin_top = 3.0
+margin_right = 48.0
+margin_bottom = 113.0
 custom_constants/separation = -3
 __meta__ = {
-"_edit_lock_": true,
 "_edit_use_anchors_": false
 }
 
@@ -116,9 +114,6 @@ margin_bottom = 40.0
 size_flags_horizontal = 3
 text = "25"
 align = 1
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="AP" type="Label" parent="UI/StatsPanel/StatsContainer"]
 margin_top = 37.0
@@ -127,9 +122,6 @@ margin_bottom = 77.0
 size_flags_horizontal = 3
 text = "3"
 align = 1
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="MP" type="Label" parent="UI/StatsPanel/StatsContainer"]
 margin_top = 74.0
@@ -138,26 +130,26 @@ margin_bottom = 114.0
 size_flags_horizontal = 3
 text = "10"
 align = 1
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="HeartStatSprite" type="Sprite" parent="UI/StatsPanel"]
-position = Vector2( 6, 6 )
+position = Vector2( 21, 24 )
+scale = Vector2( 4, 4 )
 texture = ExtResource( 5 )
 __meta__ = {
 "_edit_lock_": true
 }
 
 [node name="SwordStatSprite" type="Sprite" parent="UI/StatsPanel"]
-position = Vector2( 6, 14 )
+position = Vector2( 21, 56 )
+scale = Vector2( 4, 4 )
 texture = ExtResource( 10 )
 __meta__ = {
 "_edit_lock_": true
 }
 
 [node name="StaffStatSprite" type="Sprite" parent="UI/StatsPanel"]
-position = Vector2( 6, 23 )
+position = Vector2( 21, 92 )
+scale = Vector2( 4, 4 )
 texture = ExtResource( 11 )
 __meta__ = {
 "_edit_lock_": true

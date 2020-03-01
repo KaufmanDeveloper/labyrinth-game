@@ -38,7 +38,8 @@ enemies = [ ExtResource( 9 ) ]
 script = ExtResource( 2 )
 
 [node name="Dungeon" type="Sprite" parent="."]
-position = Vector2( 80, 45 )
+position = Vector2( 320, 180 )
+scale = Vector2( 2, 2 )
 texture = ExtResource( 3 )
 __meta__ = {
 "_edit_lock_": true
@@ -48,6 +49,7 @@ __meta__ = {
 position = Vector2( 77, 29 )
 
 [node name="Enemy" parent="EnemyPosition" instance=ExtResource( 9 )]
+position = Vector2( 226, 108 )
 
 [node name="Mobile RPG Mockup" type="Sprite" parent="."]
 visible = false
@@ -73,98 +75,94 @@ margin_right = 122.0
 margin_bottom = 50.0
 mouse_filter = 2
 __meta__ = {
+"_edit_lock_": true,
 "_edit_use_anchors_": false
 }
 
 [node name="NextRoomButton" type="Button" parent="UI/CenterContainer"]
 visible = false
-margin_left = 10.0
-margin_top = 18.0
-margin_right = 80.0
-margin_bottom = 31.0
+margin_left = -98.0
+margin_top = 1.0
+margin_right = 188.0
+margin_bottom = 49.0
 rect_min_size = Vector2( 70, 13 )
 text = "Enter Next Room"
 
 [node name="StatsPanel" type="Panel" parent="UI"]
 margin_left = 6.0
 margin_top = 7.0
-margin_right = 34.0
-margin_bottom = 36.0
+margin_right = 95.0
+margin_bottom = 125.0
 script = ExtResource( 6 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="StatsContainer" type="VBoxContainer" parent="UI/StatsPanel"]
-margin_left = 4.0
-margin_top = -1.0
-margin_right = 28.0
-margin_bottom = 30.0
+margin_left = 36.0
+margin_top = 3.0
+margin_right = 48.0
+margin_bottom = 113.0
 custom_constants/separation = -3
 __meta__ = {
-"_edit_lock_": true,
 "_edit_use_anchors_": false
 }
 
 [node name="HP" type="Label" parent="UI/StatsPanel/StatsContainer"]
-margin_right = 24.0
-margin_bottom = 12.0
+margin_right = 44.0
+margin_bottom = 40.0
 size_flags_horizontal = 3
 text = "25"
 align = 1
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="AP" type="Label" parent="UI/StatsPanel/StatsContainer"]
-margin_top = 9.0
-margin_right = 24.0
-margin_bottom = 21.0
+margin_top = 37.0
+margin_right = 44.0
+margin_bottom = 77.0
 size_flags_horizontal = 3
 text = "3"
 align = 1
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="MP" type="Label" parent="UI/StatsPanel/StatsContainer"]
-margin_top = 18.0
-margin_right = 24.0
-margin_bottom = 30.0
+margin_top = 74.0
+margin_right = 44.0
+margin_bottom = 114.0
 size_flags_horizontal = 3
 text = "10"
 align = 1
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="HeartStatSprite" type="Sprite" parent="UI/StatsPanel"]
-position = Vector2( 6, 6 )
+position = Vector2( 21, 24 )
+scale = Vector2( 4, 4 )
 texture = ExtResource( 5 )
 __meta__ = {
 "_edit_lock_": true
 }
 
 [node name="SwordStatSprite" type="Sprite" parent="UI/StatsPanel"]
-position = Vector2( 6, 14 )
+position = Vector2( 21, 56 )
+scale = Vector2( 4, 4 )
 texture = ExtResource( 10 )
 __meta__ = {
 "_edit_lock_": true
 }
 
 [node name="StaffStatSprite" type="Sprite" parent="UI/StatsPanel"]
-position = Vector2( 6, 23 )
+position = Vector2( 21, 92 )
+scale = Vector2( 4, 4 )
 texture = ExtResource( 11 )
 __meta__ = {
 "_edit_lock_": true
 }
 
 [node name="TextboxPanel" type="Panel" parent="UI"]
-margin_left = 30.0
-margin_top = 96.0
-margin_right = 124.0
-margin_bottom = 122.0
+visible = false
+margin_left = 145.0
+margin_top = 70.0
+margin_right = 481.0
+margin_bottom = 172.0
 __meta__ = {
+"_edit_lock_": true,
 "_edit_use_anchors_": false
 }
 
@@ -182,22 +180,26 @@ __meta__ = {
 }
 
 [node name="BattleActionButtons" type="GridContainer" parent="UI"]
-margin_left = 40.0
-margin_top = 62.0
-margin_right = 114.0
-margin_bottom = 81.0
+margin_left = 158.0
+margin_top = 270.0
+margin_right = 464.0
+margin_bottom = 318.0
 custom_constants/vseparation = 3
-custom_constants/hseparation = 8
+custom_constants/hseparation = 112
 columns = 2
 __meta__ = {
+"_edit_lock_": true,
 "_edit_use_anchors_": false
 }
 
 [node name="SwordActionButton" parent="UI/BattleActionButtons" instance=ExtResource( 7 )]
+margin_right = 106.0
+margin_bottom = 48.0
 
 [node name="HealActionButton" parent="UI/BattleActionButtons" instance=ExtResource( 8 )]
-margin_left = 40.0
-margin_right = 72.0
+margin_left = 218.0
+margin_right = 306.0
+margin_bottom = 48.0
 
 [node name="Fade" type="ColorRect" parent="."]
 modulate = Color( 1, 1, 1, 0 )

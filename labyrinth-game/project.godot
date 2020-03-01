@@ -27,13 +27,13 @@ _global_script_class_icons={
 [application]
 
 config/name="Labyrinth Game"
-run/main_scene="res://Scenes/Battle.tscn"
+run/main_scene="res://Chapters/TestChapter/TestChapter.tscn"
 config/icon="res://icon.png"
 
 [display]
 
-window/size/width=160
-window/size/height=90
+window/size/width=640
+window/size/height=360
 window/size/test_width=640
 window/size/test_height=360
 window/dpi/allow_hidpi=true

@@ -4,6 +4,7 @@ export (int) var speed
 
 onready var frame = $Frame
 onready var slider = $Slider
+onready var winBox = $WinBox # Be in bounds of this to win
 
 var startPoint = 52
 var frameWidth
@@ -12,6 +13,7 @@ var missedPoint = 44
 var stopPoint = 12
 var reversed = false
 
+var success = false # Stop animation if success and emit a signal in _process
 var finished = false
 
 # Called when the node enters the scene tree for the first time.
@@ -27,6 +29,9 @@ func _process(delta):
 	# Move Slider
 	if !finished:
 		move_slider(currentPosition)
+	
+	if Input.is_action_just_pressed("ui_accept"):
+		handle_click(currentPosition)
 
 # Handle movement of slider
 func move_slider(position):
@@ -49,3 +54,10 @@ func move_slider(position):
 	slider.set_position(position)
 	if reverseThisTime:
 		reversed = true
+
+# Handle click action, check if succeeded
+func handle_click(position):
+	var winboxXPosition = winBox.get_position().x
+	var winboxXSize = winBox.rect.get_size().x
+	print(winboxXPosition)
+	print(winboxXSize)

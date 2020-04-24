@@ -1,10 +1,12 @@
 extends Node
 
+signal finished(succeeded)
+
 export (int) var speed
 
 onready var frame = $Frame
-onready var slider = $Slider
-onready var winBox = $WinBox # Be in bounds of this to win
+onready var sliderArea = $SliderArea
+onready var winBoxArea = $WinBoxArea # Be in bounds of this to win
 
 var startPoint = 52
 var frameWidth
@@ -16,19 +18,23 @@ var reversed = false
 var success = false # Stop animation if success and emit a signal in _process
 var finished = false
 
+var sliderIsInsideWinBox = false
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	startPoint = slider.get_position().x
+	startPoint = sliderArea.get_position().x
 	frameWidth = frame.texture.get_size().x
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	var currentPosition = slider.get_position()
+	var currentPosition = sliderArea.get_position()
 	# Before moving, check if input detected and handle accordingly
 	
 	# Move Slider
 	if !finished:
 		move_slider(currentPosition)
+	else:
+		emit_signal("finished", success)
 	
 	if Input.is_action_just_pressed("ui_accept"):
 		handle_click(currentPosition)
@@ -51,13 +57,20 @@ func move_slider(position):
 	else:
 		position.x += moveAmount
 	
-	slider.set_position(position)
+	sliderArea.set_position(position)
 	if reverseThisTime:
 		reversed = true
 
 # Handle click action, check if succeeded
 func handle_click(position):
-	var winboxXPosition = winBox.get_position().x
-	var winboxXSize = winBox.rect.get_size().x
-	print(winboxXPosition)
-	print(winboxXSize)
+	if (sliderIsInsideWinBox):
+		success = true
+	
+	finished = true
+
+func _on_WinBoxArea_area_entered(area):
+	sliderIsInsideWinBox = true
+
+
+func _on_WinBoxArea_area_exited(area):
+	sliderIsInsideWinBox = false

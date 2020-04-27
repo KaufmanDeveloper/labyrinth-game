@@ -4,6 +4,8 @@ Choose your own adventure RPG
 
 ## Battle
 
+Battle scenes are per instance and contain one enemy each. AP, HP, and MP are reset after each battle.
+
 - Battle objects emit a `finished` signal with a succeeded parameter.
 
 ## Decision

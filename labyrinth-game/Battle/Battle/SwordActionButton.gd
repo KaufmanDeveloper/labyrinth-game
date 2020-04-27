@@ -1,6 +1,6 @@
 extends "res://ActionButton.gd"
 
-const Slash = preload("res://Scenes/Slash.tscn")
+const Slash = preload("res://Battle/Battle/Slash.tscn")
 
 func _on_pressed():
 	var enemy = BattleUnits.Enemy
@@ -17,3 +17,4 @@ func create_slash(position):
 	var main = get_tree().current_scene # Child of the "Main" scene, not enemy
 	main.add_child(slash) # Add the instance to the scene
 	slash.global_position = position
+

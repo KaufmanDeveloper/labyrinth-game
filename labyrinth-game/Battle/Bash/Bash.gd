@@ -10,9 +10,9 @@ onready var winBoxArea = $WinBoxArea # Be in bounds of this to win
 
 var startPoint = 52
 var frameWidth
-var reversePoint = 334
+var reversePoint = 164
 var missedPoint = 44
-var stopPoint = 12
+var stopPoint = -164
 var reversed = false
 
 var success = false # Stop animation if success and emit a signal in _process

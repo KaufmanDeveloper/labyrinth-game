@@ -6,7 +6,7 @@
 [ext_resource path="res://Images/Mobile RPG Mockup.png" type="Texture" id=4]
 [ext_resource path="res://Images/UI/Heart.png" type="Texture" id=5]
 [ext_resource path="res://Battle/Battle/StatsPanel.gd" type="Script" id=6]
-[ext_resource path="res://Battle/Battle/SwordActionButton.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Battle/Battle/BashActionButton.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Battle/Battle/HealActionButton.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Battle/Battle/Centipede.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Images/UI/Sword.png" type="Texture" id=10]
@@ -192,13 +192,13 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="SwordActionButton" parent="UI/BattleActionButtons" instance=ExtResource( 7 )]
-margin_right = 106.0
+[node name="BashActionButton" parent="UI/BattleActionButtons" instance=ExtResource( 7 )]
+margin_right = 88.0
 margin_bottom = 48.0
 
 [node name="HealActionButton" parent="UI/BattleActionButtons" instance=ExtResource( 8 )]
-margin_left = 218.0
-margin_right = 306.0
+margin_left = 200.0
+margin_right = 288.0
 margin_bottom = 48.0
 
 [node name="Fade" type="ColorRect" parent="."]

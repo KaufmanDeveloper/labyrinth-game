@@ -14,6 +14,7 @@ onready var enemyPosition = $EnemyPosition
 onready var miniGamePosition = $MiniGamePosition
 
 func _ready():
+	bashActionButton.Bash = Bash
 	randomize()
 	start_player_turn()
 	var enemy = BattleUnits.Enemy
@@ -61,8 +62,6 @@ func _on_NextRoomButton_pressed():
 func _on_BashActionButton_pressed():
 	battleActionButtons.hide()
 	
-	var bash = Bash.instance()
-	miniGamePosition.add_child(bash)
-	yield(bash, "finished")
+	yield(bashActionButton, "finished")
 	
 	battleActionButtons.show()

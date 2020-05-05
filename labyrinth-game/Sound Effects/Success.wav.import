@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Success.wav-38e77b1ccceb162a0ed6de96d0ef9369.sample"
+
+[deps]
+
+source_file="res://Sound Effects/Success.wav"
+dest_files=[ "res://.import/Success.wav-38e77b1ccceb162a0ed6de96d0ef9369.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

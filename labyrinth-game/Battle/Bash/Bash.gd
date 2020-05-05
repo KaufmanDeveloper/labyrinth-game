@@ -8,6 +8,8 @@ onready var frame = $Frame
 onready var sliderArea = $SliderArea
 onready var winBoxArea = $WinBoxArea # Be in bounds of this to win
 onready var animationPlayer = $AnimationPlayer
+onready var successSound = $Success
+onready var failureSound = $Failure
 
 var startPoint = 52
 var frameWidth
@@ -73,8 +75,12 @@ func handle_click(position):
 
 func play_animation():
 	if (success):
+		if (!successSound.playing):
+			successSound.play()
 		animationPlayer.play("Success")
 	else:
+		if (!failureSound.playing):
+			failureSound.play()
 		animationPlayer.play("Failure")
 	
 	yield(animationPlayer, "animation_finished")

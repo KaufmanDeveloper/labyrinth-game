@@ -1,8 +1,10 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Battle/Bash/Frame.png" type="Texture" id=1]
 [ext_resource path="res://Battle/Bash/Slider.png" type="Texture" id=2]
 [ext_resource path="res://Battle/Bash/Bash.gd" type="Script" id=3]
+[ext_resource path="res://Sound Effects/Failure.wav" type="AudioStream" id=4]
+[ext_resource path="res://Sound Effects/Success.wav" type="AudioStream" id=5]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 6, 15 )
@@ -89,5 +91,13 @@ __meta__ = {
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/Failure = SubResource( 3 )
 anims/Success = SubResource( 4 )
+
+[node name="Success" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+volume_db = -3.081
+
+[node name="Failure" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+volume_db = -3.081
 [connection signal="area_entered" from="WinBoxArea" to="." method="_on_WinBoxArea_area_entered"]
 [connection signal="area_exited" from="WinBoxArea" to="." method="_on_WinBoxArea_area_exited"]

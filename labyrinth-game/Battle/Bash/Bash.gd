@@ -7,6 +7,7 @@ export (int) var speed
 onready var frame = $Frame
 onready var sliderArea = $SliderArea
 onready var winBoxArea = $WinBoxArea # Be in bounds of this to win
+onready var animationPlayer = $AnimationPlayer
 
 var startPoint = 52
 var frameWidth
@@ -34,6 +35,8 @@ func _process(delta):
 	if !finished:
 		move_slider(currentPosition)
 	else:
+		play_animation()
+		yield(play_animation(), "completed")
 		emit_signal("finished", success)
 	
 	if Input.is_action_just_pressed("ui_accept"):
@@ -67,6 +70,14 @@ func handle_click(position):
 		success = true
 	
 	finished = true
+
+func play_animation():
+	if (success):
+		animationPlayer.play("Success")
+	else:
+		animationPlayer.play("Failure")
+	
+	yield(animationPlayer, "animation_finished")
 
 func _on_WinBoxArea_area_entered(area):
 	sliderIsInsideWinBox = true

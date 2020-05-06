@@ -39,6 +39,7 @@ func _process(delta):
 	else:
 		play_animation()
 		yield(play_animation(), "completed")
+		
 		emit_signal("finished", success)
 	
 	if Input.is_action_just_pressed("ui_accept"):

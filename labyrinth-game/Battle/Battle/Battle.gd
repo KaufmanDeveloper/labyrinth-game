@@ -3,13 +3,18 @@ extends Node
 const BattleUnits = preload("res://BattleUnits.tres")
 
 export(Array, PackedScene) var enemies = []
+export(PackedScene) var Bash = PackedScene.new()
 
 onready var battleActionButtons = $UI/BattleActionButtons
+onready var bashActionButton = $UI/BattleActionButtons/BashActionButton
+onready var healActionButton = $UI/BattleActionButtons/HealActionButton
 onready var animationPlayer = $AnimationPlayer
 onready var nextRoomButton = $UI/CenterContainer/NextRoomButton
 onready var enemyPosition = $EnemyPosition
+onready var miniGamePosition = $MiniGamePosition
 
 func _ready():
+	bashActionButton.Bash = Bash
 	randomize()
 	start_player_turn()
 	var enemy = BattleUnits.Enemy
@@ -52,3 +57,11 @@ func _on_NextRoomButton_pressed():
 	playerStats.ap = playerStats.max_ap
 	battleActionButtons.show()
 	create_new_enemy()
+
+
+func _on_BashActionButton_pressed():
+	battleActionButtons.hide()
+	
+	yield(bashActionButton, "finished")
+	
+	battleActionButtons.show()

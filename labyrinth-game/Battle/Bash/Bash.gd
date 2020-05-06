@@ -7,12 +7,15 @@ export (int) var speed
 onready var frame = $Frame
 onready var sliderArea = $SliderArea
 onready var winBoxArea = $WinBoxArea # Be in bounds of this to win
+onready var animationPlayer = $AnimationPlayer
+onready var successSound = $Success
+onready var failureSound = $Failure
 
 var startPoint = 52
 var frameWidth
-var reversePoint = 334
+var reversePoint = 164
 var missedPoint = 44
-var stopPoint = 12
+var stopPoint = -164
 var reversed = false
 
 var success = false # Stop animation if success and emit a signal in _process
@@ -34,6 +37,9 @@ func _process(delta):
 	if !finished:
 		move_slider(currentPosition)
 	else:
+		play_animation()
+		yield(play_animation(), "completed")
+		
 		emit_signal("finished", success)
 	
 	if Input.is_action_just_pressed("ui_accept"):
@@ -67,6 +73,18 @@ func handle_click(position):
 		success = true
 	
 	finished = true
+
+func play_animation():
+	if (success):
+		if (!successSound.playing):
+			successSound.play()
+		animationPlayer.play("Success")
+	else:
+		if (!failureSound.playing):
+			failureSound.play()
+		animationPlayer.play("Failure")
+	
+	yield(animationPlayer, "animation_finished")
 
 func _on_WinBoxArea_area_entered(area):
 	sliderIsInsideWinBox = true

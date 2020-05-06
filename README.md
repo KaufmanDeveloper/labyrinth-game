@@ -4,7 +4,14 @@ Choose your own adventure RPG
 
 ## Battle
 
+Battle scenes are per instance and contain one enemy each. AP, HP, and MP are reset after each battle.
+
+- Take a `enemies` and `bash` parameters. **TODO**: All mini game action buttons should be parameters in a `battle` object.
 - Battle objects emit a `finished` signal with a succeeded parameter.
+
+## Chapter
+
+- Takes `Elements` and `Track`. Elements are an array of `Dialogue`s and a `Decision`.
 
 ## Decision
 

@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Slash.gd" type="Script" id=1]
 [ext_resource path="res://Images/SlashEffect.png" type="Texture" id=2]
+[ext_resource path="res://Sound Effects/Battle Hit.wav" type="AudioStream" id=3]
 
 [sub_resource type="Animation" id=1]
 resource_name = "Slash"
@@ -26,9 +27,14 @@ script = ExtResource( 1 )
 scale = Vector2( 4, 4 )
 texture = ExtResource( 2 )
 hframes = 5
+frame = 4
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 autoplay = "Slash"
 playback_speed = 2.0
 anims/Slash = SubResource( 1 )
+
+[node name="BashSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+volume_db = -6.933
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]

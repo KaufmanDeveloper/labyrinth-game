@@ -7,6 +7,7 @@ export(int) var damage = 4
 
 onready var hpLabel = $HPLabel
 onready var animationPlayer = $AnimationPlayer
+onready var attackSound = $AttackSound
 
 # Custom signal
 signal died
@@ -26,7 +27,12 @@ func _exit_tree():
 func attack() -> void:
 	yield(get_tree().create_timer(0.4), "timeout")
 	animationPlayer.play("Attack")
+	
+	yield(get_tree().create_timer(0.4), "timeout")
+	attackSound.play()
+	
 	yield(animationPlayer, "animation_finished")
+	
 	emit_signal("end_turn")
 
 func deal_damage():

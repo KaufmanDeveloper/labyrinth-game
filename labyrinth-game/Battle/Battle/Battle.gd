@@ -13,6 +13,8 @@ onready var nextRoomButton = $UI/CenterContainer/NextRoomButton
 onready var enemyPosition = $EnemyPosition
 onready var miniGamePosition = $MiniGamePosition
 
+var enemyIsAttacking = false
+
 func _ready():
 	bashActionButton.Bash = Bash
 	randomize()
@@ -22,6 +24,7 @@ func _ready():
 		enemy.connect("died", self, "_on_Enemy_died") # Dynamic signal connect
 
 func start_player_turn():
+	enemyIsAttacking = false
 	battleActionButtons.show()
 	var playerStats = BattleUnits.PlayerStats
 	playerStats.ap = playerStats.max_ap
@@ -30,6 +33,7 @@ func start_player_turn():
 	start_enemy_turn()
 
 func start_enemy_turn():
+	enemyIsAttacking = true
 	battleActionButtons.hide()
 	var enemy = BattleUnits.Enemy
 	if enemy != null and not enemy.is_queued_for_deletion():
@@ -64,4 +68,5 @@ func _on_BashActionButton_pressed():
 	
 	yield(bashActionButton, "finished")
 	
-	battleActionButtons.show()
+	if (!enemyIsAttacking):
+		battleActionButtons.show()

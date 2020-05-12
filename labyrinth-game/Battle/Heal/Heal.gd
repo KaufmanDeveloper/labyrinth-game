@@ -8,11 +8,13 @@ onready var sliderArea = $SliderArea
 onready var winBox1 = $WinBoxArea1/WinBox1
 onready var winBox2 = $WinBoxArea2/WinBox2
 onready var winBox3 = $WinBoxArea3/WinBox3
+onready var successSound = $SuccessSound
+onready var failureSound = $FailureSound
 
 const maxClicks = 3
 const successClickColor = Color(0.13, 0.98, 0.9, 1)
 
-var successes = [false, false, false]
+var successes = 0
 var clicks = 0
 var finished = false
 
@@ -32,20 +34,25 @@ func _process(delta):
 	else:
 		emit_signal("finished")
 	
-	if Input.is_action_just_pressed("ui_accept"):
+	if Input.is_action_just_pressed("ui_accept") and !finished:
 		handle_click(currentPosition)
 
 # Handle click action, check if succeeded
 func handle_click(position):
 	if (inWinBoxArea1):
+		successSound.play()
 		winBox1.set_frame_color(successClickColor)
-		successes[0] = true
+		successes += 1
 	elif (inWinBoxArea2):
+		successSound.play()
 		winBox2.set_frame_color(successClickColor)
-		successes[1] = true
+		successes += 1
 	elif (inWinBoxArea3):
+		successSound.play()
 		winBox3.set_frame_color(successClickColor)
-		successes[2] = true
+		successes += 1
+	else:
+		failureSound.play()
 	
 	clicks += 1
 	if (clicks >= maxClicks):

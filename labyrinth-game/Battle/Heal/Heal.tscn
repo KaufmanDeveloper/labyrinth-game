@@ -1,8 +1,10 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Battle/Heal/Frame.png" type="Texture" id=1]
 [ext_resource path="res://Battle/Heal/Slider.png" type="Texture" id=2]
 [ext_resource path="res://Battle/Heal/Heal.gd" type="Script" id=3]
+[ext_resource path="res://Sound Effects/MinigamePartialSuccessTick.wav" type="AudioStream" id=4]
+[ext_resource path="res://Sound Effects/MinigamePartialFailureTick.wav" type="AudioStream" id=5]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 6, 15 )
@@ -127,11 +129,20 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="LossArea"]
+visible = false
 position = Vector2( 169, 0 )
 shape = SubResource( 3 )
 __meta__ = {
 "_edit_lock_": true
 }
+
+[node name="SuccessSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+volume_db = -8.0
+
+[node name="FailureSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+volume_db = -8.0
 [connection signal="area_entered" from="WinBoxArea1" to="." method="_on_WinBoxArea1_area_entered"]
 [connection signal="area_exited" from="WinBoxArea1" to="." method="_on_WinBoxArea1_area_exited"]
 [connection signal="area_entered" from="WinBoxArea2" to="." method="_on_WinBoxArea2_area_entered"]

@@ -1,39 +1,56 @@
 extends Control
 
-signal finished(succeeded)
+signal finished()
 
 export (int) var speed
 
 onready var sliderArea = $SliderArea
+onready var winBox1 = $WinBoxArea1/WinBox1
+onready var winBox2 = $WinBoxArea2/WinBox2
+onready var winBox3 = $WinBoxArea3/WinBox3
 
-var success = false
+const maxClicks = 3
+
+var successes = [false, false, false]
+var clicks = 0
 var finished = false
+
+var inWinBoxArea1 = false
+var inWinBoxArea2 = false
+var inWinBoxArea3 = false
 
 func _ready():
 	pass # Replace with function body.
 
 func _process(delta):
 	var currentPosition = sliderArea.get_position()
-	# Before moving, check if input detected and handle accordingly
 	
 	# Move Slider
 	if !finished:
 		move_slider(currentPosition)
 	else:
-#		play_animation()
-#		yield(play_animation(), "completed")
-		emit_signal("finished", success)
+		emit_signal("finished")
 	
 	if Input.is_action_just_pressed("ui_accept"):
 		handle_click(currentPosition)
 
 # Handle click action, check if succeeded
 func handle_click(position):
-	print('clicked')
-#	if (sliderIsInsideWinBox):
-#		success = true
+	if (inWinBoxArea1):
+		winBox1.set_frame_color(Color(1, 1, 1, 1))
+		successes[0] = true
 	
-#	finished = true
+	if (inWinBoxArea2):
+		winBox2.set_frame_color(Color(1, 1, 1, 1))
+		successes[1] = true
+	
+	if (inWinBoxArea3):
+		winBox3.set_frame_color(Color(1, 1, 1, 1))
+		successes[2] = true
+	
+	clicks += 1
+	if (clicks >= maxClicks):
+		handle_finished()
 
 # Handle movement of slider
 func move_slider(position):
@@ -41,3 +58,28 @@ func move_slider(position):
 	position.x += moveAmount
 	
 	sliderArea.set_position(position)
+
+func handle_finished():
+	finished = true
+	emit_signal("finished")
+
+func _on_WinBoxArea1_area_entered(area):
+	inWinBoxArea1 = true
+
+func _on_WinBoxArea1_area_exited(area):
+	inWinBoxArea1 = false
+
+func _on_WinBoxArea2_area_entered(area):
+	inWinBoxArea2 = true
+
+func _on_WinBoxArea2_area_exited(area):
+	inWinBoxArea2 = false
+
+func _on_WinBoxArea3_area_entered(area):
+	inWinBoxArea3 = true
+
+func _on_WinBoxArea3_area_exited(area):
+	inWinBoxArea3 = false
+
+func _on_LossArea_area_entered(area):
+	handle_finished()

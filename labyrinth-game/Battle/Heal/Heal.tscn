@@ -23,7 +23,7 @@ script = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-speed = 3
+speed = 2
 
 [node name="Frame" type="Sprite" parent="."]
 texture = ExtResource( 1 )
@@ -121,14 +121,21 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="LossArea" type="Area2D" parent="."]
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="LossArea" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LossArea"]
 position = Vector2( 169, 0 )
 shape = SubResource( 3 )
 __meta__ = {
 "_edit_lock_": true
 }
+[connection signal="area_entered" from="WinBoxArea1" to="." method="_on_WinBoxArea1_area_entered"]
+[connection signal="area_exited" from="WinBoxArea1" to="." method="_on_WinBoxArea1_area_exited"]
+[connection signal="area_entered" from="WinBoxArea2" to="." method="_on_WinBoxArea2_area_entered"]
+[connection signal="area_exited" from="WinBoxArea2" to="." method="_on_WinBoxArea2_area_exited"]
+[connection signal="area_entered" from="WinBoxArea3" to="." method="_on_WinBoxArea3_area_entered"]
+[connection signal="area_exited" from="WinBoxArea3" to="." method="_on_WinBoxArea3_area_exited"]
+[connection signal="area_entered" from="LossArea" to="." method="_on_LossArea_area_entered"]

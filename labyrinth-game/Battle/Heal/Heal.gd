@@ -10,6 +10,7 @@ onready var winBox2 = $WinBoxArea2/WinBox2
 onready var winBox3 = $WinBoxArea3/WinBox3
 
 const maxClicks = 3
+const successClickColor = Color(0.13, 0.98, 0.9, 1)
 
 var successes = [false, false, false]
 var clicks = 0
@@ -37,15 +38,13 @@ func _process(delta):
 # Handle click action, check if succeeded
 func handle_click(position):
 	if (inWinBoxArea1):
-		winBox1.set_frame_color(Color(1, 1, 1, 1))
+		winBox1.set_frame_color(successClickColor)
 		successes[0] = true
-	
-	if (inWinBoxArea2):
-		winBox2.set_frame_color(Color(1, 1, 1, 1))
+	elif (inWinBoxArea2):
+		winBox2.set_frame_color(successClickColor)
 		successes[1] = true
-	
-	if (inWinBoxArea3):
-		winBox3.set_frame_color(Color(1, 1, 1, 1))
+	elif (inWinBoxArea3):
+		winBox3.set_frame_color(successClickColor)
 		successes[2] = true
 	
 	clicks += 1

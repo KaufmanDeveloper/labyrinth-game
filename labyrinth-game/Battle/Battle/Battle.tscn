@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://Battle/Battle/Battle.gd" type="Script" id=1]
 [ext_resource path="res://Battle/Battle/PlayerStats.gd" type="Script" id=2]
@@ -12,6 +12,7 @@
 [ext_resource path="res://Images/UI/Sword.png" type="Texture" id=10]
 [ext_resource path="res://Images/UI/Staff.png" type="Texture" id=11]
 [ext_resource path="res://Battle/Bash/Bash.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Battle/Heal/Heal.tscn" type="PackedScene" id=13]
 
 [sub_resource type="StyleBoxEmpty" id=1]
 
@@ -35,6 +36,7 @@ tracks/0/keys = {
 script = ExtResource( 1 )
 enemies = [ ExtResource( 9 ) ]
 Bash = ExtResource( 12 )
+Heal = ExtResource( 13 )
 
 [node name="PlayerStats" type="Node" parent="."]
 script = ExtResource( 2 )
@@ -238,3 +240,4 @@ anims/FadeToNewRoom = SubResource( 2 )
 [connection signal="mp_changed" from="PlayerStats" to="UI/StatsPanel" method="_on_PlayerStats_mp_changed"]
 [connection signal="pressed" from="UI/CenterContainer/NextRoomButton" to="." method="_on_NextRoomButton_pressed"]
 [connection signal="pressed" from="UI/BattleActionButtons/BashActionButton" to="." method="_on_BashActionButton_pressed"]
+[connection signal="pressed" from="UI/BattleActionButtons/HealActionButton" to="." method="_on_HealActionButton_pressed"]

@@ -10,6 +10,7 @@ onready var winBox2 = $WinBoxArea2/WinBox2
 onready var winBox3 = $WinBoxArea3/WinBox3
 onready var successSound = $SuccessSound
 onready var failureSound = $FailureSound
+onready var animationPlayer = $AnimationPlayer
 
 const maxClicks = 3
 const successClickColor = Color(0.13, 0.98, 0.9, 1)
@@ -67,6 +68,8 @@ func move_slider(position):
 
 func handle_finished():
 	finished = true
+	animationPlayer.play("Finished")
+	yield(animationPlayer, "animation_finished")
 	emit_signal("finished")
 
 func _on_WinBoxArea1_area_entered(area):

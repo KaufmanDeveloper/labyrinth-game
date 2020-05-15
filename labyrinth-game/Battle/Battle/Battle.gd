@@ -4,6 +4,7 @@ const BattleUnits = preload("res://BattleUnits.tres")
 
 export(Array, PackedScene) var enemies = []
 export(PackedScene) var Bash = PackedScene.new()
+export(PackedScene) var Heal = PackedScene.new()
 
 onready var battleActionButtons = $UI/BattleActionButtons
 onready var bashActionButton = $UI/BattleActionButtons/BashActionButton
@@ -17,6 +18,7 @@ var enemyIsAttacking = false
 
 func _ready():
 	bashActionButton.Bash = Bash
+	healActionButton.Heal = Heal
 	randomize()
 	start_player_turn()
 	var enemy = BattleUnits.Enemy
@@ -62,11 +64,18 @@ func _on_NextRoomButton_pressed():
 	battleActionButtons.show()
 	create_new_enemy()
 
-
 func _on_BashActionButton_pressed():
 	battleActionButtons.hide()
 	
 	yield(bashActionButton, "finished")
+	
+	if (!enemyIsAttacking):
+		battleActionButtons.show()
+
+func _on_HealActionButton_pressed():
+	battleActionButtons.hide()
+	
+	yield(healActionButton, "finished")
 	
 	if (!enemyIsAttacking):
 		battleActionButtons.show()

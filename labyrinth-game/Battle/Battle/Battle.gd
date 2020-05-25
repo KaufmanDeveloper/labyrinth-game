@@ -79,7 +79,7 @@ func _on_HealActionButton_pressed():
 	battleActionButtons.hide()
 	
 	if (playerStats.mp < 8):
-		battleTextbox.text = "You need 8 MP to cast heal."
+		battleTextbox.bbcode_text = "[center]You need 8 MP to cast heal.[/center]"
 		battleTextPanel.visible = true
 		yield(get_tree().create_timer(2.0), "timeout")
 		battleTextPanel.visible = false

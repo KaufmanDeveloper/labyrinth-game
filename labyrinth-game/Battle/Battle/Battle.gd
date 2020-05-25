@@ -83,8 +83,8 @@ func _on_HealActionButton_pressed():
 		battleTextPanel.visible = true
 		yield(get_tree().create_timer(2.0), "timeout")
 		battleTextPanel.visible = false
-	
-	yield(healActionButton, "finished")
+	else:
+		yield(healActionButton, "finished")
 	
 	if (!enemyIsAttacking):
 		battleActionButtons.show()

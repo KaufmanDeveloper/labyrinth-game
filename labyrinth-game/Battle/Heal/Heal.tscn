@@ -1,0 +1,170 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Battle/Heal/Frame.png" type="Texture" id=1]
+[ext_resource path="res://Battle/Heal/Slider.png" type="Texture" id=2]
+[ext_resource path="res://Battle/Heal/Heal.gd" type="Script" id=3]
+[ext_resource path="res://Sound Effects/MinigamePartialSuccessTick.wav" type="AudioStream" id=4]
+[ext_resource path="res://Sound Effects/MinigamePartialFailureTick.wav" type="AudioStream" id=5]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 6, 15 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 4, 10 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 4, 10 )
+
+[sub_resource type="Animation" id=4]
+resource_name = "Finished"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("SliderArea/Slider:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3, 0.5, 0.7, 1, 1.2, 1.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ true, false, true, false, true, false, true ]
+}
+
+[node name="Heal" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -205.0
+margin_bottom = -85.0
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+speed = 2
+
+[node name="Frame" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="WinBoxArea1" type="Area2D" parent="."]
+position = Vector2( -80, 0 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="WinBox1" type="ColorRect" parent="WinBoxArea1"]
+margin_top = -15.0
+margin_right = 12.0
+margin_bottom = 15.0
+color = Color( 0.843137, 0.913725, 0.937255, 1 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WinBoxArea1"]
+visible = false
+position = Vector2( 6, 0 )
+shape = SubResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="WinBoxArea2" type="Area2D" parent="."]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="WinBox2" type="ColorRect" parent="WinBoxArea2"]
+margin_top = -15.0
+margin_right = 12.0
+margin_bottom = 15.0
+color = Color( 0.843137, 0.913725, 0.937255, 1 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WinBoxArea2"]
+visible = false
+position = Vector2( 6, 0 )
+shape = SubResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="WinBoxArea3" type="Area2D" parent="."]
+position = Vector2( 80, 0 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="WinBox3" type="ColorRect" parent="WinBoxArea3"]
+margin_top = -15.0
+margin_right = 12.0
+margin_bottom = 15.0
+color = Color( 0.843137, 0.913725, 0.937255, 1 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WinBoxArea3"]
+visible = false
+position = Vector2( 6, 0 )
+shape = SubResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="SliderArea" type="Area2D" parent="."]
+position = Vector2( -161, 0 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Slider" type="Sprite" parent="SliderArea"]
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SliderArea"]
+visible = false
+shape = SubResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="LossArea" type="Area2D" parent="."]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LossArea"]
+visible = false
+position = Vector2( 169, 0 )
+shape = SubResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="SuccessSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+volume_db = -8.0
+
+[node name="FailureSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+volume_db = -8.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/Finished = SubResource( 4 )
+[connection signal="area_entered" from="WinBoxArea1" to="." method="_on_WinBoxArea1_area_entered"]
+[connection signal="area_exited" from="WinBoxArea1" to="." method="_on_WinBoxArea1_area_exited"]
+[connection signal="area_entered" from="WinBoxArea2" to="." method="_on_WinBoxArea2_area_entered"]
+[connection signal="area_exited" from="WinBoxArea2" to="." method="_on_WinBoxArea2_area_exited"]
+[connection signal="area_entered" from="WinBoxArea3" to="." method="_on_WinBoxArea3_area_entered"]
+[connection signal="area_exited" from="WinBoxArea3" to="." method="_on_WinBoxArea3_area_exited"]
+[connection signal="area_entered" from="LossArea" to="." method="_on_LossArea_area_entered"]

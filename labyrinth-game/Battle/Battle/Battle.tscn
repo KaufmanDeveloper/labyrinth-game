@@ -16,9 +16,9 @@
 
 [sub_resource type="StyleBoxEmpty" id=1]
 
-[sub_resource type="StyleBoxEmpty" id=3]
+[sub_resource type="StyleBoxEmpty" id=2]
 
-[sub_resource type="Animation" id=2]
+[sub_resource type="Animation" id=3]
 length = 0.5
 step = 0.05
 tracks/0/type = "value"
@@ -235,7 +235,7 @@ margin_left = 14.0
 margin_top = 10.0
 margin_right = 460.0
 margin_bottom = 74.0
-custom_styles/normal = SubResource( 3 )
+custom_styles/normal = SubResource( 2 )
 bbcode_enabled = true
 bbcode_text = "[center]my centered text hereasdfasdfasdf[/center]"
 text = "my centered text hereasdfasdfasdf"
@@ -263,7 +263,7 @@ __meta__ = {
 }
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-anims/FadeToNewRoom = SubResource( 2 )
+anims/FadeToNewRoom = SubResource( 3 )
 [connection signal="ap_changed" from="PlayerStats" to="UI/StatsPanel" method="_on_PlayerStats_ap_changed"]
 [connection signal="hp_changed" from="PlayerStats" to="UI/StatsPanel" method="_on_PlayerStats_hp_changed"]
 [connection signal="mp_changed" from="PlayerStats" to="UI/StatsPanel" method="_on_PlayerStats_mp_changed"]

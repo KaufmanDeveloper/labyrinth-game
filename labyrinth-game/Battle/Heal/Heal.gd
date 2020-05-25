@@ -18,6 +18,7 @@ const successClickColor = Color(0.13, 0.98, 0.9, 1)
 var successes = 0
 var clicks = 0
 var finished = false
+var stopMoving = false
 
 var inWinBoxArea1 = false
 var inWinBoxArea2 = false
@@ -30,9 +31,9 @@ func _process(delta):
 	var currentPosition = sliderArea.get_position()
 	
 	# Move Slider
-	if !finished:
+	if !finished && !stopMoving:
 		move_slider(currentPosition)
-	else:
+	elif finished:
 		emit_signal("finished")
 	
 	if Input.is_action_just_pressed("ui_accept") and !finished:
@@ -67,10 +68,11 @@ func move_slider(position):
 	sliderArea.set_position(position)
 
 func handle_finished():
-	finished = true
+	stopMoving = true
 	animationPlayer.play("Finished")
 	yield(animationPlayer, "animation_finished")
 	emit_signal("finished")
+	finished = true
 
 func _on_WinBoxArea1_area_entered(area):
 	inWinBoxArea1 = true

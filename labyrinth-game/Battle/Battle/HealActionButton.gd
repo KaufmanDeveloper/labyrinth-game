@@ -11,6 +11,9 @@ func _on_pressed():
 	if playerStats != null:
 		if playerStats.mp >= 8:
 			handle_heal_mini_game(playerStats)
+	
+	else:
+		emit_signal("finished")
 
 func handle_heal_mini_game(playerStats):
 	var main = get_tree().current_scene # Child of the "Main" scene, not enemy

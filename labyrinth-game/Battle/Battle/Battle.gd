@@ -13,6 +13,8 @@ onready var animationPlayer = $AnimationPlayer
 onready var nextRoomButton = $UI/CenterContainer/NextRoomButton
 onready var enemyPosition = $EnemyPosition
 onready var miniGamePosition = $MiniGamePosition
+onready var battleTextPanel = $UI/BattleTextPanel
+onready var battleTextbox = $UI/BattleTextPanel/BattleTextbox
 
 var enemyIsAttacking = false
 
@@ -73,7 +75,14 @@ func _on_BashActionButton_pressed():
 		battleActionButtons.show()
 
 func _on_HealActionButton_pressed():
+	var playerStats = BattleUnits.PlayerStats
 	battleActionButtons.hide()
+	
+	if (playerStats.mp < 8):
+		battleTextbox.text = "You need 8 MP to cast heal."
+		battleTextPanel.visible = true
+		yield(get_tree().create_timer(2.0), "timeout")
+		battleTextPanel.visible = false
 	
 	yield(healActionButton, "finished")
 	

@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://Battle/Battle/Battle.gd" type="Script" id=1]
 [ext_resource path="res://Battle/Battle/PlayerStats.gd" type="Script" id=2]
@@ -15,6 +15,8 @@
 [ext_resource path="res://Battle/Heal/Heal.tscn" type="PackedScene" id=13]
 
 [sub_resource type="StyleBoxEmpty" id=1]
+
+[sub_resource type="StyleBoxEmpty" id=3]
 
 [sub_resource type="Animation" id=2]
 length = 0.5
@@ -51,6 +53,9 @@ __meta__ = {
 
 [node name="EnemyPosition" type="Position2D" parent="."]
 position = Vector2( 77, 29 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="Enemy" parent="EnemyPosition" instance=ExtResource( 9 )]
 position = Vector2( 226, 108 )
@@ -177,7 +182,6 @@ margin_top = 70.0
 margin_right = 481.0
 margin_bottom = 172.0
 __meta__ = {
-"_edit_lock_": true,
 "_edit_use_anchors_": false
 }
 
@@ -190,7 +194,6 @@ custom_styles/normal = SubResource( 1 )
 custom_constants/table_vseparation = 0
 custom_constants/line_separation = 2
 __meta__ = {
-"_edit_lock_": true,
 "_edit_use_anchors_": false
 }
 
@@ -215,6 +218,29 @@ margin_bottom = 48.0
 margin_left = 200.0
 margin_right = 288.0
 margin_bottom = 48.0
+
+[node name="BattleTextPanel" type="Panel" parent="UI"]
+visible = false
+margin_left = 82.0
+margin_top = 247.0
+margin_right = 556.0
+margin_bottom = 353.0
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="BattleTextbox" type="RichTextLabel" parent="UI/BattleTextPanel"]
+margin_left = 14.0
+margin_top = 10.0
+margin_right = 460.0
+margin_bottom = 95.0
+custom_styles/normal = SubResource( 3 )
+text = "Test"
+scroll_active = false
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="MiniGamePosition" type="Position2D" parent="."]
 position = Vector2( 311, 295 )

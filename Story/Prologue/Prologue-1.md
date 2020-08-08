@@ -76,11 +76,31 @@ Jem: I've been told by soldiers it's a cursed underground cavern near here.
 
 Seer: It's more than a cavern. And it contains powerful magic at its heart.
 
-Jem: Yah, they told me about the Lightning Flower.
+Jem: Yah, they told me about the Lightning Flower. It holds enough magic to bring the dead back to life. The story says that at least.
 
----
+Seer: A holding stone can hold enough magic from the flower to bring our Queen back. Take this.
 
--- About to enter labyrinth
+Jem: What?
+
+Seer: You and Grant will gather magic from the Lightning Flower to save our Queen. We can hold this position for two weeks.
+
+Jem: How the-
+
+Grant: Seer Dilan, if you don't mind me asking, why is it you would send the two of us? Explorers and armies have been trying to explore the labyrinth for years and they never return.
+
+Seer: Jupiter has blessed you two. When Neptune spoke to me, I could see the two of you making it out unscathed.
+
+Seer: You are our redemption. Armies haven't made it out of the labyrinth, but you two are blessed by Jupiter and the Stars.
+
+Narrator: There was a pause. I couldn't wrap my head around what the Seer was saying. Grant looked like he was trying to find words. After a pause, he held his hand to the sky.
+
+Grant: Praise the Stars.
+
+Seer: They have blessed us. Go now. The queen and all of Astra is depending on you. Your healing magic will be essential Jem. Concentrate and you will succeed.
+
+Jem: Praise the Stars.
+
+Narrator: My chest felt heavy. The Labyrinth was a myth, something that didn't feel tangible. The magic Jem used was simple and known to many. The magic that Labyrinth contained was the kind of powerful magic that was lost with time. It was the magic of the Old Kingdoms.
 
 Jem: Is this stupid?
 
@@ -102,8 +122,18 @@ Jem: Just saying, we could say we're army and just-
 
 Grant: Our deaths are for the stars and the heavens.
 
-Jem: Praise the stars. I'll say nothing more about it...
+Jem: Praise the Stars. I'll say nothing more about it...
 
 Grant: Sounds good to me.
 
-Narrator: We entered the cavernous jaw of the labyrinth. I could feel my legs shaking as I took every step. I was ashamed of what I said
+Narrator: We entered the cavernous jaw of the labyrinth. I could feel my legs shaking as I took every step. I was ashamed of what I said. Mars blessed us with ambition and courage, and I faltered.
+
+Narrator: The walls were covered with dirt but within I could see some sort of brick. Grant lit the lantern and the insects created the illusion that the walls and ceiling were moving.
+
+Grant: Oh, nice.
+
+Jem: I think I'm good to die now. That's disgusting.
+
+Grant: What is THAT?
+
+_Initiate battle with centipede_

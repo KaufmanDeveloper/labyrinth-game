@@ -4,6 +4,8 @@ Context Info: The Astran army has been laying siege to Terra Manus for 23 days. 
 
 - Work in the religious aspects of Astra, lay groundwork
 
+- Show Grant being naive, show Jem being religious
+
 ---
 
 Narrator: 23 days. We'd been laying siege to Terra Manus for 23 days. Tired and bruised I layed in the lush grass staring at the stars. I could see Venus shining Her brilliant light among the twinkling backdrop. I whispered a short prayer to Her thanking her for the things the army gave me - money, and when I retired, a home. I hadn't heard any commands for hours. It was the perfect time for a short nap...
@@ -48,23 +50,27 @@ Grant: Some kinda fever took her. Hasn't woken up since the failed attack on the
 
 Jem: Sounds rough. You got any tobacco on you?
 
-Grant: The Star Seer said he needs to speak with you. Neptune spoke to him last moon.
+Grant: The Star Seer said he needs to speak with you. Neptune apparently spoke to him last moon.
 
 Jem: Hah, right.
 
-Grant: I'm serious. You're to report to the queen's tent.
+Grant: I'm serious. He told me to get you.
 
 Jem: I don't get it.
 
-Grant: You're a nobody, I know.
+Grant: You're a nobody, I know. Must be surprising the Star Seer would want to summon a nobody.
 
 Jem: Thanks.
 
-Grant: The Seer said he saw you in a dream.
+Grant: He said he saw you in a dream.
+
+Jem: Bless Neptune. Let's not waste any time.
 
 Narrator: My thoughts were empty as we walked silently to the Star Seer's tent. I checked that my staff was accounted for and tried to quickly wipe away a grass stain on my cloak.
 
 Seer: Grant. This is the one?
+
+Narrator: Grant looked nervous.
 
 Grant: This is Jem.
 
@@ -84,56 +90,96 @@ Jem: What?
 
 Seer: You and Grant will gather magic from the Lightning Flower to save our Queen. We can hold this position for two weeks.
 
-Jem: How the-
+Grant: How the-
 
-Grant: Seer Dilan, if you don't mind me asking, why is it you would send the two of us? Explorers and armies have been trying to explore the labyrinth for years and they never return.
+Jem: Seer Dilan, if you don't mind me asking, why is it you would send the two of us? Explorers and armies have been trying to explore the labyrinth for years and they never return.
 
 Seer: Jupiter has blessed you two. When Neptune spoke to me, I could see the two of you making it out unscathed.
 
 Seer: You are our redemption. Armies haven't made it out of the labyrinth, but you two are blessed by Jupiter and the Stars.
 
-Narrator: There was a pause. I couldn't wrap my head around what the Seer was saying. Grant looked like he was trying to find words. After a pause, he held his hand to the sky.
-
-Grant: Praise the Stars.
-
-Seer: They have blessed us. Go now. The queen and all of Astra is depending on you. Your healing magic will be essential Jem. Concentrate and you will succeed.
+Narrator: There was a pause. I couldn't wrap my head around what the Seer was saying. I tried to find words. After a pause, I said the only thing I knew to say.
 
 Jem: Praise the Stars.
 
+Seer: They have blessed us. Go now. The queen and all of Astra is depending on you. Your healing magic will be essential Jem. Concentrate and you will succeed.
+
 Narrator: My chest felt heavy. The Labyrinth was a myth, something that didn't feel tangible. The magic Jem used was simple and known to many. The magic that Labyrinth contained was the kind of powerful magic that was lost with time. It was the magic of the Old Kingdoms.
 
-Jem: Is this stupid?
+Grant: This is stupid.
 
-Grant: Let me light one of these lanterns.
+Jem: Let me light one of these lanterns.
 
-Jem: Are we being stupid?
+Grant: Are we being stupid?
 
-Grant: Probably.
+Jem: Probably.
 
-Jem: We're going to die in this cave.
+Grant: We're going to die in this cave.
 
-Grant: It's for a greater cause.
+Jem: It's for a greater cause.
 
-Jem: Would anyone find us if we ditched?
+Grant: Would anyone find us if we ditched?
 
-Grant: We're not discussing that.
+Jem: We're not discussing that.
 
-Jem: Just saying, we could say we're army and just-
+Grant: Just saying, we could say we're army and just-
 
-Grant: Our deaths are for the stars and the heavens.
+Jem: Our deaths are for the stars and the heavens.
 
-Jem: Praise the Stars. I'll say nothing more about it...
+Grant: Praise the Stars. I'll say nothing more about it...
 
-Grant: Sounds good to me.
+Jem: Sounds good to me.
 
 Narrator: We entered the cavernous jaw of the labyrinth. I could feel my legs shaking as I took every step. I was ashamed of what I said. Mars blessed us with ambition and courage, and I faltered.
 
 Narrator: The walls were covered with dirt but within I could see some sort of brick. Grant lit the lantern and the insects created the illusion that the walls and ceiling were moving.
 
-Grant: Oh, nice.
+Jem: Oh, nice.
 
-Jem: I think I'm good to die now. That's disgusting.
+Grant: I think I'm good to die now. That's disgusting.
 
 Grant: What is THAT?
 
 _Initiate battle with centipede_
+
+Grant: I can't unsee that.
+
+Jem: You know, other than the fact that it was trying to kill us, it was kinda cute.
+
+Grant: You think giant centipedes are cute?
+
+Jem: They're pincers move like they're trying to give you a hug or something.
+
+Grant: ...
+
+Jem: Your legs are still shaking.
+
+Grant: I'm really scared I'm gonna die in this cave.
+
+Jem: I was meaning to ask you about that. I've known you since we joined the Astran Army right?
+
+Grant: Yah. Basic training was fun times.
+
+Jem: You've always been so scared of dying. Like, since you joined.
+
+Grant: What's your point?
+
+Jem: Pluto blesses us with release from the Earth. When you joined the army you should've been ready to die. You're fighting our enemies to the death.
+
+Grant: What do you fight for?
+
+Jem: What do you mean?
+
+Grant: I mean why did you join the army?
+
+Jem: I wanted to embrace Mars and vanquish the people that oppose Astra.
+
+Grant: And why else?
+
+Jem: There is no why else.
+
+Grant: I joined the army for one reason, Jem. I needed money. The army pays well and even allows you to retire pretty early if you survive.
+
+Jem: Yes, Venus gives us a lot. I actually prayed to her yesterday even.
+
+Grant: Yah, so it's not

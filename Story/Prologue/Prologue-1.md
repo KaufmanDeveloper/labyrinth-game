@@ -1,5 +1,17 @@
 ## Part 1
 
+Tori Feedback:
+
+- Beginning is interesting
+
+- Why are planet names being used? May need more information. Start sooner?
+
+- Felt like it moved really fast.
+
+- How does queen fit into any of this?
+
+_Start with an attack of some kind, after successful attack, Queen Igna gives a service_
+
 Context Info: The Astran army has been laying siege to Terra Manus for 23 days. Queen Igna II has fallen ill and has been unable to direct the army. This has caused the siege to come to a stand still. The Star Seer has summoned Jem with an important message...
 
 - Work in the religious aspects of Astra, lay groundwork
@@ -182,4 +194,16 @@ Grant: I joined the army for one reason, Jem. I needed money. The army pays well
 
 Jem: Yes, Venus gives us a lot. I actually prayed to her yesterday even.
 
-Grant: Yah, so it's not
+Grant: Yah, so it's not so much about glory and all that. I just wanted to eat.
+
+Jem: Still, when are you going to make peace with yourself? I live every day knowing that I could die.
+
+Grant: Good for you.
+
+Jem: I get the feeling you don't wanna talk about this anymore.
+
+Grant: It looks like we're coming up to a fork. Do you want to go left or right?
+
+Narrator: I thought it was important to get Grant's head straight. A soldier who's afraid to die doesn't fight with the same focus as someone who's made peace with themself. I wasn't sure which way to go. I guess either decision was as good as the other.
+
+_Choose left or right_

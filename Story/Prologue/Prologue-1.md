@@ -12,7 +12,7 @@ Tori Feedback:
 
 _Start with an attack of some kind, after successful attack, Queen Igna gives a service_
 
-Context Info: The Astran army has been laying siege to Terra Manus for 23 days. Queen Igna II has fallen ill and has been unable to direct the army. This has caused the siege to come to a stand still. The Star Seer has summoned Jem with an important message...
+Context Info: The Astran army has been laying siege to Terra Manus for 23 days. Queen Igna has fallen ill and has been unable to direct the army. This has caused the siege to come to a stand still. The Star Seer has summoned Jem with an important message...
 
 - Work in the religious aspects of Astra, lay groundwork
 
@@ -20,7 +20,41 @@ Context Info: The Astran army has been laying siege to Terra Manus for 23 days. 
 
 ---
 
-Narrator: 23 days. We'd been laying siege to Terra Manus for 23 days. Tired and bruised I layed in the lush grass staring at the stars. I could see Venus shining Her brilliant light among the twinkling backdrop. I whispered a short prayer to Her thanking her for the things the army gave me - money, and when I retired, a home. I hadn't heard any commands for hours. It was the perfect time for a short nap...
+Narrator: We had arrived at Terra Manus a week ago. It stood as the center of the Terran Empire. Grand Star Igna took Kelan's place only weeks ago. She was ambitious and it was said she had been wanting to take Terra Manus since she was a child waiting for the throne. If the Terran Empire was ever to be conquered, its capitol was key. It stood between Astra and Terra on a narrow piece of connecting land. The Terrans believe the earth blesses their city and all who worship it. They believe in the goddess of earth, the goddess of fire, and the goddess of water. They believe their bond blesses all who believe in them, and that their belief has given them a holy empire.
+
+Narrator: I know this to be a false belief. The Astran people understand that the Gods come from the skies. Earth is merely the ground that we stand on. The Celestials govern the universe. Mars gave me power when I stood gazing at the Terra Manus gates with hate in my eyes and war in my heart. Saturn gave me the understanding to follow my commands and stay calm as we approached the gates of the enemy. This was my first campaign. I was eager to prove myself and impatiently grasped my staff as I stared at the great wall.
+
+Grant: A full frontal assault already.
+
+Jem: I'm ready.
+
+Grant: ...
+
+Grand Star Igna: Take your ranks!
+
+Narrator: My heart was pounding with excitement.
+
+Grand Star Igna: Forward!
+
+Narrator: As we moved toward the Terra Manus gates I made sure to stay behind Grant. Healers' top priority was the soldier in front of them as well as the soldier to that soldier's immediate left and right. Though many soldiers wanted to be healers, not all were gifted with the ability to commune with the magic of the Stars. Artifacts like the staff I was given were also rare enough to be preserved only for those most talented. Soldiers outnumbers healers about 20 to 1, so we were spread out behind waves in order to be the most effective.
+
+Jem: You ready to kill some Terrans?
+
+Grant: ...
+
+Grant: I think I'm gonna be sick.
+
+Jem: You're fighting for the glory of Astra.
+
+Grant: Yup, gonna be sick...
+
+Narrator: The party that awaited us were clad in iron armor and stood still as we approached. Sol stood behind us and cast an orange light on the great walls of Terra Manus.
+
+Grant: Arrows!
+
+-- After battle and service
+
+Narrator: Tired and bruised I layed in the lush grass staring at the stars. I could see Venus shining Her brilliant light among the twinkling backdrop. I whispered a short prayer to Her thanking her for the things the army gave me - money, and when I retired, a home. I hadn't heard any commands for hours. It was the perfect time for a short nap...
 
 Grant: Rise and shine Jem.
 

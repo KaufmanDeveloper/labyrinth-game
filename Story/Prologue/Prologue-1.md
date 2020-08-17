@@ -52,6 +52,58 @@ Narrator: The party that awaited us were clad in iron armor and stood still as w
 
 Grant: Arrows!
 
+Jem: The arrows are aimed for behind us, where most of our troops are. Don't stop moving forward.
+
+Narrator: Grant resisted the urge to raise his shield above his head and run. My focus was on looking for if any stray arrows hit anyone near me. The first wave our line made it through unscathed minus a few troops already being tended to.
+
+Grant: They're charging us!
+
+Jem: Alright here we go. Take a lower crouching stance.
+
+Grant: Hoo, ok.
+
+Narrator: The Terran soldiers shouted battle cries as they clashed against our line. Their words were white noise as I prepared my magic. The power of Mars flowed through my veins and I couldn't stop shaking from excitement. After an almost slowed down moment before the armies connected, contact was made.
+
+Narrator: I wasn't prepared for just how fast they would cut through our troops. Our front line was torn apart in moments. There was no hope of saving most of ours that met the sword of the defending army.
+
+Jem: Grant! Left!
+
+Narrator: Grant's head whipped to his left as he met the attacker that cut down the man to his left. As he began brawling him, a man approached from in front of Grant. I rushed forward to prevent him from backstabbing my best friend.
+
+_Initiate battle with soldier_
+
+Narrator: I looked to Grant to see if he was ok. A gash ran the lenth of his arm and I immediately began healing it. As I did so the second volley of arrows flew overhead to strike behind us yet again. For a brief moment I looked around to see our numbers getting thinned. We were vastly outmatched.
+
+Grand Star Igna: Retreeeaaaaat! By Mercury, fall back!
+
+Jem: What?
+
+Grant: You heard her, let's get going!
+
+Narrator: Right after we began the assault we got the signal to retreat. Grand Star Igna's plate mail helm clashed against her breastplate. The star symbol on her wooden shield had blood spattered on it as she used it to block an attacker's sword strike.
+
+Jem: Two more! Grant!
+
+Grant: I got this one.
+
+_Initiate battle with soldier_
+
+Jem: You good?
+
+Grant: Yah, let's go!
+
+Narrator: We scrambled to retreat behind our back line as well timed cannon shots fired into the ranks of the Terrans. Our supply of cannonballs were limited, so I knew it was costly for us to be forced to use them to cover a failed attack. The hours that ensued afterwards were spent healing the wounded. A few of the soldiers I was healing died while I was tending to their wounds. It was draining work. I couldn't help but think about what it would have been like to stand within the walls of the Terran capitol. This was the 23rd day of the assault, and this was the first time I had the chance to be among the front lines of an assault on the gates. I understood now why every frontal assault had failed. Grand Star Igna approached and I stood and saluted.
+
+Grand Star Igna: I want everyone to know I understand the sacrifice you all made when you retreated. Mars was with us today, but the Terrans are strong. I will continue to ask Mercury for guidance.
+
+Narrator: Her voice was strong and commanding, but I noticed her face was pale and sweat stuck her bangs to her forehead.
+
+Grand Star Igna: We will take Terra Manus. I have seen our victory in a dream the Stars blessed me with.
+
+Narrator: Our queen looked excited as she said the words. The defeat seemed to falter her spirit none.
+
+Grand Star Igna: Service is in one hour.
+
 -- After battle and service
 
 Narrator: Tired and bruised I layed in the lush grass staring at the stars. I could see Venus shining Her brilliant light among the twinkling backdrop. I whispered a short prayer to Her thanking her for the things the army gave me - money, and when I retired, a home. I hadn't heard any commands for hours. It was the perfect time for a short nap...

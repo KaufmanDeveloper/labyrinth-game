@@ -72,7 +72,7 @@ Narrator: Grant's head whipped to his left as he met the attacker that cut down 
 
 _Initiate battle with soldier_
 
-Narrator: I looked to Grant to see if he was ok. A gash ran the lenth of his arm and I immediately began healing it. As I did so the second volley of arrows flew overhead to strike behind us yet again. For a brief moment I looked around to see our numbers getting thinned. We were vastly outmatched.
+Narrator: I looked to Grant to see if he was ok. A gash ran the length of his arm and I immediately began healing it. As I did so the second volley of arrows flew overhead to strike behind us yet again. For a brief moment I looked around to see our numbers getting thinned. We were vastly outmatched.
 
 Grand Star Igna: Retreeeaaaaat! By Mercury, fall back!
 
@@ -102,11 +102,17 @@ Grand Star Igna: We will take Terra Manus. I have seen our victory in a dream th
 
 Narrator: Our queen looked excited as she said the words. The defeat seemed to falter her spirit none.
 
-Grand Star Igna: Service is in one hour.
+Grand Star Igna: Service is in one hour. Praise the heavens.
+
+Narrator: We held one hand to the sky and repeated: "Praise the heavens." She turned and walked away.
+
+Narrator: I looked at Grant. His eyes were bloodshot and he was still breathing heavy. He looked back at the gates of Terra Manus and my gaze followed. They would be celebrating in that city over the death of my comrades. We couldn't recover all the bodies from the battlefield. I bowed my head and said a short prayer for their souls. Those that we could manage to retrieve were being carried off on wooden gurneys for ascension.
+
+Narrator: Few words were exchanged as we made our way back to camp and waited for Service.
 
 -- After battle and service
 
-Narrator: Tired and bruised I layed in the lush grass staring at the stars. I could see Venus shining Her brilliant light among the twinkling backdrop. I whispered a short prayer to Her thanking her for the things the army gave me - money, and when I retired, a home. I hadn't heard any commands for hours. It was the perfect time for a short nap...
+Narrator: Tired and bruised I laid in the lush grass staring at the stars. I could see Venus shining Her brilliant light among the twinkling backdrop. I whispered a short prayer to Her thanking her for the things the army gave me - money, and when I retired, a home. I hadn't heard any commands for hours. It was the perfect time for a short nap...
 
 Grant: Rise and shine Jem.
 

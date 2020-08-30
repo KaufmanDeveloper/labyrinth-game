@@ -108,11 +108,23 @@ Narrator: We held one hand to the sky and repeated: "Praise the heavens." She tu
 
 Narrator: I looked at Grant. His eyes were bloodshot and he was still breathing heavy. He looked back at the gates of Terra Manus and my gaze followed. They would be celebrating in that city over the death of my comrades. We couldn't recover all the bodies from the battlefield. I bowed my head and said a short prayer for their souls. Those that we could manage to retrieve were being carried off on wooden gurneys for ascension.
 
-Narrator: Few words were exchanged as we made our way back to camp and waited for Service.
+Narrator: Few words were exchanged as we made our way back to camp and waited for Service. The sun began setting and cast a warm glow. Grand Star Igna walked through the middle aisle to the altar with the Star Seer following and acolytes behind him.
 
--- After battle and service
+Grand Star Igna: Praise the heavens.
 
-Narrator: Tired and bruised I laid in the lush grass staring at the stars. I could see Venus shining Her brilliant light among the twinkling backdrop. I whispered a short prayer to Her thanking her for the things the army gave me - money, and when I retired, a home. I hadn't heard any commands for hours. It was the perfect time for a short nap...
+Narrator: We repeated. After a few songs and prayers, the Grand Star began the Message. Her voice was commanding and strong, but her face looked pale.
+
+Grand Star Igna: The Celestials ask a lot of us. Mars has given us the drive to take Terra Manus, while Mercury tells us to retreat. It seems confusing doesn't it? Just like us, they disagree. They know our future, but argue about how to reach it. They created us in their image after all.
+
+Narrator: She paused for a moment.
+
+Grand Star Igna: The Heavens are watching us. The Celestials and the Stars want nothing more than for us to win this war so we can spread their message. The Terrans and their people are blind. They don't understand the love that Venus shows us. They aren't governed under law understood by us through Saturn. They will be destroyed by themselves after they're finished killing off our people one territory at a time.
+
+Narrator: This caused a stir in the crowd. Many soldiers were still angered by the merciless invasion of Port Orion. The Terrans left no survivors. Hearing about the attack is what inspired me to enlist.
+
+Narrator: Grand Star Igna continued the sermon and said a prayer to all of the Celestials. At the end of the service we prayed to Pluto to bless the souls of the fallen soldiers. We burned the bodies we were able to recover as we sang hymnals.
+
+Narrator: After the service I left Grant and walked around the perimeter of our camp. I reflected on the day and couldn't help but feel disappointed in how my first battle went. Tired and bruised I laid in a patch of lush grass staring at the Stars. I could see Venus shining Her brilliant light among the twinkling backdrop. I whispered a short prayer to Her thanking her for the things the army gave me - money, and when I retired, a home. Sleep came easily...
 
 Grant: Rise and shine Jem.
 
@@ -252,7 +264,7 @@ Jem: You know, other than the fact that it was trying to kill us, it was kinda c
 
 Grant: You think giant centipedes are cute?
 
-Jem: They're pincers move like they're trying to give you a hug or something.
+Jem: Their pincers move like they're trying to give you a hug or something.
 
 Grant: ...
 
@@ -276,7 +288,7 @@ Jem: What do you mean?
 
 Grant: I mean why did you join the army?
 
-Jem: I wanted to embrace Mars and vanquish the people that oppose Astra.
+Jem: I wanted to fight for Mars and to fight for our people. We can't submit to Terra.
 
 Grant: And why else?
 

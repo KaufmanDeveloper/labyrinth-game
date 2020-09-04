@@ -1,7 +1,8 @@
-- Prologue
+### Gameplay
 
-* Path 1 - Left
-* Path 2 - Right
+- Mostly visual novel
+- Turn taking action based battle system with mini games
+- Mini games (puzzles?) also to progress through story
 
 ### General Setting
 
@@ -10,6 +11,8 @@
 - Astrans believe in the Stars and Celestials as deity, and have a warped understanding of Astrology as their religion
 - The Terrans believe in the deities of Earth, Fire, and Water. Have a warped understanding of Geology as their religion
 - "Magic" is used through artifacts which is just technology from the ancient humans that used "Intention" as a driver. (Supposed to use an enhancer chip to use artifacts but humans evolved over time to be able to use them without)
+- You are Jem, a skilled healer with a Regeneration Staff. You are much more however as you have the ability to interface with ancient technology better than any other. You find this out through the different story paths.
+- After going through all story paths, you wake in the morning after the assault on Terra Manus and have knowledge of going through all of them.
 
 ### Somnium Labyrinth
 
@@ -21,12 +24,12 @@
 
 - 111 - 
 - 112 - 
-- 121 - 
+- 121 - (I am the Monarch) - Left - Go to the Cloning Station - Tell Grant "I think I love you"
 - 122 - 
 - 211 - (I am the Executioner) - Right - Kill Tara - Kill Last in stasis chambers and Extract Core
 - 212 - (I am the Shepherd) - Right - Kill Tara - Use core to revive last remaining in stasis chambers
 - 221 - 
-- 222 - 
+- 222 - (I am the Voyager)
 - True Ending (After all others unlocked?)
 
 ### Path 1 (Left - Science/Morality/Pandemic)
@@ -45,6 +48,18 @@
 ### Path 1 - 2 (Go to The Cloning Station)
 
 - When few humans were found to be immune to the virus, they were supposed to be cloned
+- The others that were stranded in the cave to die there rioted and destroyed most of the machines, along with the subjects
+
+### Path 1 - 2 -1 (Grant asks how you feel about him - "I think I love you")
+
+- You realize with Grant that the Astra religion may be a sham
+- You use the cloning station to create an army of soldiers over a number of years
+- With Grant you reign as the monarchs of a new age
+
+### Path 1 -2 -2 (Grant asks how you feel about him - "I think you're naive")
+
+- You try to bring the cloning machine outside of the labyrinth so you can clone Grand Star Igna.
+- 
 
 ### Path 2 (Right - Religion/Family/Understanding)
 
@@ -60,11 +75,25 @@
 
 ### Path 2 - 1 - 1 (Extract the core, killing the last in the chambers)
 
-- 
+- Kill the remaining survivors in cryo stasis chambers
+- Take the core, and use its power to heal Grand Star Igna
 
 ### Path 2 - 1 - 2 (Use the last of the core's power to revive the last remaining in the chambers)
 
-- 
+- Remaining survivors with Jem and Grant have to start a new colony
 
-### Path 2 - 2 (Tara Lives)
+### Path 2 - 2 (Spare Tara)
+
+- You 
+
+### Path 2 - 2 - 1 (Go with Grant)
+
+
+
+### Path 2 - 2 - 2 (Go with Tara)
+
+- You find a leftover shuttle to Mars
+- You take off with Tara (by accident?)
+- Mars has an empty station
+- Shuttle was a one way trip
 

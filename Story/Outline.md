@@ -13,6 +13,7 @@
 - "Magic" is used through artifacts which is just technology from the ancient humans that used "Intention" as a driver. (Supposed to use an enhancer chip to use artifacts but humans evolved over time to be able to use them without)
 - You are Jem, a skilled healer with a Regeneration Staff. You are much more however as you have the ability to interface with ancient technology better than any other. You find this out through the different story paths.
 - After going through all story paths, you wake in the morning after the assault on Terra Manus and have knowledge of going through all of them.
+- A pandemic is taking place, and Queen Igna gets sick with it, assumed to die before recovery
 
 ### Somnium Labyrinth
 
@@ -23,19 +24,20 @@
 ##### Endings (8 regular, 9 with true ending)
 
 - 111 - 
-- 112 - 
+- 112 - (I am the Hero) - Left - Go to the Laboratory - Take the DNA Recoding Tech
 - 121 - (I am the Monarch) - Left - Go to the Cloning Station - Tell Grant "I think I love you"
-- 122 - 
+- 122 - (I am the Herald) - Left - Go to the Cloning Station - Tell Grant "I think you're naive"
 - 211 - (I am the Executioner) - Right - Kill Tara - Kill Last in stasis chambers and Extract Core
 - 212 - (I am the Shepherd) - Right - Kill Tara - Use core to revive last remaining in stasis chambers
 - 221 - 
-- 222 - (I am the Voyager)
-- True Ending (After all others unlocked?)
+- 222 - (I am the Voyager) Right - Spare Tara - Go with Tara
+- True Ending (I am Jem, the Healer) - After all others unlocked
 
 ### Path 1 (Left - Science/Morality/Pandemic)
 
 - Grant lives
 - You meet Doctor Ben and Doctor Wesley (has two heads) - Ben has lost his mind, Wesley is usually asleep but is the "sane" mind
+- Wesley had been infected with the virus, so Ben detached him from his body and attached him to his own to keep him alive
 - The doctors are from the second age
 - Ben starts laughing madly when he sees Jem's staff
 
@@ -43,7 +45,25 @@
 
 - The pandemic spread by using virus fueled technology
 - Unsure if attack by someone or not, but humanity didn't know how to handle it and revert to being without technology
-- The laboratory was supposed to be where a vaccine would be developed (never succeeded)
+- The laboratory was supposed to be where a vaccine would be developed (succeeded in the form of DNA recoding, kept secret and locked away)
+- Give DNA recoding tech a name 
+- Afraid viruses would only be among the poor, reinforce the unbalance already present in their society
+
+### Path 1 - 1 -1 (Leave the DNA Recoding Tech)
+
+
+
+### Path 1 - 1 - 2 (Take the DNA Recoding Tech)
+
+- Dr Ben and Dr Wesley attack you
+
+- You take the device back with you
+
+- You heal Igna and your army is immune to the virus
+
+- Soon, the Astran empire rises to complete power and class divisions rise over time
+
+  
 
 ### Path 1 - 2 (Go to The Cloning Station)
 
@@ -59,7 +79,10 @@
 ### Path 1 -2 -2 (Grant asks how you feel about him - "I think you're naive")
 
 - You try to bring the cloning machine outside of the labyrinth so you can clone Grand Star Igna.
-- 
+- Igna has passed away by the time you return to her
+- The Star Seer is next in line, becomes Grand Star Ignus
+- The Astran army retreats, and over the next decade Ignus creates thousands of "Stars" ruling over different regions, clones of himself
+- Eventually Astra conquors Terra, and Jem's child, Jet becomes Grand Star.
 
 ### Path 2 (Right - Religion/Family/Understanding)
 
@@ -96,4 +119,13 @@
 - You take off with Tara (by accident?)
 - Mars has an empty station
 - Shuttle was a one way trip
+
+
+
+### Path Final Ending
+
+- The staff glows and you recieve a vision from the alternate universe versions of yourself that have done these actions
+- You gain the understanding to do what you need to do
+- You take the DNA Recoding device back with you
+- You get the survivors from the cryo stasis chambers and go with Tara and Grant to Mars to create a colony immune from the virus
 

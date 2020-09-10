@@ -23,14 +23,14 @@
 
 ##### Endings (8 regular, 9 with true ending)
 
-- 111 - 
+- 111 - (I am the Martyr) - Left - Go to the Laboratory - Leave the DNA Recoding Tech
 - 112 - (I am the Hero) - Left - Go to the Laboratory - Take the DNA Recoding Tech
 - 121 - (I am the Monarch) - Left - Go to the Cloning Station - Tell Grant "I think I love you"
 - 122 - (I am the Herald) - Left - Go to the Cloning Station - Tell Grant "I think you're naive"
 - 211 - (I am the Executioner) - Right - Kill Tara - Kill Last in stasis chambers and Extract Core
 - 212 - (I am the Shepherd) - Right - Kill Tara - Use core to revive last remaining in stasis chambers
-- 221 - 
-- 222 - (I am the Voyager) Right - Spare Tara - Go with Tara
+- 221 - (I am the Convert) Right - Spare Tara - Go to the city
+- 222 - (I am the Voyager) Right - Spare Tara - Go to the sign with the symbol
 - True Ending (I am Jem, the Healer) - After all others unlocked
 
 ### Path 1 (Left - Science/Morality/Pandemic)
@@ -51,7 +51,9 @@
 
 ### Path 1 - 1 -1 (Leave the DNA Recoding Tech)
 
-
+- You return to Igna with treatment to help give her a chance at fighting the virus
+- When you return, the army was defeated by a pincer attack by Terra
+- You are spotted as an Astran and are beheaded
 
 ### Path 1 - 1 - 2 (Take the DNA Recoding Tech)
 
@@ -103,18 +105,24 @@
 
 ### Path 2 - 1 - 2 (Use the last of the core's power to revive the last remaining in the chambers)
 
-- Remaining survivors with Jem and Grant have to start a new colony
+- Remaining survivors with Jem and Grant have to start a new colony (or get brought back to Astra? Maybe as slaves)
 
 ### Path 2 - 2 (Spare Tara)
 
-- You 
+- You decide to spare Tara
+- Grant wants to go to the city of (insert name)
+- Tara wants to find out what the earthen symbol means on the sign
 
-### Path 2 - 2 - 1 (Go with Grant)
+### Path 2 - 2 - 1 (Go to City)
 
+- Find an underground city with primal humans that have evolved to live in the dark
+- They worship "The Core"
+- Tara finds her place as an evangelist among them
+- You join her religion
 
+### Path 2 - 2 - 2 (Go to Sign Symbol)
 
-### Path 2 - 2 - 2 (Go with Tara)
-
+- Grant dies
 - You find a leftover shuttle to Mars
 - You take off with Tara (by accident?)
 - Mars has an empty station

@@ -192,7 +192,7 @@ Grant: This is Jem.
 
 Seer: The queen is ill, Jem, she hasn't woken in 22 hours. Without her guidance we cannot continue our attack. We cannot wait here for too long either or we will run out of food and resources.
 
-Seer: Neptune has blessed me with a vision. Have you heard of _name here_ Labyrinth?
+Seer: Neptune has blessed me with a vision. Have you heard of Somnium Labyrinth?
 
 Jem: I've been told by soldiers it's a cursed underground cavern near here.
 
@@ -216,11 +216,13 @@ Seer: You are our redemption. Armies haven't made it out of the labyrinth, but y
 
 Narrator: There was a pause. I couldn't wrap my head around what the Seer was saying. I tried to find words. After a pause, I said the only thing I knew to say.
 
-Jem: Praise the Stars.
+Jem: Praise the heavens.
 
-Seer: They have blessed us. Go now. The queen and all of Astra is depending on you. Your healing magic will be essential Jem. Concentrate and you will succeed.
+Seer: Praise the heavens. Go now. The queen and all of Astra is depending on you. Your healing magic will be essential Jem. Concentrate and you will succeed.
 
-Narrator: My chest felt heavy. The Labyrinth was a myth, something that didn't feel tangible. The magic Jem used was simple and known to many. The magic that Labyrinth contained was the kind of powerful magic that was lost with time. It was the magic of the Old Kingdoms.
+Narrator: He gave me a nod and I left the tent with Grant. My chest felt heavy. Somnium Labyrinth was a myth, something that didn't feel tangible. The magic Jem used was simple and known to many. The magic that the labyrinth contained was the kind of powerful magic that was lost with time. It was the magic of the old kingdoms. Though we have learned a lot from these forgotten people, including our star charts and how to interpret the meaning of the Heavens, there's also so much we don't know about them. Their magic was known to often curse bodies of those who came upon their artifacts. As much good that's come of researching them, disaster has also resulted for many.
+
+Narrator: We trekked for days to Somnium Labyrinth. The road wasn't difficult but it was filled with long silences as fear of the unknown that awaited us sat in our stomachs.
 
 Grant: This is stupid.
 

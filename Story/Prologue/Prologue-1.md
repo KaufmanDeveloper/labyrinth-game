@@ -310,6 +310,6 @@ Jem: I get the feeling you don't wanna talk about this anymore.
 
 Grant: It looks like we're coming up to a fork. Do you want to go left or right?
 
-Narrator: I thought it was important to get Grant's head straight. A soldier who's afraid to die doesn't fight with the same focus as someone who's made peace with themself. I wasn't sure which way to go. I guess either decision was as good as the other.
+Narrator: I thought it was important to get Grant's head straight. A soldier who's afraid to die doesn't fight with the same focus as someone who's made peace with themself. I looked to the left and saw a path that had metal walls. To the right was a path with just the rocky tunnel walls similar to all that led up to this point. I guess either decision was as good as the other.
 
 _Choose left or right_

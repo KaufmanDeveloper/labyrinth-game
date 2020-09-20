@@ -35,7 +35,6 @@
 
 ### Path 1 (Left - Science/Morality/Pandemic)
 
-- Grant lives
 - You meet Doctor Ben and Doctor Wesley (has two heads) - Ben has lost his mind, Wesley is usually asleep but is the "sane" mind
 - Wesley had been infected with the virus, so Ben detached him from his body and attached him to his own to keep him alive
 - The doctors are from the second age

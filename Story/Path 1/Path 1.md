@@ -14,6 +14,7 @@
 
 ## Summation Notes
 
+- Grant and Jem talk about family (Grant's parents Archivists, they had a falling out)
 - 
 
 ---
@@ -92,7 +93,7 @@ Jem: I think so. It's hard for me to imagine because I think I always knew what 
 
 Grant: Oh yah?
 
-Jem: My mother and father met in the army. They said "Astra for Eternity" in their vows alright, we're tied to this stuff.
+Jem: My mother and father met in the army. They said "Astra for Eternity" in their vows. we're tied to this stuff.
 
 Grant: This is a slow elevator.
 
@@ -100,3 +101,78 @@ Jem: It feels like we're slowing down.
 
 Narrator: The elevator stopped and the doors opened.
 
+Grant: What the...
+
+Narrator: Fake garden plants with detailed painted back drops surrounded a room full of complex looking machinery. There was a strong chemical smell in the air mixed with some sort of organic rotting smell. The machines looked like they hadn't been functional for a long time. As we stood in awe in the elevator, a creature began scurrying toward us out of the corner of my eye.
+
+Grant: Jem!
+
+*initiate battle with Mutated Lab Rat*
+
+Jem: What even...
+
+Grant: I don't understand a thing about this place.
+
+Jem: What even...
+
+Grant: He got my leg.
+
+Jem: What even...
+
+Grant: Stop saying that.
+
+Narrator: A figure woke from the corner of the room and approached us. It's figure was so odd and grotesque I couldn't move or speak.
+
+???-Ben: A sleeper! A sleepy deepy friend I thought up again, hello!!!
+
+Jem: Uh, hello?
+
+Narrator: A moment passed in silence as this odd creature stared expectedly at us.
+
+Grant: I'm Grant and this is Jem. What's your... names?
+
+???-Ben: I'm Doctor Ben I think! The sleepyhead attached to me is Doctor Wesley. He sleeps a looot though.
+
+Grant: Ahh. I see. And why is Doctor Wesley... attached to your head?
+
+Doctor Ben: Do you guys wanna see my fun machine?
+
+Narrator: Grant gave me a look that said, "Let's play this cool", but I could tell he was as confused and terrified as I was.
+
+Jem: We'd love to. Is this your home?
+
+Doctor Ben: It's become a house and a home I guess! With unwanted guests...
+
+Grant: The rats?
+
+Doctor Ben: Rats and now humans! But that's ok. I want to show you my fun machine so it's ok.
+
+Narrator: Another quick glance but this time we were communicating more of a "What is actually happening right now" kind of message through our eyes.
+
+Jem: Lead the way please, doctor.
+
+Narrator: He ran ahead of them down a hallway with the familiar painted scenery with his stained and torn apart white coat trailing behind.
+
+Grant: Wait!
+
+Jem: Aaaand he's... they're gone.
+
+Grant: I don't understand a thing that's happening here.
+
+Jem: Do you know anything about this stuff?
+
+Grant: The machines here?
+
+Jem: Yah scholar dude.
+
+Grant: I have no clue. I don't think most of the machinery my dad studied they couldn't figure out what it was supposed to be used for. It was the simpler ones they were able to understand, like ones that massage your back or whatever.
+
+Jem: What about magic relics like my staff? How did they figure out how they work?
+
+Grant: By accident I'd guess. I mean, most people can't use those. You're lucky.
+
+Jem: Neptune blessed me.
+
+Grant: Praise the Heavens.
+
+Jem: 

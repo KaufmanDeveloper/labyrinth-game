@@ -8,6 +8,7 @@
 
 - It is the third age on Earth. Scholars have determined the first age is all of mankind before the great heat, the second age was when humanity discovered magic and bore great underground structures and ended with some pandemic, and the third age is after the revival and rebuilding of humanity from the primal surviving few that came from the second age
 - Astra is trying to take Terra Manus, the capitol of the Terran empire
+- "Praise the Heavens" is common Astran phrase.
 - Astrans believe in the Stars and Celestials as deity, and have a warped understanding of Astrology as their religion
 - The Terrans believe in the deities of Earth, Fire, and Water. Have a warped understanding of Geology as their religion
 - "Magic" is used through artifacts which is just technology from the ancient humans that used "Intention" as a driver. (Supposed to use an enhancer chip to use artifacts but humans evolved over time to be able to use them without)
@@ -35,11 +36,11 @@
 
 ### Path 1 (Left - Science/Morality/Pandemic)
 
-- Grant lives
 - You meet Doctor Ben and Doctor Wesley (has two heads) - Ben has lost his mind, Wesley is usually asleep but is the "sane" mind
 - Wesley had been infected with the virus, so Ben detached him from his body and attached him to his own to keep him alive
 - The doctors are from the second age
 - Ben starts laughing madly when he sees Jem's staff
+- Enemies - Mutated Lab Rat
 
 ### Path 1 - 1 (Go to The Laboratory)
 

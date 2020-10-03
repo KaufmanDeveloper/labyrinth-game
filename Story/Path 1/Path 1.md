@@ -1,10 +1,212 @@
 ## Chapter 1
 
 - Featuring: Grant and Jem
-
 - Previous Choices: Jem chose left
-
 - Things to happen:
 
-  ​	- 
+  - You meet Doctor Ben and Doctor Wesley (has two heads) - Ben has lost his mind, Wesley is usually asleep but is the "sane" mind
+  - Wesley had been infected with the virus, so Ben detached him from his body and attached him to his own to keep him alive
+  - The doctors are from the second age
+  - Ben starts laughing madly when he sees Jem's staff
+- Monsters:
+- Use solid pacing, don't do any fights until a little ways in
+- Celestials are the general deities
 
+## Summation Notes
+
+- Grant and Jem talk about family (Grant's parents Archivists, they had a falling out)
+- 
+
+---
+
+Jem: Let's go left.
+
+Grant: I was thinking the same actually.
+
+Jem: Why's that? I just chose randomly.
+
+Grant: Whenever I have to choose between left or right randomly I always choose left. Do you have anything you do like that?
+
+Jem: Not really. Well actuallly I think I usually choose right.
+
+Grant: Whoa. Crazy.
+
+Narrator: The metal walls became metal floors as well as we walked, and soon we found ourselves in a familiar kind of setting.
+
+Jem: When I heard stories about Somnium Labyrinth I had heard it was a remnant of the second age. Looks like it was a true.
+
+Grant: Man... Sometimes I wonder wish I was born in the second age. How were they able to build things like this?
+
+Jem: I know they were closer to the Celestials than we are.
+
+Grant: Yah?
+
+Jem: Think about it. If Neptune gave us magic, and the people of the second age created all these magic artifacts, it would make sense that they had much stronger ties to the Celestials as well.
+
+Grant: Mm.
+
+Narrator: We continued walking for a while in silence. Grant wouldn't discuss Astran philosophies with me very much. He would usually just nod in agreement with me and we'd move on. A door opened in front of us.
+
+Grant: An elevator.
+
+Jem: Is that what these were called?
+
+Grant: Yah, it's going to take us lower looks like.
+
+Jem: Deeper into the abyss.
+
+Grant: Man, you make it sound so epic.
+
+Jem: I'm guessing I just press the big button here?
+
+Grant: DON'T PRESS THAT!!!
+
+Jem: ...
+
+Grant: Yah that should take us down.
+
+Narrator: I pressed the button and felt the machine whirr. It shook a bit at first but then glided smoothly deeper into the earth.
+
+Grant: I don't think I've ever asked about your parents.
+
+Jem: My parents? What made you think of that?
+
+Grant: My dad used to show me machines like this from the second age.
+
+Jem: Archivist?
+
+Grant: Yah, he would go on and on about their "genious" and all that. It's interesting stuff but when you have to hear about it all day...
+
+Jem: You guys close?
+
+Grant: Nah. We kinda had a falling out. Less so with my mom but kinda with her too.
+
+Jem: What about?
+
+Grant: It doesn't matter. We just had different opinions and it was driving me crazy to be near them.
+
+Jem: When you told me you joined the army because you wanted a change is that what you meant?
+
+Grant: Yah. I wanted to do something for myself. Before I left home it felt like I was just going through the motions every day in my life and never really experiencing anything. Do you know what I mean?
+
+Jem: I think so. It's hard for me to imagine because I think I always knew what I wanted. I'm really close to my family, and they supported me from day one being in the military.
+
+Grant: Oh yah?
+
+Jem: My mother and father met in the army. They said "Astra for Eternity" in their vows. we're tied to this stuff.
+
+Grant: This is a slow elevator.
+
+Jem: It feels like we're slowing down.
+
+Narrator: The elevator stopped and the doors opened.
+
+Grant: What the...
+
+Narrator: Fake garden plants with detailed painted back drops surrounded a room full of complex looking machinery. There was a strong chemical smell in the air mixed with some sort of organic rotting smell. The machines looked like they hadn't been functional for a long time. As we stood in awe in the elevator, a creature began scurrying toward us out of the corner of my eye.
+
+Grant: Jem!
+
+*initiate battle with Mutated Lab Rat*
+
+Jem: What even...
+
+Grant: I don't understand a thing about this place.
+
+Jem: What even...
+
+Grant: He got my leg.
+
+Jem: What even...
+
+Grant: Stop saying that.
+
+Narrator: A figure woke from the corner of the room and approached us. It's figure was so odd and grotesque I couldn't move or speak.
+
+???-Ben: A sleeper! A sleepy deepy friend I thought up again, hello!!!
+
+Jem: Uh, hello?
+
+Narrator: A moment passed in silence as this odd creature stared expectedly at us.
+
+Grant: I'm Grant and this is Jem. What's your... names?
+
+???-Ben: I'm Doctor Ben I think! The sleepyhead attached to me is Doctor Wesley. He sleeps a looot though.
+
+Grant: Ahh. I see. And why is Doctor Wesley... attached to your head?
+
+Doctor Ben: Do you guys wanna see my fun machine?
+
+Narrator: Grant gave me a look that said, "Let's play this cool", but I could tell he was as confused and terrified as I was.
+
+Jem: We'd love to. Is this your home?
+
+Doctor Ben: It's become a house and a home I guess! With unwanted guests...
+
+Grant: The rats?
+
+Doctor Ben: Rats and now humans! But that's ok. I want to show you my fun machine so it's ok.
+
+Narrator: Another quick glance but this time we were communicating more of a "What is actually happening right now" kind of message through our eyes.
+
+Jem: Lead the way please, doctor.
+
+Narrator: He ran ahead of them down a hallway with the familiar painted scenery with his stained and torn apart white coat trailing behind.
+
+Grant: Wait!
+
+Jem: Aaaand he's... they're gone.
+
+Grant: I don't understand a thing that's happening here.
+
+Jem: Do you know anything about this stuff?
+
+Grant: The machines here?
+
+Jem: Yah, scholar dude.
+
+Grant: I have no clue. With most of the machinery my dad studied they couldn't figure out what it was supposed to be used for. It was the simpler ones they were able to understand, like ones that massage your back or things like that.
+
+Jem: What about magic relics like my staff? How did they figure out how they work?
+
+Grant: By accident I'd guess. I mean, most people can't use those. You're lucky.
+
+Jem: Neptune blessed me. Praise the Heavens.
+
+Grant: Yah.
+
+Jem: Why do you think they painted so much plants and scenery on the walls?
+
+Grant: I was wondering about that myself.
+
+Jem: Do you think if you spent a lot of time underground it would make you crazy?
+
+Grant: Hm.
+
+Jem: I wonder if the walls were painted after the initial construction of this place.
+
+Grant: Why? I'd think they'd just want to make sure the place looked nice when they built it.
+
+Jem: The plants look off. Look, there's petals where there shouldn't be on this weed looking thing.
+
+Grant: Oh you're right.
+
+Jem: They're painted so strangely that I think a lot of time passed before these were put on the walls. I get the feeling they were painted out of a desperation to see something green.
+
+Doctor Ben: They were memories I think but not so clear! Ha ha!
+
+Grant: Gaaah, where did you come from!?
+
+Doctor Ben: I have two fun machines. Whose birthday is it?
+
+Grant: Uh, not mine.
+
+Doctor Ben: Ok, you get to choose then! What was your name?
+
+Jem: Jem.
+
+Doctor Ben: I have a machine for my kids and a machine for my friends. Which one do you want to see?
+
+Narrator: I wish Doctor Ben was clearer with the things he was saying. I had no idea how to answer, but I had to make a decision...
+
+*choose Machine for my Kids or Machine for my Friends*

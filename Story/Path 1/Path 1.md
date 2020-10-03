@@ -163,16 +163,50 @@ Jem: Do you know anything about this stuff?
 
 Grant: The machines here?
 
-Jem: Yah scholar dude.
+Jem: Yah, scholar dude.
 
-Grant: I have no clue. I don't think most of the machinery my dad studied they couldn't figure out what it was supposed to be used for. It was the simpler ones they were able to understand, like ones that massage your back or whatever.
+Grant: I have no clue. With most of the machinery my dad studied they couldn't figure out what it was supposed to be used for. It was the simpler ones they were able to understand, like ones that massage your back or things like that.
 
 Jem: What about magic relics like my staff? How did they figure out how they work?
 
 Grant: By accident I'd guess. I mean, most people can't use those. You're lucky.
 
-Jem: Neptune blessed me.
+Jem: Neptune blessed me. Praise the Heavens.
 
-Grant: Praise the Heavens.
+Grant: Yah.
 
-Jem: 
+Jem: Why do you think they painted so much plants and scenery on the walls?
+
+Grant: I was wondering about that myself.
+
+Jem: Do you think if you spent a lot of time underground it would make you crazy?
+
+Grant: Hm.
+
+Jem: I wonder if the walls were painted after the initial construction of this place.
+
+Grant: Why? I'd think they'd just want to make sure the place looked nice when they built it.
+
+Jem: The plants look off. Look, there's petals where there shouldn't be on this weed looking thing.
+
+Grant: Oh you're right.
+
+Jem: They're painted so strangely that I think a lot of time passed before these were put on the walls. I get the feeling they were painted out of a desperation to see something green.
+
+Doctor Ben: They were memories I think but not so clear! Ha ha!
+
+Grant: Gaaah, where did you come from!?
+
+Doctor Ben: I have two fun machines. Whose birthday is it?
+
+Grant: Uh, not mine.
+
+Doctor Ben: Ok, you get to choose then! What was your name?
+
+Jem: Jem.
+
+Doctor Ben: I have a machine for my kids and a machine for my friends. Which one do you want to see?
+
+Narrator: I wish Doctor Ben was clearer with the things he was saying. I had no idea how to answer, but I had to make a decision...
+
+*choose Machine for my Kids or Machine for my Friends*

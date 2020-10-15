@@ -41,6 +41,7 @@
 - The doctors are from the second age
 - Ben starts laughing madly when he sees Jem's staff
 - Enemies - Mutated Lab Rat
+- **Conversation about Grant's parents as Archivists**
 
 ### Path 1 - 1 (Go to The Laboratory)
 
@@ -90,10 +91,13 @@
 ### Path 2 (Right - Religion/Family/Understanding)
 
 - You find empty cryo stasis pods and fight husks
-- Tara is found, a Terran priest
-- Grant takes the lead and convinces Tara they are with the Scholar Guild. They were a brave two that convinced the guild they should be funded to go on an expedition to the Somnium Labyrinth for research.
+- Grant is killed by a husk
+- Kara is found, a Terran priest
+- Jem convinces Tara they are with the Scholar Guild. They were a brave two that convinced the guild they should be funded to go on an expedition to the Somnium Labyrinth for research.
+- Crystal lights - Stolen from elsewhere in the labyrinth
+- **Conversation about Jem's dad as cave explorers**
 
-### Path 2 - 1 (Kill Tara - The labyrinth takes you to the Somnium Chambers)
+### Path 2 - 1 (Kill Kara - The labyrinth takes you to the Somnium Chambers)
 
 - Rows and rows of cryo stasis pods that failed
 - An AI speaks to you over loudspeaker
@@ -106,11 +110,11 @@
 
 ### Path 2 - 1 - 2 (Use the last of the core's power to revive the last remaining in the chambers)
 
-- Remaining survivors with Jem and Grant have to start a new colony (or get brought back to Astra? Maybe as slaves)
+- Remaining survivors with Jem have to start a new colony (or get brought back to Astra? Maybe as slaves)
 
-### Path 2 - 2 (Spare Tara)
+### Path 2 - 2 (Spare Kara)
 
-- You decide to spare Tara
+- You decide to spare Kara
 - Grant wants to go to the city of (insert name)
 - Tara wants to find out what the earthen symbol means on the sign
 
@@ -118,14 +122,14 @@
 
 - Find an underground city with primal humans that have evolved to live in the dark
 - They worship "The Core"
-- Tara finds her place as an evangelist among them
+- Kara finds her place as an evangelist among them
 - You join her religion
 
 ### Path 2 - 2 - 2 (Go to Sign Symbol)
 
 - Grant dies
 - You find a leftover shuttle to Mars
-- You take off with Tara (by accident?)
+- You take off with Kara (by accident?)
 - Mars has an empty station
 - Shuttle was a one way trip
 

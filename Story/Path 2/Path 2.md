@@ -1,0 +1,78 @@
+- Kara <-- Heavily religious, views the world simply, lost a son, deals with grief, is very direct and confrontational
+- Grant needs to die
+- Husks are enemies (people that have turned into savage monsters after experiments and generations of degradation)
+- Empty cryostasis chambers
+- Kara's goal is find a weapon that can help them defeat Astra
+
+-----
+
+Jem: Let's go right.
+
+Grant: Oh, I was thinking left.
+
+Jem: Why's that? I just chose randomly.
+
+Grant: Whenever I have to choose between left or right randomly I always choose left. Do you have anything you do like that?
+
+Jem: Not really. Well actuallly I think I usually choose right.
+
+Grant: Didn't feel like changing it up?
+
+Jem: Do you want to just go left? If you're gonna keep complaining about it-
+
+Grant: No no, I trust your judgement.
+
+Jem: Right.
+
+Narrator: We walked in silence for a while. There were some sort of blue crystals that were embedded within the cavern walls that lit the way. It was cold and the air was wet with moisture.
+
+Jem: I used to explore caves with my dad.
+
+Grant: Yah?
+
+Jem: We were poor but really close. One of the ways we got food was by spelunking.
+
+Grant: You found food in caves?
+
+Jem: Apparently some people from the second age built these farms that mostly had potatoes in caves.
+
+Grant: Don't farms need, you know, sun?
+
+Jem: There were these lamps. We couldn't figure out what kept them going but they put this bright light on the crops. There were these machines that watered them too, probably took water from somewhere deeper underground.
+
+Grant: I can't help but wonder why a farm like that would be built hidden away in a cave.
+
+Jem: We never told anyone in the village that we found it. We were afraid they'd destroy it if they did.
+
+Grant: Hm.
+
+Jem: What?
+
+Grant: Well, seems selfish.
+
+Jem: Selfish?
+
+Grant: Yah, I'd guess the people in your village were poor too.
+
+Jem: They were.
+
+Grant: So why would you keep that information to yourself? They have all the same reasons as you did to keep it going.
+
+Jem: In my experience, when our people found ancient technology, they opted to take it apart for research. They'd want to learn from it but end up destroying it in the process.
+
+Grant: That's progress.
+
+Jem: That's what's selfish. We have lives that need to be sustained right now. We can use that technology instead of having to constantly reserve it just for research.
+
+Grant: If we could build our own machines we could-
+
+Jem: I know I know, but I just get tired of hearing that excuse when people are starving.
+
+Grant: Jem.
+
+Jem: I don't really wanna talk about it anymore.
+
+Grant: No, look.
+
+Narrator: Straight ahead of me standing just around the corner was the outline of some kind of human.
+

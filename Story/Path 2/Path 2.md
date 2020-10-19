@@ -74,5 +74,51 @@ Jem: I don't really wanna talk about it anymore.
 
 Grant: No, look.
 
-Narrator: Straight ahead of me standing just around the corner was the outline of some kind of human.
+Narrator: Straight ahead of me standing halfway around the corner was the outline of some kind of human. Stray hairs clung to the top of its head and its skin looked like leather. Its mouth seemed to be formed for a constant scream, but the only sound that was coming out was a slight groan. It looked more mutant than human. As it emerged into our path, another followed.
+
+Jem: Uh, hello?
+
+Grant: That's not a person.
+
+Jem: Are you guys ok?
+
+Grant: That's not a person.
+
+Narrator: It was like the first mutant suddenly noticed we were there. It whipped it's head to face me. As it began barreling towards me, so did its companion.
+
+Grant: Get ready!
+
+**Begin fight with Mutant**
+
+Jem: That was close. You ok?
+
+Narrator: I looked down to see Grant on the floor writhing.
+
+Jem: Grant!
+
+Grant: It... my neck...
+
+Narrator: He held his neck and his eyes were bloodshot. He was dying.
+
+Jem: No, no, no, no!
+
+Narrator: I could feel myself beginning to panic.
+
+Jem: I'm going to heal your neck, ok? I'll need you to take your hand off of it in a second.
+
+Grant: No, too... Listen...
+
+Narrator: He was on the brink, I had to act now. I forced his hand away from his neck and focused my staff right on the bite. It was worse than I imagined, but I pushed all worry and fear away as I took a deep breath and channeled my magic. The staff glowed and illuminated his face and the rocky walls surrounding us. His face began fading and he could only mutter one more word.
+
+Grant: Time...
+
+Narrator: A final breath escaped Grant as we sat on the earth floor. I backed up against the wall and sat for a while unable to move. I felt paralyzed. Grant had been my first and best friend since enlisting. For some reason I'd assumed we'd always be fighting alongside one another.
+
+Narrator: It wasn't necessarily a conscious thought but in the back of my mind somewhere I'd always imagined we'd be old and retired and still arguing the meaning of our existence and making lame jokes.
+
+Narrator: For a while I just sat. I don't know for how long, but I couldn't bring myself to move.
+
+Narrator: Why? Why did I feel this way? Comrades die. This is what I signed up for. I knew this could happen.
+
+Narrator: I have a miss
 

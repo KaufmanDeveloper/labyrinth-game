@@ -116,9 +116,18 @@ Narrator: A final breath escaped Grant as we sat on the earth floor. I backed up
 
 Narrator: It wasn't necessarily a conscious thought but in the back of my mind somewhere I'd always imagined we'd be old and retired and still arguing the meaning of our existence and making lame jokes.
 
-Narrator: For a while I just sat. I don't know for how long, but I couldn't bring myself to move.
+Narrator: For a while I just sat. I don't know for how long, but I couldn't bring myself to move. There was a cold that I felt in the caverns sitting there. It started in my spine and grew to my extremities as I felt a sense of loneliness I hadn't felt ever.
 
-Narrator: Why? Why did I feel this way? Comrades die. This is what I signed up for. I knew this could happen.
+Narrator: I remembered a prayer I memorized in my days in the village. Prayer LVII. Grand Star Igna read the prayer in my head. "Every atom has a role to play. Selflessly, atoms carry out their tasks for the good of the universe. So too shall we. We are devoted servants to humanity, and by extension, the universe."
 
-Narrator: I have a miss
+Narrator: Why? Why was I feeling sorry for myself? Comrades die. This is what I signed up for. I knew this could happen.
 
+Narrator: I had a mission. It was time to carry it out selflessy and play my role in the universe, just as Grant played his. I stood and patted the dirt off my cloak. Not wanting to look at Grant's body, I continued forward.
+
+Jem: "Selflessly, atom carry out their tasks for the good of the universe. So too shall we."
+
+???: That's an interesting thing to say.
+
+Jem: Whoa! What?
+
+???: That's an interesting thing to say to yourself. 

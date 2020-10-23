@@ -4,6 +4,14 @@
 - Turn taking action based battle system with mini games
 - Mini games (puzzles?) also to progress through story
 
+### Characters
+
+- Jem - Main character. Devoted, cool headed, dreamer
+- Grant - Comrade in arms to Jem. Sarcastic, inexperienced, logical
+- Doctor Ben and Doctor Wesley - Two headed scientist, Ben has lost his mind over the years, Wesley is a genius scientist that's lost his hope in humanity. Ben continues to fight for humanity even if he's lost many of the mental faculties to effectively do so.
+- Wing - Only has one wing as other has been bit off. Bat chimera human creature. Son of Ben. His dad performed experiment on him to try to make humans resistant to virus by fusing with animals. Calm, indifferent, awkward.
+- Kara - Terran priest. 
+
 ### General Setting
 
 - It is the third age on Earth. Scholars have determined the first age is all of mankind before the great heat, the second age was when humanity discovered magic and bore great underground structures and ended with some pandemic, and the third age is after the revival and rebuilding of humanity from the primal surviving few that came from the second age
@@ -92,7 +100,8 @@
 
 - You find empty cryo stasis pods and fight mutants
 - Grant is killed by a mutant
-- Kara is found, a Terran priest
+- 
+- Kara is found, a Terran executioner
 - Jem convinces Tara they are with the Scholar Guild. They were a brave two that convinced the guild they should be funded to go on an expedition to the Somnium Labyrinth for research.
 - Crystal lights - Stolen from elsewhere in the labyrinth
 - **Conversation about Jem's dad as cave explorers**

@@ -100,9 +100,8 @@
 
 - You find empty cryo stasis pods and fight mutants
 - Grant is killed by a mutant
-- 
 - Kara is found, a Terran executioner
-- Jem convinces Tara they are with the Scholar Guild. They were a brave two that convinced the guild they should be funded to go on an expedition to the Somnium Labyrinth for research.
+- Jem convinces Kara they are with the Scholar Guild. They were a brave two that convinced the guild they should be funded to go on an expedition to the Somnium Labyrinth for research.
 - Crystal lights - Stolen from elsewhere in the labyrinth
 - **Conversation about Jem's dad as cave explorers**
 

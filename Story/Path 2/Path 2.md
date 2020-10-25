@@ -131,3 +131,69 @@ Jem: "Selflessly, atom carry out their tasks for the good of the universe. So to
 Jem: Whoa! What?
 
 ???: That's an interesting thing to say to yourself. 
+
+Jem: Oh, yah. What?
+
+Wing: You can call me Wing. I think it's a fitting name because I... clearly have only one wing. It's a fitting and cute name right?
+
+Jem: Sure.
+
+Wing: Your dead friend called you Jem?
+
+Jem: Yes. So you just watched while those things mauled us?
+
+Wing: I did.
+
+Jem: Why didn't you try to help us somehow?
+
+Wing: Help you? By doing what? You think I should have flapped my wing at those monsters' faces? Would that have helped?
+
+Jem: I don't know, maybe. I just lost my best friend and you just sat there and watched two people get attacked by monsters.
+
+Wing: How do you know I'm not a monster?
+
+Jem: Well you definitely look like one. But you can talk and stuff, what do you mean?
+
+Wing: Do you know that they couldn't talk and stuff? They may have been as sentient as us.
+
+Jem: They attacked us, ok? We had to fight for our lives and you did nothing to help a stranger.
+
+Wing: Forgive and move on.
+
+Jem: What?
+
+Wing: It's a saying. The past is the past and there's no sense giving me a hard time for your shortcomings. Forgive and move on.
+
+Jem: Whatever.
+
+Narrator: This sentient bat creature continued to follow me as I walked the continually narrowing path of the labyrinth. I thought of a way to ask why it looked the way it did, and how it came to be in this place.
+
+Wing: Why are you here?
+
+Jem: ...
+
+Narrator: I realized I didn't know the allegiance of this creature. It was probably best if I came up with a believable story. I took a long stretch while I thought of a story so I didn't look like I was searching for an answer.
+
+Jem: I'm with the Scholar Guild. Me and my comrade are researchers that were sent here. For... research.
+
+Wing: I don't understand. Why was it just you and your friend that were sent?
+
+Jem: Large groups have tried to explore the Somnium Labyrinth before and either perished or barely made it out of here alive. The guild was betting that our chances of succeeding in our quest would be much higher if we went in with just a couple of people. For some reason it seems like the larger the group, the more the labyrinth wants to expell the intruders.
+
+Wing: Ah! I hadn't thought of it that way. When you put it like that it makes sense. It was still pretty stupid of you to come here I'd say.
+
+Jem: We came here with a mission. I won't let my people down.
+
+Narrator: Wing came to a halt and crouched behind a rock that was before an opening in the cave.
+
+Wing: Sshh.
+
+Jem: What?
+
+Wing: Look.
+
+Narrator: After crouching with Wing, I looked ahead and saw a woman cleaning her cloak using the water at the base of a waterfall. Her braided blonde hair trailed down her back and where it ended I noticed the crest of Terra marked her uniform. A sheathed sword lay on the ground next to her as she worked.
+
+Narrator: What should I do? This was perhaps my only opportunity to get the jump on this enemy.
+
+**choice: "I have to kill her now!" - "For now, we could work together."**

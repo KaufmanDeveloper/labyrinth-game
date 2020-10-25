@@ -9,8 +9,8 @@
 - Jem - Main character. Devoted, cool headed, dreamer
 - Grant - Comrade in arms to Jem. Sarcastic, inexperienced, logical
 - Doctor Ben and Doctor Wesley - Two headed scientist, Ben has lost his mind over the years, Wesley is a genius scientist that's lost his hope in humanity. Ben continues to fight for humanity even if he's lost many of the mental faculties to effectively do so.
-- Wing - Only has one wing as other has been bit off. Bat chimera human creature. Son of Ben. His dad performed experiment on him to try to make humans resistant to virus by fusing with animals. Calm, indifferent, awkward.
-- Kara - Terran priest. 
+- Wing - Only has one wing as other has been bit off. Bat chimera human creature. Son of Ben. His dad performed experiments on him to try to make humans resistant to virus by fusing with animals. Calm, indifferent, awkward.
+- Kara - Terran priest. Her party was trying to find a weapon to defend against Astra. They have all died and she's the only one left. Optimist, tender, emotional.
 
 ### General Setting
 

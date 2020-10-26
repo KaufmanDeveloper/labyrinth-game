@@ -132,15 +132,16 @@ func load_actors(dialogue):
 	var names = []
 	for index in dialogue:
 		var currentDialogue = dialogue[index]
-		if(currentDialogue.name != "Player" and names.find(currentDialogue.name) == -1):
+		if(currentDialogue.name != "Player" && currentDialogue.name != "Narrator" and names.find(currentDialogue.name) == -1):
 			names.push_back(currentDialogue.name)
 			var CurrentActor = load("res://Actors/" + currentDialogue.name + ".tscn")
 			var currentActorInstance = CurrentActor.instance()
 			actors.push_back(currentActorInstance)
 	
 	# Set first actor to talk as displayed actor
-	currentActor.set_texture(actors[0].get_node("ActorSprite").get_texture())
-	currentActor.set_actorName(actors[0].actorName)
+	if (actors.size()):
+		currentActor.set_texture(actors[0].get_node("ActorSprite").get_texture())
+		currentActor.set_actorName(actors[0].actorName)
 
 func change_actor(name):
 	for actor in actors:

@@ -29,7 +29,7 @@ var currentActorName = ""
 func _ready():
 	interact()
 
-func _process(delta):
+func _process(_delta):
 	if nameIsChecked:
 		type_text()
 
@@ -135,8 +135,8 @@ func load_actors(dialogue):
 		if(currentDialogue.name != "Player" and names.find(currentDialogue.name) == -1):
 			names.push_back(currentDialogue.name)
 			var CurrentActor = load("res://Actors/" + currentDialogue.name + ".tscn")
-			var currentActor = CurrentActor.instance()
-			actors.push_back(currentActor)
+			var currentActorInstance = CurrentActor.instance()
+			actors.push_back(currentActorInstance)
 	
 	# Set first actor to talk as displayed actor
 	currentActor.set_texture(actors[0].get_node("ActorSprite").get_texture())

@@ -1,7 +1,6 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Images/Dungeon.png" type="Texture" id=1]
-[ext_resource path="res://Actors/Test.png" type="Texture" id=2]
 [ext_resource path="res://Dialogue/Dialogue.gd" type="Script" id=3]
 [ext_resource path="res://Sound Effects/TextSound.wav" type="AudioStream" id=5]
 [ext_resource path="res://Sound Effects/TxtOut.wav" type="AudioStream" id=6]
@@ -47,7 +46,7 @@ tracks/0/keys = {
 resource_name = "NamePanelIn"
 length = 0.1
 tracks/0/type = "value"
-tracks/0/path = NodePath("UI/DialoguePanel/NamePanel:rect_size")
+tracks/0/path = NodePath("UI/NamePanel:rect_size")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -58,23 +57,11 @@ tracks/0/keys = {
 "update": 0,
 "values": [ Vector2( 0, 0 ), Vector2( 200, 54 ) ]
 }
-tracks/1/type = "value"
-tracks/1/path = NodePath("UI/DialoguePanel/NamePanel:rect_position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0, 0.1 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Vector2( 0, 0 ), Vector2( 0, -50 ) ]
-}
 
 [sub_resource type="Animation" id=5]
 length = 0.1
 tracks/0/type = "value"
-tracks/0/path = NodePath("UI/DialoguePanel/NamePanel:rect_size")
+tracks/0/path = NodePath("UI/NamePanel:rect_size")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -84,18 +71,6 @@ tracks/0/keys = {
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ Vector2( 200, 54 ), Vector2( 41, 1 ) ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("UI/DialoguePanel/NamePanel:rect_position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0, 0.1 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Vector2( 0, -50 ), Vector2( 0, 0 ) ]
 }
 
 [sub_resource type="Animation" id=6]
@@ -162,9 +137,9 @@ __meta__ = {
 }
 
 [node name="CurrentActor" type="Sprite" parent="."]
+modulate = Color( 1, 1, 1, 0 )
 position = Vector2( 273, 125 )
 scale = Vector2( 4, 4 )
-texture = ExtResource( 2 )
 hframes = 2
 script = ExtResource( 8 )
 
@@ -181,7 +156,6 @@ anchor_right = 0.633
 margin_top = 236.0
 margin_right = 234.88
 margin_bottom = 359.0
-rect_scale = Vector2( 1e-05, 1e-05 )
 rect_pivot_offset = Vector2( 319, 58 )
 __meta__ = {
 "_edit_lock_": true,
@@ -203,10 +177,11 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="NamePanel" type="Panel" parent="UI/DialoguePanel"]
-margin_top = -50.0
-margin_right = 200.0
-margin_bottom = 4.0
+[node name="NamePanel" type="Panel" parent="UI"]
+margin_left = -0.439781
+margin_top = 186.063
+margin_right = 199.56
+margin_bottom = 240.063
 rect_min_size = Vector2( 1, 1 )
 rect_pivot_offset = Vector2( 22, 5 )
 __meta__ = {
@@ -214,7 +189,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="NameText" type="RichTextLabel" parent="UI/DialoguePanel/NamePanel"]
+[node name="NameText" type="RichTextLabel" parent="UI/NamePanel"]
 margin_left = 17.0
 margin_top = 12.0
 margin_right = 226.0

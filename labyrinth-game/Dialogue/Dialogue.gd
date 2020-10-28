@@ -2,7 +2,7 @@ extends Node
 
 onready var actors = []
 
-onready var nameText = $UI/DialoguePanel/NamePanel/NameText
+onready var nameText = $UI/NamePanel/NameText
 onready var dialogueText = $UI/DialoguePanel/DialogueText
 onready var textSound = $TextSound
 onready var textInSound = $TextIn
@@ -73,25 +73,29 @@ func check_actor(name):
 	nameIsChecked = false
 	
 	if not isInitialRender:
-		animationPlayer.play("NamePanelOut")
-		yield(animationPlayer, "animation_finished")
-		textOutSound.play()
+		if nameText.get_text() != '':
+			animationPlayer.play("NamePanelOut")
+			yield(animationPlayer, "animation_finished")
+			textOutSound.play()
 		animationPlayer.play("DialogueBoxOut")
 		yield(animationPlayer, "animation_finished")
 		yield(get_tree().create_timer(0.4), "timeout")
 	
 	isInitialRender = false
 	textInSound.play()
+	
 	animationPlayer.play("DialogueBoxIn")
 	yield(animationPlayer, "animation_finished")
-	animationPlayer.play("NamePanelIn")
-	yield(animationPlayer, "animation_finished")
+
+	if nameText.get_text() != '':
+		animationPlayer.play("NamePanelIn")
+		yield(animationPlayer, "animation_finished")
 	
 	# Will need to take array of actors and compare them to name field
 	if name == "Player":
 		nameText.set_text("Jem")
-	else:
-		nameText.set_text(name)
+	elif name != "Narrator":
+		nameText.set_text("")
 	
 	nameIsChecked = true
 

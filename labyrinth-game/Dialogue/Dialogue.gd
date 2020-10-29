@@ -51,9 +51,11 @@ func interact() -> void:
 			yield(self, "proceed_dialogue")
 			previousIndex = index
 		
-		if ('directive' in currentDialogue):
+		if ('directive' in currentDialogue and 'name' in currentDialogue):
 			if (currentDialogue.directive == 'fade_in'):
 				fade_in_actor(currentDialogue.name)
+			if (currentDialogue.directive == 'fade_out'):
+				fade_out_actor(currentDialogue.name)
 	
 	emit_signal("finished")
 	
@@ -170,9 +172,23 @@ func fade_in_actor(name):
 			currentActor.set_actorName(name)
 			return
 
+func fade_out_actor(name):
+	for actor in actors:
+		if name == actor.actorName:
+			spriteFadesAnimationPlayer.play("FadeOutActor")
+			yield(spriteFadesAnimationPlayer, "animation_finished")
+			currentActor.set_actorName(name)
+			return
+
 func change_actor(name):
 	for actor in actors:
 		if name == actor.actorName:
+			
+			# If no actor is visible, just fade in when changing
+			if currentActor.modulate == Color(1,1,1,0):
+				fade_in_actor(name)
+				return
+			
 			spriteFadesAnimationPlayer.play("FadeOutActor")
 			yield(spriteFadesAnimationPlayer, "animation_finished")
 			currentActor.set_texture(actor.get_node("ActorSprite").get_texture())

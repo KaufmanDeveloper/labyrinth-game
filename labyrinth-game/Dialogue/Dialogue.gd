@@ -36,13 +36,18 @@ func _process(_delta):
 
 func interact() -> void:
 	var dialogue : Dictionary = load_dialogue(dialogue_file_path)
+	var previousIndex = null
 	load_actors(dialogue)
 	
 	for index in dialogue:
 		var currentDialogue = dialogue[index]
-		check_actor(currentDialogue.name)
+		var previousName = null
+		if (previousIndex):
+			previousName = dialogue[previousIndex].name 
+		check_actor(currentDialogue.name, previousName)
 		print_text(currentDialogue.text)
 		yield(self, "proceed_dialogue")
+		previousIndex = index
 	
 	emit_signal("finished")
 	
@@ -60,7 +65,7 @@ func print_text(text):
 	dialogueText.set_visible_characters(textRevealed)
 	dialogueText.set_text(text)
 
-func check_actor(name):
+func check_actor(name, previousName):
 	if nameText.get_text() == "Jem" and name == "Player" or (nameText.get_text() == name):
 		return
 	
@@ -77,15 +82,16 @@ func check_actor(name):
 			animationPlayer.play("NamePanelOut")
 			yield(animationPlayer, "animation_finished")
 			textOutSound.play()
-		animationPlayer.play("DialogueBoxOut")
+		if previousName and previousName != name:
+			animationPlayer.play("DialogueBoxOut")
+			yield(animationPlayer, "animation_finished")
+			yield(get_tree().create_timer(0.4), "timeout")
+	
+	
+	if (previousName and previousName != name) or isInitialRender:
+		textInSound.play()
+		animationPlayer.play("DialogueBoxIn")
 		yield(animationPlayer, "animation_finished")
-		yield(get_tree().create_timer(0.4), "timeout")
-	
-	isInitialRender = false
-	textInSound.play()
-	
-	animationPlayer.play("DialogueBoxIn")
-	yield(animationPlayer, "animation_finished")
 
 	if nameText.get_text() != '':
 		animationPlayer.play("NamePanelIn")
@@ -98,6 +104,7 @@ func check_actor(name):
 		nameText.set_text("")
 	
 	nameIsChecked = true
+	isInitialRender = false
 
 func reset_text_timers():
 	textTimer = 0

@@ -22,7 +22,7 @@ signal finished
 var textTimer = 0
 var textRevealed = 0
 var dialogueIsRevealing = true
-var nameIsChecked = false
+var nameIsCheckedAndTypeText = false
 var isInitialRender = true
 var currentActorName = ""
 
@@ -30,7 +30,7 @@ func _ready():
 	interact()
 
 func _process(_delta):
-	if nameIsChecked:
+	if nameIsCheckedAndTypeText:
 		type_text()
 
 
@@ -45,9 +45,15 @@ func interact() -> void:
 		if (previousIndex):
 			previousName = dialogue[previousIndex].name 
 		check_actor(currentDialogue.name, previousName)
-		print_text(currentDialogue.text)
-		yield(self, "proceed_dialogue")
-		previousIndex = index
+		
+		if ("text" in currentDialogue):
+			print_text(currentDialogue.text)
+			yield(self, "proceed_dialogue")
+			previousIndex = index
+		
+		if ('directive' in currentDialogue):
+			if (currentDialogue.directive == 'fade_in'):
+				fade_in_actor(currentDialogue.name)
 	
 	emit_signal("finished")
 	
@@ -75,7 +81,7 @@ func check_actor(name, previousName):
 			change_actor(name)
 	
 	nameText.set_text("")
-	nameIsChecked = false
+	nameIsCheckedAndTypeText = false
 	
 	if not isInitialRender:
 		if nameText.get_text() != '':
@@ -103,7 +109,8 @@ func check_actor(name, previousName):
 	elif name != "Narrator":
 		nameText.set_text("")
 	
-	nameIsChecked = true
+	if dialogueText:
+		nameIsCheckedAndTypeText = true
 	isInitialRender = false
 
 func reset_text_timers():
@@ -153,6 +160,15 @@ func load_actors(dialogue):
 	if (actors.size()):
 		currentActor.set_texture(actors[0].get_node("ActorSprite").get_texture())
 		currentActor.set_actorName(actors[0].actorName)
+
+func fade_in_actor(name):
+	for actor in actors:
+		if name == actor.actorName:
+			currentActor.set_texture(actor.get_node("ActorSprite").get_texture())
+			spriteFadesAnimationPlayer.play("FadeInActor")
+			yield(spriteFadesAnimationPlayer, "animation_finished")
+			currentActor.set_actorName(name)
+			return
 
 func change_actor(name):
 	for actor in actors:

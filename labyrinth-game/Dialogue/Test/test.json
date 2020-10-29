@@ -1,5 +1,6 @@
 {
   "1": { "name": "Player", "text": "This is a test." },
+  "1.1": {"name": "Tara", "directive": "fade_in"},
   "2": { "name": "Tara", "text": "Tests are fun!" },
   "3": {
     "name": "Grant",

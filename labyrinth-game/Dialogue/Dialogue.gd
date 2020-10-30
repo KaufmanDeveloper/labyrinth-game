@@ -89,8 +89,6 @@ func check_actor(name, previousName):
 	
 	nameIsCheckedAndTypeText = false
 	
-	print(namePanel.rect_size)
-	
 	if nameText.text != name:
 		if name != 'Narrator':
 			shouldPlayNamePanelInAnimation = true

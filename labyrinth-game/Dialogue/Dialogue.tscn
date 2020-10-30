@@ -156,6 +156,7 @@ anchor_right = 0.633
 margin_top = 236.0
 margin_right = 234.88
 margin_bottom = 359.0
+rect_scale = Vector2( 1e-05, 1e-05 )
 rect_pivot_offset = Vector2( 319, 58 )
 __meta__ = {
 "_edit_lock_": true,

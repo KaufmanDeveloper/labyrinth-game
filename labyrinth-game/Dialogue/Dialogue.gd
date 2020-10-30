@@ -44,7 +44,9 @@ func interact() -> void:
 		var previousName = null
 		if (previousIndex):
 			previousName = dialogue[previousIndex].name 
-		check_actor(currentDialogue.name, previousName)
+		
+		if (!'directive' in currentDialogue):
+			check_actor(currentDialogue.name, previousName)
 		
 		if ("text" in currentDialogue):
 			print_text(currentDialogue.text)
@@ -82,8 +84,10 @@ func check_actor(name, previousName):
 		if name != "Player" and name != currentActor.get_actorName():
 			change_actor(name)
 	
-	nameText.set_text("")
 	nameIsCheckedAndTypeText = false
+	
+	if nameText.text != name:
+		nameText.set_text("")
 	
 	if not isInitialRender:
 		if nameText.get_text() != '':
@@ -105,11 +109,15 @@ func check_actor(name, previousName):
 		animationPlayer.play("NamePanelIn")
 		yield(animationPlayer, "animation_finished")
 	
+	
+	
 	# Will need to take array of actors and compare them to name field
 	if name == "Player":
 		nameText.set_text("Jem")
-	elif name != "Narrator":
+	elif name == "Narrator":
 		nameText.set_text("")
+	elif nameText.get_text() != name:
+		nameText.set_text(name)
 	
 	if dialogueText:
 		nameIsCheckedAndTypeText = true

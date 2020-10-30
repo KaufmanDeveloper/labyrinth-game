@@ -2,6 +2,7 @@ extends Node
 
 onready var actors = []
 
+onready var namePanel = $UI/NamePanel
 onready var nameText = $UI/NamePanel/NameText
 onready var dialogueText = $UI/DialoguePanel/DialogueText
 onready var textSound = $TextSound
@@ -88,10 +89,13 @@ func check_actor(name, previousName):
 	
 	nameIsCheckedAndTypeText = false
 	
+	print(namePanel.rect_size)
+	
 	if nameText.text != name:
 		if name != 'Narrator':
 			shouldPlayNamePanelInAnimation = true
-		shouldPlayNamePanelOutAnimation = true
+		if namePanel.rect_size > Vector2(50, 50): # Check if need to play out animation
+			shouldPlayNamePanelOutAnimation = true
 		nameText.set_text("")
 	
 	if not isInitialRender:

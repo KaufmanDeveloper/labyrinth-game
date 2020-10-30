@@ -181,8 +181,8 @@ __meta__ = {
 [node name="NamePanel" type="Panel" parent="UI"]
 margin_left = -0.439781
 margin_top = 186.063
-margin_right = 199.56
-margin_bottom = 240.063
+margin_right = 0.560219
+margin_bottom = 187.063
 rect_min_size = Vector2( 1, 1 )
 rect_pivot_offset = Vector2( 22, 5 )
 __meta__ = {

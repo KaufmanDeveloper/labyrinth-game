@@ -78,7 +78,8 @@ func print_text(text):
 func check_actor(name, previousName):
 	if nameText.get_text() == "Jem" and name == "Player" or (nameText.get_text() == name):
 		return
-	var shouldPlayNamePanelAnimation = false
+	var shouldPlayNamePanelInAnimation = false
+	var shouldPlayNamePanelOutAnimation = false
 	
 	if currentActorName != name:
 		currentActorName = name
@@ -88,11 +89,13 @@ func check_actor(name, previousName):
 	nameIsCheckedAndTypeText = false
 	
 	if nameText.text != name:
-		shouldPlayNamePanelAnimation = true
+		if name != 'Narrator':
+			shouldPlayNamePanelInAnimation = true
+		shouldPlayNamePanelOutAnimation = true
 		nameText.set_text("")
 	
 	if not isInitialRender:
-		if shouldPlayNamePanelAnimation:
+		if shouldPlayNamePanelOutAnimation:
 			animationPlayer.play("NamePanelOut")
 			yield(animationPlayer, "animation_finished")
 			textOutSound.play()
@@ -107,7 +110,7 @@ func check_actor(name, previousName):
 		animationPlayer.play("DialogueBoxIn")
 		yield(animationPlayer, "animation_finished")
 
-	if shouldPlayNamePanelAnimation:
+	if shouldPlayNamePanelInAnimation:
 		animationPlayer.play("NamePanelIn")
 		yield(animationPlayer, "animation_finished")
 	
@@ -123,7 +126,6 @@ func check_actor(name, previousName):
 	
 	if dialogueText:
 		nameIsCheckedAndTypeText = true
-	shouldPlayNamePanelAnimation = false
 	isInitialRender = false
 
 func reset_text_timers():

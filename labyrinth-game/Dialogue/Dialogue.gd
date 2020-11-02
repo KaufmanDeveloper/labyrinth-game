@@ -2,7 +2,8 @@ extends Node
 
 onready var actors = []
 
-onready var nameText = $UI/DialoguePanel/NamePanel/NameText
+onready var namePanel = $UI/NamePanel
+onready var nameText = $UI/NamePanel/NameText
 onready var dialogueText = $UI/DialoguePanel/DialogueText
 onready var textSound = $TextSound
 onready var textInSound = $TextIn
@@ -22,27 +23,42 @@ signal finished
 var textTimer = 0
 var textRevealed = 0
 var dialogueIsRevealing = true
-var nameIsChecked = false
+var nameIsCheckedAndTypeText = false
 var isInitialRender = true
 var currentActorName = ""
 
 func _ready():
 	interact()
 
-func _process(delta):
-	if nameIsChecked:
+func _process(_delta):
+	if nameIsCheckedAndTypeText:
 		type_text()
 
 
 func interact() -> void:
 	var dialogue : Dictionary = load_dialogue(dialogue_file_path)
+	var previousIndex = null
 	load_actors(dialogue)
 	
 	for index in dialogue:
 		var currentDialogue = dialogue[index]
-		check_actor(currentDialogue.name)
-		print_text(currentDialogue.text)
-		yield(self, "proceed_dialogue")
+		var previousName = null
+		if (previousIndex):
+			previousName = dialogue[previousIndex].name 
+		
+		if (!'directive' in currentDialogue):
+			check_actor(currentDialogue.name, previousName)
+		
+		if ("text" in currentDialogue):
+			print_text(currentDialogue.text)
+			yield(self, "proceed_dialogue")
+			previousIndex = index
+		
+		if ('directive' in currentDialogue and 'name' in currentDialogue):
+			if (currentDialogue.directive == 'fade_in'):
+				fade_in_actor(currentDialogue.name)
+			if (currentDialogue.directive == 'fade_out'):
+				fade_out_actor(currentDialogue.name)
 	
 	emit_signal("finished")
 	
@@ -60,40 +76,59 @@ func print_text(text):
 	dialogueText.set_visible_characters(textRevealed)
 	dialogueText.set_text(text)
 
-func check_actor(name):
+func check_actor(name, previousName):
 	if nameText.get_text() == "Jem" and name == "Player" or (nameText.get_text() == name):
 		return
+	var shouldPlayNamePanelInAnimation = false
+	var shouldPlayNamePanelOutAnimation = false
 	
 	if currentActorName != name:
 		currentActorName = name
 		if name != "Player" and name != currentActor.get_actorName():
 			change_actor(name)
 	
-	nameText.set_text("")
-	nameIsChecked = false
+	nameIsCheckedAndTypeText = false
+	
+	if nameText.text != name:
+		if name != 'Narrator':
+			shouldPlayNamePanelInAnimation = true
+		if namePanel.rect_size > Vector2(50, 50): # Check if need to play out animation
+			shouldPlayNamePanelOutAnimation = true
+		nameText.set_text("")
 	
 	if not isInitialRender:
-		animationPlayer.play("NamePanelOut")
-		yield(animationPlayer, "animation_finished")
-		textOutSound.play()
-		animationPlayer.play("DialogueBoxOut")
-		yield(animationPlayer, "animation_finished")
-		yield(get_tree().create_timer(0.4), "timeout")
+		if shouldPlayNamePanelOutAnimation:
+			animationPlayer.play("NamePanelOut")
+			yield(animationPlayer, "animation_finished")
+			textOutSound.play()
+		if previousName and previousName != name:
+			animationPlayer.play("DialogueBoxOut")
+			yield(animationPlayer, "animation_finished")
+			yield(get_tree().create_timer(0.4), "timeout")
 	
-	isInitialRender = false
-	textInSound.play()
-	animationPlayer.play("DialogueBoxIn")
-	yield(animationPlayer, "animation_finished")
-	animationPlayer.play("NamePanelIn")
-	yield(animationPlayer, "animation_finished")
+	
+	if (previousName and previousName != name) or isInitialRender:
+		textInSound.play()
+		animationPlayer.play("DialogueBoxIn")
+		yield(animationPlayer, "animation_finished")
+
+	if shouldPlayNamePanelInAnimation:
+		animationPlayer.play("NamePanelIn")
+		yield(animationPlayer, "animation_finished")
+	
+	
 	
 	# Will need to take array of actors and compare them to name field
 	if name == "Player":
 		nameText.set_text("Jem")
-	else:
+	elif name == "Narrator":
+		nameText.set_text("")
+	elif nameText.get_text() != name:
 		nameText.set_text(name)
 	
-	nameIsChecked = true
+	if dialogueText:
+		nameIsCheckedAndTypeText = true
+	isInitialRender = false
 
 func reset_text_timers():
 	textTimer = 0
@@ -132,19 +167,43 @@ func load_actors(dialogue):
 	var names = []
 	for index in dialogue:
 		var currentDialogue = dialogue[index]
-		if(currentDialogue.name != "Player" and names.find(currentDialogue.name) == -1):
+		if(currentDialogue.name != "Player" && currentDialogue.name != "Narrator" and names.find(currentDialogue.name) == -1):
 			names.push_back(currentDialogue.name)
 			var CurrentActor = load("res://Actors/" + currentDialogue.name + ".tscn")
-			var currentActor = CurrentActor.instance()
-			actors.push_back(currentActor)
+			var currentActorInstance = CurrentActor.instance()
+			actors.push_back(currentActorInstance)
 	
 	# Set first actor to talk as displayed actor
-	currentActor.set_texture(actors[0].get_node("ActorSprite").get_texture())
-	currentActor.set_actorName(actors[0].actorName)
+	if (actors.size()):
+		currentActor.set_texture(actors[0].get_node("ActorSprite").get_texture())
+		currentActor.set_actorName(actors[0].actorName)
+
+func fade_in_actor(name):
+	for actor in actors:
+		if name == actor.actorName:
+			currentActor.set_texture(actor.get_node("ActorSprite").get_texture())
+			spriteFadesAnimationPlayer.play("FadeInActor")
+			yield(spriteFadesAnimationPlayer, "animation_finished")
+			currentActor.set_actorName(name)
+			return
+
+func fade_out_actor(name):
+	for actor in actors:
+		if name == actor.actorName:
+			spriteFadesAnimationPlayer.play("FadeOutActor")
+			yield(spriteFadesAnimationPlayer, "animation_finished")
+			currentActor.set_actorName(name)
+			return
 
 func change_actor(name):
 	for actor in actors:
 		if name == actor.actorName:
+			
+			# If no actor is visible, just fade in when changing
+			if currentActor.modulate == Color(1,1,1,0):
+				fade_in_actor(name)
+				return
+			
 			spriteFadesAnimationPlayer.play("FadeOutActor")
 			yield(spriteFadesAnimationPlayer, "animation_finished")
 			currentActor.set_texture(actor.get_node("ActorSprite").get_texture())

@@ -1,8 +1,5 @@
 extends Node
 
-onready var animationPlayer = $AnimationPlayer
-onready var colorRect = $ColorRect
-
 export(Array, PackedScene) var elements = []
 export (AudioStream) var track
 

@@ -5,9 +5,6 @@
 [node name="Dialogue" instance=ExtResource( 1 )]
 dialogue_file_path = "res://Dialogue/Prologue/prologue.json"
 
-[node name="DialoguePanel" parent="UI" index="0"]
-rect_scale = Vector2( 1e-05, 1e-05 )
-
 [node name="NamePanel" parent="UI" index="1"]
 margin_right = 0.560219
 margin_bottom = 187.063

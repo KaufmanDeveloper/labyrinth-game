@@ -14,7 +14,7 @@ onready var currentActor = $CurrentActor
 
 export (String, FILE, "*.json") var dialogue_file_path : String
 
-
+const Fades = preload("res://Utilities/Transitions/Fades.tscn")
 var type = "dialogue"
 
 signal proceed_dialogue
@@ -59,6 +59,8 @@ func interact() -> void:
 				fade_in_actor(currentDialogue.name)
 			if (currentDialogue.directive == 'fade_out'):
 				fade_out_actor(currentDialogue.name)
+			if (currentDialogue.directive == 'battle'):
+				initiate_battle(currentDialogue.name)
 	
 	emit_signal("finished")
 	
@@ -167,7 +169,9 @@ func load_actors(dialogue):
 	var names = []
 	for index in dialogue:
 		var currentDialogue = dialogue[index]
-		if(currentDialogue.name != "Player" && currentDialogue.name != "Narrator" and names.find(currentDialogue.name) == -1):
+		var isNotDirective = !'directive' in currentDialogue
+		
+		if(isNotDirective and currentDialogue.name != "Player" && currentDialogue.name != "Narrator" and names.find(currentDialogue.name) == -1):
 			names.push_back(currentDialogue.name)
 			var CurrentActor = load("res://Actors/" + currentDialogue.name + ".tscn")
 			var currentActorInstance = CurrentActor.instance()
@@ -212,3 +216,14 @@ func change_actor(name):
 			yield(spriteFadesAnimationPlayer, "animation_finished")
 			currentActor.set_actorName(name)
 			return
+
+func initiate_battle(name):
+	var CurrentBattle = load("res://Battle/Battle/" + name + "/" + name + ".tscn")
+	
+	# Need to fade out, initiate battle, await success. If success, fade in and return
+	var fades = Fades.instance()
+	add_child(fades)
+	var fadesAnimationPlayer = fades.get_node("AnimationPlayer")
+	fadesAnimationPlayer.play("FadeIn")
+	yield(fadesAnimationPlayer, "animation_finished")
+	remove_child(fades)

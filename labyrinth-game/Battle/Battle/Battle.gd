@@ -18,6 +18,9 @@ onready var battleTextbox = $UI/BattleTextPanel/BattleTextbox
 
 var enemyIsAttacking = false
 
+signal finished
+signal success
+
 func _ready():
 	bashActionButton.Bash = Bash
 	healActionButton.Heal = Heal
@@ -53,8 +56,8 @@ func create_new_enemy():
 	enemy.connect("died", self, "_on_Enemy_died")
 
 func _on_Enemy_died():
-	nextRoomButton.show()
 	battleActionButtons.hide()
+	emit_signal("success")
 
 func _on_NextRoomButton_pressed():
 	nextRoomButton.hide()

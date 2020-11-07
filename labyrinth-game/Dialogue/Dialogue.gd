@@ -19,6 +19,7 @@ var type = "dialogue"
 
 signal proceed_dialogue
 signal finished
+signal battleSucceeded
 
 var textTimer = 0
 var textRevealed = 0
@@ -224,6 +225,19 @@ func initiate_battle(name):
 	var fades = Fades.instance()
 	add_child(fades)
 	var fadesAnimationPlayer = fades.get_node("AnimationPlayer")
+	fadesAnimationPlayer.play("FadeOut")
+	yield(fadesAnimationPlayer, "animation_finished")
+	
+	var currentBattleInstance = CurrentBattle.instance()
+	
 	fadesAnimationPlayer.play("FadeIn")
 	yield(fadesAnimationPlayer, "animation_finished")
 	remove_child(fades)
+	
+	self.add_child(currentBattleInstance)
+	currentBattleInstance.connect("success", self, "on_battle_success")
+	
+	yield(self, 'battleSucceded')
+
+func on_battle_success():
+	emit_signal("battleSucceeded")

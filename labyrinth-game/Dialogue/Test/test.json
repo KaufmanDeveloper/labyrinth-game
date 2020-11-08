@@ -1,10 +1,10 @@
 {
   "1": { "name": "Player", "text": "This is a test." },
+  "1.4": {"name": "TestBattle", "directive": "battle"},
   "1.1": {"name": "Tara", "directive": "fade_in"},
   "2": { "name": "Tara", "text": "Tests are fun!" },
   "1.2": {"name": "Tara", "directive": "fade_out"},
   "1.3": {"name": "Narrator", "text": "I agreed."},
-  "1.4": {"name": "TestBattle", "directive": "battle"},
   "3": {
 
     

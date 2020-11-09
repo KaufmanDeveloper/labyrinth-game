@@ -1,6 +1,7 @@
 extends Node
 
 const BattleUnits = preload("res://BattleUnits.tres")
+const type = "Battle"
 
 export(Array, PackedScene) var enemies = []
 export(PackedScene) var Bash = PackedScene.new()

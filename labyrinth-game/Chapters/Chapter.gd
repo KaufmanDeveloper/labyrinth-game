@@ -69,7 +69,7 @@ func on_battle_loaded(battleName):
 	
 	remove_child(currentElementInstance)
 	var currentBattleInstance = CurrentBattle.instance()
-	self.add_child(currentBattleInstance)
+	add_child(currentBattleInstance)
 	
 	fadesAnimationPlayer.play("FadeIn")
 	yield(fadesAnimationPlayer, "animation_finished")

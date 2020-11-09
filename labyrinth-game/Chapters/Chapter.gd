@@ -8,6 +8,7 @@ const DecisionTree = preload("res://Globals/DecisionTree.tres")
 const Fades = preload("res://Utilities/Transitions/Fades.tscn")
 
 var fadesAnimationPlayer = null
+var currentElementInstance = null
 
 signal finished
 
@@ -21,6 +22,7 @@ func _ready():
 	for element in elements:
 		var elementInstance = element.instance()
 		add_child(elementInstance)
+		currentElementInstance = elementInstance
 		
 		if fadesAnimationPlayer == null:
 			var fades = Fades.instance()
@@ -65,11 +67,12 @@ func on_battle_loaded(battleName):
 	fadesAnimationPlayer.play("FadeOut")
 	yield(fadesAnimationPlayer, "animation_finished")
 	
+	remove_child(currentElementInstance)
 	var currentBattleInstance = CurrentBattle.instance()
+	self.add_child(currentBattleInstance)
 	
 	fadesAnimationPlayer.play("FadeIn")
 	yield(fadesAnimationPlayer, "animation_finished")
 	remove_child(fades)
 	
-	self.add_child(currentBattleInstance)
 	currentBattleInstance.connect("success", self, "on_battle_success")

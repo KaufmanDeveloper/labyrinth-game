@@ -2,9 +2,10 @@ extends Node2D
 
 const BattleUnits = preload("res://BattleUnits.tres")
 
-export(int) onready var hp = 25 setget set_hp # Makes visible in Inspector
-export(int) var damage = 4
+export(int) var initialHP
+export(int) var damage
 
+onready var hp setget set_hp # Makes visible in Inspector
 onready var hpLabel = $HPLabel
 onready var animationPlayer = $AnimationPlayer
 onready var attackSound = $AttackSound
@@ -20,6 +21,8 @@ func set_hp(new_hp):
 
 func _ready():
 	BattleUnits.Enemy = self
+	set_hp(initialHP)
+	hpLabel.text = str(hp)
 
 func _exit_tree():
 	BattleUnits.Enemy = null

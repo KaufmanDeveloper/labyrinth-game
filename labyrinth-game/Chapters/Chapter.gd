@@ -70,6 +70,7 @@ func on_battle_loaded(battleName):
 	remove_child(currentElementInstance)
 	var currentBattleInstance = CurrentBattle.instance()
 	add_child(currentBattleInstance)
+	move_child(currentBattleInstance, 0) # Move to higher position than animation so animation is visible
 	
 	fadesAnimationPlayer.play("FadeIn")
 	yield(fadesAnimationPlayer, "animation_finished")

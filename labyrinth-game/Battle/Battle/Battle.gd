@@ -1,6 +1,7 @@
 extends Node
 
 const BattleUnits = preload("res://BattleUnits.tres")
+const type = "Battle"
 
 export(Array, PackedScene) var enemies = []
 export(PackedScene) var Bash = PackedScene.new()
@@ -17,6 +18,9 @@ onready var battleTextPanel = $UI/BattleTextPanel
 onready var battleTextbox = $UI/BattleTextPanel/BattleTextbox
 
 var enemyIsAttacking = false
+
+signal finished
+signal success
 
 func _ready():
 	bashActionButton.Bash = Bash
@@ -53,8 +57,8 @@ func create_new_enemy():
 	enemy.connect("died", self, "_on_Enemy_died")
 
 func _on_Enemy_died():
-	nextRoomButton.show()
 	battleActionButtons.hide()
+	emit_signal("success")
 
 func _on_NextRoomButton_pressed():
 	nextRoomButton.hide()

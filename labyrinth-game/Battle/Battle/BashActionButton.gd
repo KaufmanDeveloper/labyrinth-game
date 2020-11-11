@@ -18,8 +18,13 @@ func _on_pressed():
 func handle_attack(enemy, playerStats):
 	var position = enemy.global_position
 	var slash = Slash.instance() # Create a new instance of the Slash scene
-	var main = get_tree().current_scene # Child of the "Main" scene, not enemy
-	var miniGamePosition = main.miniGamePosition
+	var battleNode = get_tree().current_scene # Child of the "Main" scene, not enemy
+	if !"type" in battleNode or battleNode.type != "Battle":
+		for nodeChild in get_tree().current_scene.get_children():
+			if "type" in nodeChild and nodeChild.type == "Battle":
+				battleNode = nodeChild # Find the battle node in the tree
+	
+	var miniGamePosition = battleNode.miniGamePosition
 	
 	var bash = Bash.instance()
 	miniGamePosition.add_child(bash)
@@ -28,7 +33,7 @@ func handle_attack(enemy, playerStats):
 	bash.queue_free()
 	
 	if bashSucceeded:
-		main.add_child(slash) # Add the instance to the scene
+		battleNode.add_child(slash) # Add the instance to the scene
 		slash.global_position = position
 		enemy.take_damage(4)
 		playerStats.mp += 2

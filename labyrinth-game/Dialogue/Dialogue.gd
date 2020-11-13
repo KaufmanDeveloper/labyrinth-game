@@ -21,6 +21,7 @@ signal proceed_dialogue
 signal finished
 signal load_battle
 signal battle_succeeded
+signal load_music
 
 var textTimer = 0
 var textRevealed = 0
@@ -69,6 +70,8 @@ func interact() -> void:
 				fade_out_actor(currentDialogue.name)
 			if (currentDialogue.directive == 'battle'):
 				initiate_battle(currentDialogue.name)
+			if (currentDialogue.directive == "play_song"):
+				initiate_music(currentDialogue.name)
 	
 	emit_signal("finished")
 	
@@ -227,3 +230,6 @@ func change_actor(name):
 
 func initiate_battle(name):
 	emit_signal("load_battle", name)
+
+func initiate_music(name):
+	emit_signal("load_music", name)

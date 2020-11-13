@@ -1,7 +1,6 @@
 extends Node
 
 export(Array, PackedScene) var elements = []
-export (AudioStream) var track
 
 onready var MusicPlayer = load("res://Music/MusicPlayer.tscn")
 const DecisionTree = preload("res://Globals/DecisionTree.tres")
@@ -11,15 +10,14 @@ var fadesAnimationPlayer = null
 var currentElementInstance = null
 var currentBattleInstance = null
 var currentDialogueIndex = null
+var musicPlayer = null
 
 signal finished
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	var musicPlayer = MusicPlayer.instance()
+	musicPlayer = MusicPlayer.instance()
 	add_child(musicPlayer)
-	musicPlayer.set_stream(track)
-	musicPlayer.play(0)
 	
 	for element in elements:
 		var elementInstance = element.instance()
@@ -41,6 +39,8 @@ func _ready():
 		
 		if containsLoadBattleSignal:
 			elementInstance.connect("load_battle", self, "on_battle_loaded")
+		
+		elementInstance.connect("load_music", self, "on_music_loaded")
 		
 		
 		yield(self, "finished")
@@ -104,3 +104,10 @@ func on_battle_loaded(battleName):
 func on_battle_success():
 	if currentElementInstance.type == "Dialogue":
 		add_back_and_continue_dialogue()
+
+func on_music_loaded(trackName):
+	var CurrentTrackAudioFile = load("res://Music/Exported/" + trackName + ".ogg")
+	
+	musicPlayer.set_stream(CurrentTrackAudioFile)
+	musicPlayer.play(0)
+	print(musicPlayer.playing)

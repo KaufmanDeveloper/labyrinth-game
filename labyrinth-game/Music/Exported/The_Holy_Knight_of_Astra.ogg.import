@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/The_Holy_Knight_of_Astra.ogg-450690a64a054c8232fbb9fbdc951132.oggstr"
+
+[deps]
+
+source_file="res://Music/Exported/The_Holy_Knight_of_Astra.ogg"
+dest_files=[ "res://.import/The_Holy_Knight_of_Astra.ogg-450690a64a054c8232fbb9fbdc951132.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

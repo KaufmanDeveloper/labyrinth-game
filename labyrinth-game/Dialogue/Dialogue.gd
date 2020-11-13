@@ -15,12 +15,13 @@ onready var currentActor = $CurrentActor
 export (String, FILE, "*.json") var dialogue_file_path : String
 
 const Fades = preload("res://Utilities/Transitions/Fades.tscn")
-var type = "dialogue"
+const type = "Dialogue"
 
 signal proceed_dialogue
 signal finished
 signal load_battle
 signal battle_succeeded
+signal load_music
 
 var textTimer = 0
 var textRevealed = 0
@@ -28,6 +29,8 @@ var dialogueIsRevealing = true
 var nameIsCheckedAndTypeText = false
 var isInitialRender = true
 var currentActorName = ""
+var currentIndex = null
+var initialIndex = null
 
 func _ready():
 	interact()
@@ -43,6 +46,10 @@ func interact() -> void:
 	load_actors(dialogue)
 	
 	for index in dialogue:
+		if initialIndex and index <= initialIndex:
+			continue
+		
+		currentIndex = index
 		var currentDialogue = dialogue[index]
 		var previousName = null
 		if (previousIndex):
@@ -63,6 +70,8 @@ func interact() -> void:
 				fade_out_actor(currentDialogue.name)
 			if (currentDialogue.directive == 'battle'):
 				initiate_battle(currentDialogue.name)
+			if (currentDialogue.directive == "play_song"):
+				initiate_music(currentDialogue.name)
 	
 	emit_signal("finished")
 	
@@ -221,3 +230,6 @@ func change_actor(name):
 
 func initiate_battle(name):
 	emit_signal("load_battle", name)
+
+func initiate_music(name):
+	emit_signal("load_music", name)

@@ -65,15 +65,25 @@ func remove_and_save_position(currentElement):
 	remove_child(currentElement)
 
 func add_back_and_continue_dialogue():
+	var fades = Fades.instance()
+	add_child(fades)
+	var fadesAnimationPlayer = fades.get_node("AnimationPlayer")
+	fadesAnimationPlayer.play("FadeOut")
+	yield(fadesAnimationPlayer, "animation_finished")
+	
 	remove_child(currentBattleInstance)
 	
 	currentElementInstance.initialIndex = currentDialogueIndex
 	add_child(currentElementInstance)
+	move_child(currentElementInstance, 0)
+	
+	fadesAnimationPlayer.play("FadeIn")
+	yield(fadesAnimationPlayer, "animation_finished")
+	remove_child(fades)
 
 func on_battle_loaded(battleName):
 	var CurrentBattle = load("res://Battle/Battle/" + battleName + "/" + battleName + ".tscn")
 	
-	# Need to fade out, initiate battle, await success. If success, fade in and return
 	var fades = Fades.instance()
 	add_child(fades)
 	var fadesAnimationPlayer = fades.get_node("AnimationPlayer")

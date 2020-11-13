@@ -33,14 +33,17 @@ func _ready():
 			remove_child(fades)
 		
 		var containsLoadBattleSignal = false
+		var containsLoadMusicSignal = false
 		for currentSignal in elementInstance.get_signal_list():
 			if(currentSignal["name"] == "load_battle"):
 				containsLoadBattleSignal = true
+			if (currentSignal["name"] == "load_music"):
+				containsLoadMusicSignal = true
 		
 		if containsLoadBattleSignal:
 			elementInstance.connect("load_battle", self, "on_battle_loaded")
-		
-		elementInstance.connect("load_music", self, "on_music_loaded")
+		if containsLoadMusicSignal:
+			elementInstance.connect("load_music", self, "on_music_loaded")
 		
 		
 		yield(self, "finished")
@@ -108,6 +111,4 @@ func on_battle_success():
 func on_music_loaded(trackName):
 	var CurrentTrackAudioFile = load("res://Music/Exported/" + trackName + ".ogg")
 	
-	musicPlayer.set_stream(CurrentTrackAudioFile)
-	musicPlayer.play(0)
-	print(musicPlayer.playing)
+	musicPlayer.crossfade_to(CurrentTrackAudioFile)

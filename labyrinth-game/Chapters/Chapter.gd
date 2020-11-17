@@ -79,6 +79,7 @@ func add_back_and_continue_dialogue():
 	currentElementInstance.initialIndex = currentDialogueIndex
 	add_child(currentElementInstance)
 	move_child(currentElementInstance, 0)
+	currentElementInstance.emit_signal('battle_succeeded')
 	
 	fadesAnimationPlayer.play("FadeIn")
 	yield(fadesAnimationPlayer, "animation_finished")

@@ -31,12 +31,13 @@ var isInitialRender = true
 var currentActorName = ""
 var currentIndex = null
 var initialIndex = null
+var textStopped = false
 
 func _ready():
 	interact()
 
 func _process(_delta):
-	if nameIsCheckedAndTypeText:
+	if nameIsCheckedAndTypeText and !textStopped:
 		type_text()
 
 
@@ -69,7 +70,10 @@ func interact() -> void:
 			if (currentDialogue.directive == 'fade_out'):
 				fade_out_actor(currentDialogue.name)
 			if (currentDialogue.directive == 'battle'):
+				textStopped = true
 				initiate_battle(currentDialogue.name)
+				yield(self, 'battle_succeeded')
+				textStopped = false
 			if (currentDialogue.directive == "play_song"):
 				initiate_music(currentDialogue.name)
 	

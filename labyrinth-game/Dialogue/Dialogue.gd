@@ -46,15 +46,16 @@ func interact() -> void:
 	var previousIndex = null
 	load_actors(dialogue)
 	
-	for index in dialogue:
-		if initialIndex and index <= initialIndex:
-			continue
+	for index in dialogue.content:
+		print(index)
+#		if initialIndex and index <= initialIndex:
+#			continue
 		
 		currentIndex = index
-		var currentDialogue = dialogue[index]
+		var currentDialogue = index
 		var previousName = null
 		if (previousIndex):
-			previousName = dialogue[previousIndex].name 
+			previousName = previousIndex.name 
 		
 		if (!'directive' in currentDialogue):
 			check_actor(currentDialogue.name, previousName)
@@ -182,8 +183,8 @@ func type_text():
 
 func load_actors(dialogue):
 	var names = []
-	for index in dialogue:
-		var currentDialogue = dialogue[index]
+	for index in dialogue.content:
+		var currentDialogue = index
 		var isNotDirective = !'directive' in currentDialogue
 		
 		if(isNotDirective and currentDialogue.name != "Player" && currentDialogue.name != "Narrator" and names.find(currentDialogue.name) == -1):

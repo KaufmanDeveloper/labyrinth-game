@@ -6,7 +6,9 @@ const type = "Battle"
 export(Array, PackedScene) var enemies = []
 export(PackedScene) var Bash = PackedScene.new()
 export(PackedScene) var Heal = PackedScene.new()
+export (PackedScene) var background = PackedScene.new()
 
+onready var backgroundNode = $Background
 onready var battleActionButtons = $UI/BattleActionButtons
 onready var bashActionButton = $UI/BattleActionButtons/BashActionButton
 onready var healActionButton = $UI/BattleActionButtons/HealActionButton
@@ -23,6 +25,9 @@ signal finished
 signal success
 
 func _ready():
+	var backgroundInstance = background.instance()
+	backgroundNode.add_child(backgroundInstance)
+	
 	bashActionButton.Bash = Bash
 	healActionButton.Heal = Heal
 	randomize()

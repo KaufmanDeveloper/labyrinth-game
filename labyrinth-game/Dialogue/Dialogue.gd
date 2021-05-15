@@ -14,7 +14,7 @@ onready var spriteFadesAnimationPlayer = $SpriteFadesAnimationPlayer
 onready var currentActor = $CurrentActor
 
 export (String, FILE, "*.json") var dialogue_file_path : String
-export (PackedScene) var background
+export (PackedScene) var background = PackedScene.new()
 
 const Fades = preload("res://Utilities/Transitions/Fades.tscn")
 const type = "Dialogue"

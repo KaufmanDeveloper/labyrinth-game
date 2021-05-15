@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Battle/Battle/Battle.gd" type="Script" id=1]
 [ext_resource path="res://Battle/Battle/PlayerStats.gd" type="Script" id=2]
-[ext_resource path="res://Images/Dungeon.png" type="Texture" id=3]
+[ext_resource path="res://Backgrounds/TestBackground.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Images/Mobile RPG Mockup.png" type="Texture" id=4]
 [ext_resource path="res://Images/UI/Heart.png" type="Texture" id=5]
 [ext_resource path="res://Battle/Battle/StatsPanel.gd" type="Script" id=6]
@@ -39,17 +39,12 @@ script = ExtResource( 1 )
 enemies = [ ExtResource( 9 ) ]
 Bash = ExtResource( 12 )
 Heal = ExtResource( 13 )
+background = ExtResource( 3 )
 
 [node name="PlayerStats" type="Node" parent="."]
 script = ExtResource( 2 )
 
-[node name="Dungeon" type="Sprite" parent="."]
-position = Vector2( 320, 180 )
-scale = Vector2( 2, 2 )
-texture = ExtResource( 3 )
-__meta__ = {
-"_edit_lock_": true
-}
+[node name="Background" type="Node" parent="."]
 
 [node name="EnemyPosition" type="Position2D" parent="."]
 position = Vector2( 77, 29 )
@@ -264,6 +259,7 @@ __meta__ = {
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/FadeToNewRoom = SubResource( 3 )
+
 [connection signal="ap_changed" from="PlayerStats" to="UI/StatsPanel" method="_on_PlayerStats_ap_changed"]
 [connection signal="hp_changed" from="PlayerStats" to="UI/StatsPanel" method="_on_PlayerStats_hp_changed"]
 [connection signal="mp_changed" from="PlayerStats" to="UI/StatsPanel" method="_on_PlayerStats_mp_changed"]

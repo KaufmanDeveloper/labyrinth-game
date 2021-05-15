@@ -2,6 +2,7 @@ extends Node
 
 onready var actors = []
 
+onready var backgroundNode = $BackgroundNode
 onready var namePanel = $UI/NamePanel
 onready var nameText = $UI/NamePanel/NameText
 onready var dialogueText = $UI/DialoguePanel/DialogueText
@@ -13,6 +14,7 @@ onready var spriteFadesAnimationPlayer = $SpriteFadesAnimationPlayer
 onready var currentActor = $CurrentActor
 
 export (String, FILE, "*.json") var dialogue_file_path : String
+export (PackedScene) var background = PackedScene.new()
 
 const Fades = preload("res://Utilities/Transitions/Fades.tscn")
 const type = "Dialogue"
@@ -34,6 +36,8 @@ var initialIndex = null
 var textStopped = false
 
 func _ready():
+	var backgroundInstance = background.instance()
+	backgroundNode.add_child(backgroundInstance)
 	interact()
 
 func _process(_delta):

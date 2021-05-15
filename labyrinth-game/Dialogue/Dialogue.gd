@@ -13,6 +13,7 @@ onready var spriteFadesAnimationPlayer = $SpriteFadesAnimationPlayer
 onready var currentActor = $CurrentActor
 
 export (String, FILE, "*.json") var dialogue_file_path : String
+export (PackedScene) var background
 
 const Fades = preload("res://Utilities/Transitions/Fades.tscn")
 const type = "Dialogue"
@@ -34,6 +35,9 @@ var initialIndex = null
 var textStopped = false
 
 func _ready():
+	var backgroundInstance = background.instance()
+	var backgroundElement = add_child(backgroundInstance)
+	move_child(backgroundElement, 0)
 	interact()
 
 func _process(_delta):

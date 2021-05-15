@@ -48,18 +48,21 @@ tracks/2/keys = {
 
 [node name="Sprite" type="Sprite" parent="."]
 visible = false
-position = Vector2( -80.6892, 133.705 )
+position = Vector2( 158.637, 447.42 )
+scale = Vector2( 2, 2 )
 texture = ExtResource( 1 )
 offset = Vector2( 80.6892, -133.705 )
 
 [node name="Sprite2" type="Sprite" parent="."]
 visible = false
-position = Vector2( -80.6892, 133.705 )
+position = Vector2( 158.637, 447.42 )
+scale = Vector2( 2, 2 )
 texture = ExtResource( 2 )
 offset = Vector2( 80.6892, -133.705 )
 
 [node name="Sprite3" type="Sprite" parent="."]
-position = Vector2( -80.6892, 133.705 )
+position = Vector2( 158.637, 447.42 )
+scale = Vector2( 2, 2 )
 texture = ExtResource( 3 )
 offset = Vector2( 80.6892, -133.705 )
 

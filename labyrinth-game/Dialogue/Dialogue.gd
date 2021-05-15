@@ -2,6 +2,7 @@ extends Node
 
 onready var actors = []
 
+onready var backgroundNode = $BackgroundNode
 onready var namePanel = $UI/NamePanel
 onready var nameText = $UI/NamePanel/NameText
 onready var dialogueText = $UI/DialoguePanel/DialogueText
@@ -36,8 +37,7 @@ var textStopped = false
 
 func _ready():
 	var backgroundInstance = background.instance()
-	var backgroundElement = add_child(backgroundInstance)
-	move_child(backgroundElement, 0)
+	backgroundNode.add_child(backgroundInstance)
 	interact()
 
 func _process(_delta):

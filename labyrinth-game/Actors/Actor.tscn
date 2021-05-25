@@ -6,10 +6,9 @@
 
 [sub_resource type="Animation" id=1]
 resource_name = "Talking"
-length = 0.5
 loop = true
 tracks/0/type = "value"
-tracks/0/path = NodePath("ActorSprite:modulate")
+tracks/0/path = NodePath("ActorSprite:visible")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -17,11 +16,11 @@ tracks/0/enabled = true
 tracks/0/keys = {
 "times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+"update": 1,
+"values": [ true, false ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("ActorSprite2:modulate")
+tracks/1/path = NodePath("ActorSprite2:visible")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -29,19 +28,19 @@ tracks/1/enabled = true
 tracks/1/keys = {
 "times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+"update": 1,
+"values": [ false, true ]
 }
 
 [node name="Actor" type="Node"]
 script = ExtResource( 2 )
 
 [node name="ActorSprite" type="Sprite" parent="."]
-modulate = Color( 1, 1, 1, 0 )
 texture = ExtResource( 1 )
 frame = 1
 
 [node name="ActorSprite2" type="Sprite" parent="."]
+visible = false
 texture = ExtResource( 3 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]

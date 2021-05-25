@@ -1,5 +1,6 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=16 format=2]
 
+[ext_resource path="res://Actors/Images/Marcus1.png" type="Texture" id=1]
 [ext_resource path="res://Backgrounds/TestBackground.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Dialogue/Dialogue.gd" type="Script" id=3]
 [ext_resource path="res://Sound Effects/TextSound.wav" type="AudioStream" id=5]
@@ -91,7 +92,7 @@ tracks/1/keys = {
 "times": PoolRealArray( 0, 0.1 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 0.371199, 235.223 ), Vector2( -0.439781, 186.063 ) ]
+"values": [ Vector2( 0.371199, 235.223 ), Vector2( -0.3, 220.7 ) ]
 }
 tracks/2/type = "value"
 tracks/2/path = NodePath("UI/NamePanel:modulate")
@@ -130,7 +131,7 @@ tracks/1/keys = {
 "times": PoolRealArray( 0, 0.1 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( -0.439781, 186.063 ), Vector2( 0.371, 235.223 ) ]
+"values": [ Vector2( -0.3, 220.7 ), Vector2( 0.371, 235.223 ) ]
 }
 tracks/2/type = "value"
 tracks/2/path = NodePath("UI/NamePanel:modulate")
@@ -205,9 +206,9 @@ background = ExtResource( 2 )
 
 [node name="CurrentActor" type="Sprite" parent="."]
 modulate = Color( 1, 1, 1, 0 )
-position = Vector2( 273, 125 )
-scale = Vector2( 4, 4 )
-hframes = 2
+position = Vector2( 339.882, 164.895 )
+scale = Vector2( 1.5, 1.5 )
+texture = ExtResource( 1 )
 script = ExtResource( 8 )
 
 [node name="UI" type="Control" parent="."]
@@ -219,12 +220,10 @@ __meta__ = {
 }
 
 [node name="DialoguePanel" type="Panel" parent="UI"]
-modulate = Color( 0, 0, 0, 0 )
 anchor_right = 0.633
-margin_top = 236.0
+margin_top = 271.0
 margin_right = 234.88
-margin_bottom = 359.0
-rect_scale = Vector2( 1e-05, 1e-05 )
+margin_bottom = 360.0
 rect_pivot_offset = Vector2( 319, 58 )
 __meta__ = {
 "_edit_lock_": true,
@@ -248,9 +247,9 @@ __meta__ = {
 
 [node name="NamePanel" type="Panel" parent="UI"]
 modulate = Color( 0, 0, 0, 0 )
-margin_left = 0.371199
+margin_left = 0.371
 margin_top = 235.223
-margin_right = 1.3712
+margin_right = 41.371
 margin_bottom = 236.223
 rect_min_size = Vector2( 1, 1 )
 rect_pivot_offset = Vector2( 99.9187, 53.7221 )

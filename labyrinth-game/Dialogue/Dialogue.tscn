@@ -219,6 +219,18 @@ tracks/0/keys = {
 "update": 0,
 "values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
 }
+tracks/1/type = "value"
+tracks/1/path = NodePath("CurrentActor2:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
 
 [node name="Dialogue" type="Node"]
 script = ExtResource( 3 )
@@ -228,7 +240,6 @@ background = ExtResource( 2 )
 [node name="BackgroundNode" type="Node" parent="."]
 
 [node name="CurrentActor" type="Sprite" parent="."]
-modulate = Color( 1, 1, 1, 0 )
 position = Vector2( 339.692, 177.973 )
 scale = Vector2( 1.4, 1.4 )
 texture = ExtResource( 1 )

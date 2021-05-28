@@ -4,7 +4,6 @@
     { "name": "Marcus", "directive": "fade_in" },
     { "name": "Marcus", "text": "Hey my name's Marcus." },
     { "name": "The_Holy_Knight_of_Astra", "directive": "play_song" },
-    { "name": "Tara", "directive": "fade_in" },
     { "name": "Tara", "text": "Tests are fun!" },
     { "name": "Tara", "directive": "fade_out" },
     { "name": "Clair_De_Loon", "directive": "play_song" },

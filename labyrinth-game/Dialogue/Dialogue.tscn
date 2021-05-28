@@ -240,8 +240,8 @@ background = ExtResource( 2 )
 [node name="BackgroundNode" type="Node" parent="."]
 
 [node name="CurrentActor" type="Sprite" parent="."]
+modulate = Color( 1, 1, 1, 0 )
 position = Vector2( 339.692, 177.973 )
-scale = Vector2( 1.4, 1.4 )
 texture = ExtResource( 1 )
 script = ExtResource( 8 )
 
@@ -249,7 +249,6 @@ script = ExtResource( 8 )
 visible = false
 modulate = Color( 1, 1, 1, 0 )
 position = Vector2( 339.692, 177.973 )
-scale = Vector2( 1.4, 1.4 )
 texture = ExtResource( 1 )
 script = ExtResource( 8 )
 

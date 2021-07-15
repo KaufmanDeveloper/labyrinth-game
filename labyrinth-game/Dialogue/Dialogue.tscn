@@ -151,7 +151,7 @@ tracks/2/keys = {
 resource_name = "Talking"
 loop = true
 tracks/0/type = "value"
-tracks/0/path = NodePath("CurrentActor:visible")
+tracks/0/path = NodePath("UI/ActorPanel/CurrentActor:visible")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -163,7 +163,7 @@ tracks/0/keys = {
 "values": [ true, false ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("CurrentActor2:visible")
+tracks/1/path = NodePath("UI/ActorPanel/CurrentActor2:visible")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -180,7 +180,7 @@ resource_name = "FadeInActor"
 length = 0.2
 step = 0.2
 tracks/0/type = "value"
-tracks/0/path = NodePath("CurrentActor:modulate")
+tracks/0/path = NodePath("UI/ActorPanel/CurrentActor:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -192,7 +192,7 @@ tracks/0/keys = {
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("CurrentActor2:modulate")
+tracks/1/path = NodePath("UI/ActorPanel/CurrentActor2:modulate")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -209,7 +209,7 @@ resource_name = "FadeOutActor"
 length = 0.2
 step = 0.2
 tracks/0/type = "value"
-tracks/0/path = NodePath("CurrentActor:modulate")
+tracks/0/path = NodePath("UI/ActorPanel/CurrentActor:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -221,7 +221,7 @@ tracks/0/keys = {
 "values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("CurrentActor2:modulate")
+tracks/1/path = NodePath("UI/ActorPanel/CurrentActor2:modulate")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -239,19 +239,6 @@ dialogue_file_path = "res://Dialogue/Test/test.json"
 background = ExtResource( 2 )
 
 [node name="BackgroundNode" type="Node" parent="."]
-
-[node name="CurrentActor" type="Sprite" parent="."]
-position = Vector2( 322.914, 156.033 )
-scale = Vector2( 4, 4 )
-texture = ExtResource( 4 )
-script = ExtResource( 8 )
-
-[node name="CurrentActor2" type="Sprite" parent="."]
-visible = false
-position = Vector2( 322.914, 156.033 )
-scale = Vector2( 4, 4 )
-texture = ExtResource( 1 )
-script = ExtResource( 8 )
 
 [node name="UI" type="Control" parent="."]
 anchor_right = 1.0
@@ -314,6 +301,34 @@ text = "Name"
 __meta__ = {
 "_edit_lock_": true,
 "_edit_use_anchors_": false
+}
+
+[node name="ActorPanel" type="Panel" parent="UI"]
+margin_left = 284.579
+margin_top = 19.9041
+margin_right = 547.579
+margin_bottom = 255.904
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CurrentActor" type="Sprite" parent="UI/ActorPanel"]
+position = Vector2( 130.692, 120.044 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 4 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CurrentActor2" type="Sprite" parent="UI/ActorPanel"]
+visible = false
+position = Vector2( 130.692, 120.044 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_lock_": true
 }
 
 [node name="TextSound" type="AudioStreamPlayer" parent="."]

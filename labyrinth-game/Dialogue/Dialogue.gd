@@ -11,8 +11,8 @@ onready var textInSound = $TextIn
 onready var textOutSound = $TextOut
 onready var animationPlayer = $AnimationPlayer
 onready var spriteFadesAnimationPlayer = $SpriteFadesAnimationPlayer
-onready var currentActor = $CurrentActor
-onready var currentActor2 = $CurrentActor2
+onready var currentActor = $UI/ActorPanel/CurrentActor
+onready var currentActor2 = $UI/ActorPanel/CurrentActor2
 
 export (String, FILE, "*.json") var dialogue_file_path : String
 export (PackedScene) var background = PackedScene.new()

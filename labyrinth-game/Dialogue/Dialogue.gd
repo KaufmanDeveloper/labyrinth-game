@@ -209,9 +209,6 @@ func load_actors(dialogue):
 func fade_in_actor(name):
 	for actor in actors:
 		if name == actor.actorName:
-			currentActor.set_texture(actor.get_node("ActorSprite").get_texture())
-			currentActor2.set_texture(actor.get_node("ActorSprite2").get_texture())
-			
 			spriteFadesAnimationPlayer.play("FadeInActorPanel")
 			yield(spriteFadesAnimationPlayer, "animation_finished")
 			
@@ -224,11 +221,12 @@ func fade_in_actor(name):
 func fade_out_actor(name):
 	for actor in actors:
 		if name == actor.actorName:
+			spriteFadesAnimationPlayer.play("FadeOutActor")
+			yield(spriteFadesAnimationPlayer, "animation_finished")
+			
 			spriteFadesAnimationPlayer.play("FadeOutActorPanel")
 			yield(spriteFadesAnimationPlayer, "animation_finished")
 			
-			spriteFadesAnimationPlayer.play("FadeOutActor")
-			yield(spriteFadesAnimationPlayer, "animation_finished")
 			currentActor.set_actorName(name)
 			currentActor2.set_actorName(name)
 			return
@@ -242,11 +240,12 @@ func change_actor(name):
 				fade_in_actor(name)
 				return
 			
+			spriteFadesAnimationPlayer.play("FadeOutActor")
+			yield(spriteFadesAnimationPlayer, "animation_finished")
+			
 			spriteFadesAnimationPlayer.play("FadeOutActorPanel")
 			yield(spriteFadesAnimationPlayer, "animation_finished")
 			
-			spriteFadesAnimationPlayer.play("FadeOutActor")
-			yield(spriteFadesAnimationPlayer, "animation_finished")
 			currentActor.set_texture(actor.get_node("ActorSprite").get_texture())
 			currentActor2.set_texture(actor.get_node("ActorSprite2").get_texture())
 			yield(get_tree().create_timer(0.4), "timeout")

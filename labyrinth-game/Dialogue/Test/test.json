@@ -1,6 +1,7 @@
 {
   "content": [
     { "name": "Player", "text": "This is a test." },
+    { "name": "Grant", "directive": "fade_in" },
     {
       "name": "Grant",
       "text": "I can talk a lot. I can talk a lot. I can talk a lot."

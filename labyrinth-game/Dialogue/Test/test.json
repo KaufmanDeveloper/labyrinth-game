@@ -1,15 +1,15 @@
 {
   "content": [
     { "name": "Player", "text": "This is a test." },
+    {
+      "name": "Grant",
+      "text": "I can talk a lot. I can talk a lot. I can talk a lot."
+    },
     { "name": "Tara", "directive": "fade_in" },
     { "name": "Tara", "text": "Tests are fun!" },
     { "name": "a_forest_is_here", "directive": "play_song" },
     { "name": "Tara", "directive": "fade_out" },
     { "name": "Narrator", "text": "I agreed." },
-    {
-      "name": "Grant",
-      "text": "I can talk a lot. I can talk a lot. I can talk a lot."
-    },
     {
       "name": "Player",
       "text": "Different person talking."

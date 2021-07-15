@@ -11,8 +11,8 @@ onready var textInSound = $TextIn
 onready var textOutSound = $TextOut
 onready var animationPlayer = $AnimationPlayer
 onready var spriteFadesAnimationPlayer = $SpriteFadesAnimationPlayer
-onready var currentActor = $CurrentActor
-onready var currentActor2 = $CurrentActor2
+onready var currentActor = $UI/ActorPanel/CurrentActor
+onready var currentActor2 = $UI/ActorPanel/CurrentActor2
 
 export (String, FILE, "*.json") var dialogue_file_path : String
 export (PackedScene) var background = PackedScene.new()
@@ -209,8 +209,9 @@ func load_actors(dialogue):
 func fade_in_actor(name):
 	for actor in actors:
 		if name == actor.actorName:
-			currentActor.set_texture(actor.get_node("ActorSprite").get_texture())
-			currentActor2.set_texture(actor.get_node("ActorSprite2").get_texture())
+			spriteFadesAnimationPlayer.play("FadeInActorPanel")
+			yield(spriteFadesAnimationPlayer, "animation_finished")
+			
 			spriteFadesAnimationPlayer.play("FadeInActor")
 			yield(spriteFadesAnimationPlayer, "animation_finished")
 			currentActor.set_actorName(name)
@@ -222,6 +223,10 @@ func fade_out_actor(name):
 		if name == actor.actorName:
 			spriteFadesAnimationPlayer.play("FadeOutActor")
 			yield(spriteFadesAnimationPlayer, "animation_finished")
+			
+			spriteFadesAnimationPlayer.play("FadeOutActorPanel")
+			yield(spriteFadesAnimationPlayer, "animation_finished")
+			
 			currentActor.set_actorName(name)
 			currentActor2.set_actorName(name)
 			return
@@ -237,9 +242,17 @@ func change_actor(name):
 			
 			spriteFadesAnimationPlayer.play("FadeOutActor")
 			yield(spriteFadesAnimationPlayer, "animation_finished")
+			
+			spriteFadesAnimationPlayer.play("FadeOutActorPanel")
+			yield(spriteFadesAnimationPlayer, "animation_finished")
+			
 			currentActor.set_texture(actor.get_node("ActorSprite").get_texture())
 			currentActor2.set_texture(actor.get_node("ActorSprite2").get_texture())
 			yield(get_tree().create_timer(0.4), "timeout")
+			
+			spriteFadesAnimationPlayer.play("FadeInActorPanel")
+			yield(spriteFadesAnimationPlayer, "animation_finished")
+			
 			spriteFadesAnimationPlayer.play("FadeInActor")
 			yield(spriteFadesAnimationPlayer, "animation_finished")
 			currentActor.set_actorName(name)

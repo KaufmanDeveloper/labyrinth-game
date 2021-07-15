@@ -1,8 +1,9 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://Actors/Images/Marcus1.png" type="Texture" id=1]
 [ext_resource path="res://Backgrounds/TestBackground.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Dialogue/Dialogue.gd" type="Script" id=3]
+[ext_resource path="res://Actors/Images/Grant1.png" type="Texture" id=4]
 [ext_resource path="res://Sound Effects/TextSound.wav" type="AudioStream" id=5]
 [ext_resource path="res://Sound Effects/TxtOut.wav" type="AudioStream" id=6]
 [ext_resource path="res://Sound Effects/TxtIn.wav" type="AudioStream" id=7]
@@ -150,7 +151,7 @@ tracks/2/keys = {
 resource_name = "Talking"
 loop = true
 tracks/0/type = "value"
-tracks/0/path = NodePath("CurrentActor:visible")
+tracks/0/path = NodePath("UI/ActorPanel/CurrentActor:visible")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -162,7 +163,7 @@ tracks/0/keys = {
 "values": [ true, false ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("CurrentActor2:visible")
+tracks/1/path = NodePath("UI/ActorPanel/CurrentActor2:visible")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -179,7 +180,7 @@ resource_name = "FadeInActor"
 length = 0.2
 step = 0.2
 tracks/0/type = "value"
-tracks/0/path = NodePath("CurrentActor:modulate")
+tracks/0/path = NodePath("UI/ActorPanel/CurrentActor:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -191,12 +192,28 @@ tracks/0/keys = {
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("CurrentActor2:modulate")
+tracks/1/path = NodePath("UI/ActorPanel/CurrentActor2:modulate")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=9]
+resource_name = "FadeInActorPanel"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/path = NodePath("UI/ActorPanel:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
 "times": PoolRealArray( 0, 0.2 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
@@ -208,7 +225,7 @@ resource_name = "FadeOutActor"
 length = 0.2
 step = 0.2
 tracks/0/type = "value"
-tracks/0/path = NodePath("CurrentActor:modulate")
+tracks/0/path = NodePath("UI/ActorPanel/CurrentActor:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -220,7 +237,7 @@ tracks/0/keys = {
 "values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("CurrentActor2:modulate")
+tracks/1/path = NodePath("UI/ActorPanel/CurrentActor2:modulate")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -232,25 +249,28 @@ tracks/1/keys = {
 "values": [ Color( 1, 1, 1, 0 ) ]
 }
 
+[sub_resource type="Animation" id=10]
+resource_name = "FadeOutActorPanel"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/path = NodePath("UI/ActorPanel:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+
 [node name="Dialogue" type="Node"]
 script = ExtResource( 3 )
 dialogue_file_path = "res://Dialogue/Test/test.json"
 background = ExtResource( 2 )
 
 [node name="BackgroundNode" type="Node" parent="."]
-
-[node name="CurrentActor" type="Sprite" parent="."]
-modulate = Color( 1, 1, 1, 0 )
-position = Vector2( 339.692, 177.973 )
-texture = ExtResource( 1 )
-script = ExtResource( 8 )
-
-[node name="CurrentActor2" type="Sprite" parent="."]
-visible = false
-modulate = Color( 1, 1, 1, 0 )
-position = Vector2( 339.692, 177.973 )
-texture = ExtResource( 1 )
-script = ExtResource( 8 )
 
 [node name="UI" type="Control" parent="."]
 anchor_right = 1.0
@@ -315,6 +335,37 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="ActorPanel" type="Panel" parent="UI"]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 284.579
+margin_top = 19.9041
+margin_right = 547.579
+margin_bottom = 255.904
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CurrentActor" type="Sprite" parent="UI/ActorPanel"]
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 130.692, 120.044 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 4 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CurrentActor2" type="Sprite" parent="UI/ActorPanel"]
+visible = false
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 130.692, 120.044 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_lock_": true
+}
+
 [node name="TextSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 5 )
 volume_db = -9.244
@@ -337,4 +388,6 @@ volume_db = -8.0
 
 [node name="SpriteFadesAnimationPlayer" type="AnimationPlayer" parent="."]
 anims/FadeInActor = SubResource( 7 )
+anims/FadeInActorPanel = SubResource( 9 )
 anims/FadeOutActor = SubResource( 8 )
+anims/FadeOutActorPanel = SubResource( 10 )

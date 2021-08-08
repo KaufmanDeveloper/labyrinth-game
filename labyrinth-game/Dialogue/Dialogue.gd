@@ -25,6 +25,7 @@ signal finished
 signal load_battle
 signal battle_succeeded
 signal load_music
+signal actor_faded_out
 
 var textTimer = 0
 var textRevealed = 0
@@ -108,7 +109,7 @@ func check_actor(name, previousName):
 	if currentActorName != name:
 		currentActorName = name
 		if name != "Player" and name != currentActor.get_actorName():
-			change_actor(name)
+			change_actor(previousName, name)
 	
 	nameIsCheckedAndTypeText = false
 	
@@ -205,42 +206,40 @@ func load_actors(dialogue):
 func fade_in_actor(name):
 	for actor in actors:
 		if name == actor.actorName:
+			currentActor.set_actorName(name)
+			currentActor2.set_actorName(name)
+			
 			spriteFadesAnimationPlayer.play("FadeInActor")
 			yield(spriteFadesAnimationPlayer, "animation_finished")
-			currentActor.set_actorName(name)
-			currentActor2.set_actorName(name)
+			
 			return
 
-func fade_out_actor(name):
+func fade_out_actor(name, toName = false):
 	for actor in actors:
 		if name == actor.actorName:
 			spriteFadesAnimationPlayer.play("FadeOutActor")
 			yield(spriteFadesAnimationPlayer, "animation_finished")
 			
-			currentActor.set_actorName(name)
-			currentActor2.set_actorName(name)
+			if (toName):
+				currentActor.set_actorName(toName)
+				currentActor2.set_actorName(toName)
+			
+			emit_signal("actor_faded_out")
 			return
 
-func change_actor(name):
+func change_actor(fromName, toName):
 	for actor in actors:
-		if name == actor.actorName:
+		if toName == actor.actorName:
 			
-			# If no actor is visible, just fade in when changing
-			if currentActor.modulate == Color(1,1,1,0):
-				fade_in_actor(name)
-				return
-			
-			spriteFadesAnimationPlayer.play("FadeOutActor")
-			yield(spriteFadesAnimationPlayer, "animation_finished")
+			fade_out_actor(fromName)
+			yield(self, "actor_faded_out")
 			
 			currentActor.set_texture(actor.get_node("ActorSprite").get_texture())
 			currentActor2.set_texture(actor.get_node("ActorSprite2").get_texture())
 			yield(get_tree().create_timer(0.4), "timeout")
 			
-			spriteFadesAnimationPlayer.play("FadeInActor")
-			yield(spriteFadesAnimationPlayer, "animation_finished")
-			currentActor.set_actorName(name)
-			currentActor2.set_actorName(name)
+			fade_in_actor(toName)
+			
 			return
 
 func initiate_battle(name):

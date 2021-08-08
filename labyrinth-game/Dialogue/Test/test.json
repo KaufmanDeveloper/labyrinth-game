@@ -6,7 +6,6 @@
       "name": "Grant",
       "text": "I can talk a lot. I can talk a lot. I can talk a lot."
     },
-    { "name": "Tara", "directive": "fade_in" },
     { "name": "Tara", "text": "Tests are fun!" },
     { "name": "a_forest_is_here", "directive": "play_song" },
     { "name": "Tara", "directive": "fade_out" },

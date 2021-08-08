@@ -1,4 +1,4 @@
-**New story outline**
+# **New story outline**
 
 ## Visual Setting
 
@@ -11,16 +11,25 @@
 
 ----
 
-- Klein Family just moved
-- Klein Family is comprised of two parents and a sister
+- Johnson Family just moved
+- Johnson Family is comprised of two parents and a sister
 
 ## Characters
 
 -----
 
-- Jem wears a hoodie, could be a guy or girl
+##### Jem
 
-- Spends the day wishing the movie didn't happen, missing old friends
+- Jem wears a hoodie, could be a guy or girl
+- Spends the day wishing the move didn't happen, missing old friends
+
+##### Tara
+
+- F
+
+##### Grant
+
+- F
 
 ## Plot
 
@@ -32,4 +41,7 @@
 #### Nowhere Place
 
 - Consists of liminal spaces and strange beings
-- 
+- The secret in the end is that Nowhere Place is a real place that exists between our dimension and other dimensions. Its a kind of "purgatory" where our desires, fears, and memories exist
+- The "Nowhere Man" is the God of the Nowhere Place
+- (**Why does he take Jem to the Nowhere Place** <-- TBD)
+

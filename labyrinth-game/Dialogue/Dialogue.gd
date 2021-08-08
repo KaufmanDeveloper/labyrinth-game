@@ -25,6 +25,7 @@ signal finished
 signal load_battle
 signal battle_succeeded
 signal load_music
+signal actor_faded_in
 signal actor_faded_out
 
 var textTimer = 0
@@ -158,6 +159,8 @@ func reset_text_timers():
 func type_text():
 	if dialogueIsRevealing:
 		if currentActor and currentActor2 and (not animationPlayer.current_animation == "Talking") and currentActorName != "Player":
+			if currentActor.modulate == Color(1,1,1,0):
+				fade_in_actor(currentActorName)
 			animationPlayer.play("Talking")
 		elif animationPlayer.current_animation == "Talking" and currentActorName == "Player":
 			animationPlayer.stop()

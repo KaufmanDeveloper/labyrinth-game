@@ -12,7 +12,7 @@
 ----
 
 - Johnson Family just moved
-- Johnson Family is comprised of two parents and a sister
+- Johnson Family is comprised of two parents and a brother
 
 ## Characters
 
@@ -32,10 +32,15 @@
 - Carrot girl
 - She is very shy and timid, but also individualistic and strong
 - She's lost her garden and is trying to find her way back
+- Becomes companion for whole game
 
-##### Tara
+##### Ant
 
-- F
+- Honeybee guy
+- Hardworking and emotionally disconnected
+- Trying to finish thesis
+- Other classmates are beatles that don't talk to them (some are hostile)
+- 
 
 ##### Grant
 
@@ -62,8 +67,24 @@
 - The people in Nowhere Place are reflections of people in real life that are trapped because they won't be vulnerable and deal with emotions, or let themselves fail. These are all pieces of myself.
 - Anger, 
 
-## Story Paths
+## Story Paths List
 
 -----
 
+- Intro
+
+
+
+#### Intro
+
+- Just moved to Maplewood
+- Two parents, one sister
+- Brother stepped out, has gone missing (he's at Nowhere Place)
+
+#### College
+
+- Come across a college
+- They meet a honeybee named Ant
+- They're trying to help him finish his thesis so he can graduate
+- Honey Science might be his major
 - 

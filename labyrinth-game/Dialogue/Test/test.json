@@ -1,6 +1,11 @@
 {
   "content": [
     { "name": "Player", "text": "This is a test." },
+    {
+      "directive": "thought",
+      "name": "This is a thought.",
+      "color": "#b35555"
+    },
     { "name": "Grant", "directive": "fade_in" },
     {
       "name": "Grant",

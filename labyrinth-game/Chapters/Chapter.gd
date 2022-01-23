@@ -34,16 +34,21 @@ func _ready():
 		
 		var containsLoadBattleSignal = false
 		var containsLoadMusicSignal = false
+		var containsLoadThoughtSignal = false
 		for currentSignal in elementInstance.get_signal_list():
 			if(currentSignal["name"] == "load_battle"):
 				containsLoadBattleSignal = true
 			if (currentSignal["name"] == "load_music"):
 				containsLoadMusicSignal = true
+			if (currentSignal["name"] == "load_thought"):
+				containsLoadThoughtSignal = true
 		
 		if containsLoadBattleSignal:
 			elementInstance.connect("load_battle", self, "on_battle_loaded")
 		if containsLoadMusicSignal:
 			elementInstance.connect("load_music", self, "on_music_loaded")
+		if containsLoadThoughtSignal:
+			elementInstance.connect("load_thought", self, "on_thought_loaded")
 		
 		
 		yield(self, "finished")
@@ -113,3 +118,7 @@ func on_music_loaded(trackName):
 	var CurrentTrackAudioFile = load("res://Music/Exported/" + trackName + ".ogg")
 	
 	musicPlayer.crossfade_to(CurrentTrackAudioFile)
+
+func on_thought_loaded(text, color):
+	print('signal gets to chapter')
+	

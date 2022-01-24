@@ -326,13 +326,14 @@ __meta__ = {
 }
 
 [node name="ThoughtText" type="RichTextLabel" parent="UI"]
-margin_left = 232.197
-margin_top = 93.4178
-margin_right = 450.197
-margin_bottom = 133.418
+margin_left = 154.0
+margin_top = 44.0
+margin_right = 619.0
+margin_bottom = 80.0
+custom_colors/default_color = Color( 1, 0.854902, 0.368627, 1 )
+custom_constants/line_separation = 3
+custom_styles/normal = SubResource( 1 )
 bbcode_enabled = true
-bbcode_text = "Not set"
-text = "Not set"
 __meta__ = {
 "_edit_use_anchors_": false
 }

@@ -4,7 +4,7 @@
     {
       "directive": "thought",
       "name": "This is a thought.",
-      "color": "#b35555"
+      "color": "#cf7575"
     },
     { "name": "Grant", "directive": "fade_in" },
     {

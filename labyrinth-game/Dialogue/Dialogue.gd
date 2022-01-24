@@ -6,6 +6,7 @@ onready var backgroundNode = $BackgroundNode
 onready var namePanel = $UI/NamePanel
 onready var nameText = $UI/NamePanel/NameText
 onready var dialogueText = $UI/DialoguePanel/DialogueText
+onready var thoughtText = $UI/ThoughtText
 onready var textSound = $TextSound
 onready var textInSound = $TextIn
 onready var textOutSound = $TextOut
@@ -27,7 +28,6 @@ signal battle_succeeded
 signal load_music
 signal actor_faded_in
 signal actor_faded_out
-signal load_thought
 
 var textTimer = 0
 var textRevealed = 0
@@ -255,5 +255,5 @@ func initiate_music(name):
 	emit_signal("load_music", name)
 
 func initiate_thought(text, color):
-	emit_signal("load_thought", text, color)
+	thoughtText.bbcode_text = "[color=" + color + "]" + text + "[/color]"
 

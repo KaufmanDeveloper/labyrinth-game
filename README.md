@@ -1,6 +1,6 @@
 # labyrinth-game
 
-Choose your own adventure RPG
+Choose your own adventure RPG! I've outlined the general structure of the API below.
 
 ## Battle
 
